@@ -1,2 +1,2 @@
 # resumeSniper
-CS189a project
+CS189a Capstone Project
