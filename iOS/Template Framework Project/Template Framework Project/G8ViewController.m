@@ -8,6 +8,7 @@
 //
 
 #import "G8ViewController.h"
+#import "CropViewController.h"
 
 @interface G8ViewController ()
 
@@ -21,6 +22,7 @@
  *  https://github.com/gali8/Tesseract-OCR-iOS
  */
 @implementation G8ViewController
+UIImage* resumeImage;
 
 - (void)viewDidLoad
 {
@@ -145,11 +147,22 @@
 
 #pragma mark - UIImagePickerController Delegate
 
-- (void)imagePickerController:(UIImagePickerController *)picker
+-(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    resumeImage = image;
     [picker dismissViewControllerAnimated:YES completion:nil];
-    [self recognizeImageWithTesseract:image];
+    [self performSegueWithIdentifier:@"cropSegue" sender:self];
+    //[self recognizeImageWithTesseract:image];
+}
+
+// Sends resume image from camera to other CropViewController
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"cropSegue"]){
+        CropViewController *controller = (CropViewController *)segue.destinationViewController;
+        controller.resumeImage = resumeImage;
+
+    }
 }
 @end

@@ -9,6 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import <TesseractOCR/TesseractOCR.h>
+@class CropViewController;
 
 @interface G8ViewController : UIViewController <G8TesseractDelegate,
                                                 UIImagePickerControllerDelegate,

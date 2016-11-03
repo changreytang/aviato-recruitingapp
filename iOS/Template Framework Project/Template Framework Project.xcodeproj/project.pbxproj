@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
+		31703EAD1DCADFB400CD22A4 /* SPUserResizableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EAB1DCADFB400CD22A4 /* SPUserResizableView.m */; };
 		428615B71845F340005D5A2E /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428615B61845F340005D5A2E /* image_sample.jpg */; };
 		6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
 		6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31703EA81DCADFB400CD22A4 /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
+		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
+		31703EAA1DCADFB400CD22A4 /* SPUserResizableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserResizableView.h; sourceTree = "<group>"; };
+		31703EAB1DCADFB400CD22A4 /* SPUserResizableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUserResizableView.m; sourceTree = "<group>"; };
 		428615B61845F340005D5A2E /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
 		6400DDD5180C5DE000443362 /* Template Framework Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Framework Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6400DDD8180C5DE000443362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +108,10 @@
 				6400DDE8180C5DE000443362 /* G8AppDelegate.m */,
 				6400DDED180C5DE000443362 /* G8ViewController.h */,
 				6400DDEE180C5DE000443362 /* G8ViewController.m */,
+				31703EA81DCADFB400CD22A4 /* CropViewController.h */,
+				31703EA91DCADFB400CD22A4 /* CropViewController.m */,
+				31703EAA1DCADFB400CD22A4 /* SPUserResizableView.h */,
+				31703EAB1DCADFB400CD22A4 /* SPUserResizableView.m */,
 				6400DDEA180C5DE000443362 /* Main.storyboard */,
 				6400DDF0180C5DE000443362 /* Images.xcassets */,
 				6400DDDF180C5DE000443362 /* Supporting Files */,
@@ -152,7 +162,7 @@
 				ORGANIZATIONNAME = "Daniele Galiotto - www.g8production.com";
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
-						DevelopmentTeam = SZVLL8KQSW;
+						DevelopmentTeam = 3CZNDNRV95;
 					};
 				};
 			};
@@ -195,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6400DDE5180C5DE000443362 /* main.m in Sources */,
+				31703EAD1DCADFB400CD22A4 /* SPUserResizableView.m in Sources */,
 				6400DDE9180C5DE000443362 /* G8AppDelegate.m in Sources */,
+				31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */,
 				6400DDEF180C5DE000443362 /* G8ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 3CZNDNRV95;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -331,7 +343,7 @@
 					"-ObjC",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.TestsProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tliew.TestsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -342,7 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 3CZNDNRV95;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -359,7 +371,7 @@
 					"-ObjC",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.TestsProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tliew.TestsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

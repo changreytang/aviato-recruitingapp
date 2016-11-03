@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPUserResizableView.h"
 
-@interface CropViewController : UIViewController
+@class G8ViewController;
 
+@interface CropViewController : UIViewController <UIGestureRecognizerDelegate, SPUserResizableViewDelegate>{
+    UIImage* image;
+}
+@property (nonatomic) UIImage* resumeImage;
 @end

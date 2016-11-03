@@ -98,7 +98,7 @@ static SPUserResizableViewAnchorPoint SPUserResizableViewLowerMiddleAnchorPoint 
 
 - (void)setupDefaultAttributes {
     borderView = [[SPGripViewBorderView alloc] initWithFrame:CGRectInset(self.bounds, kSPUserResizableViewGlobalInset, kSPUserResizableViewGlobalInset)];
-    [borderView setHidden:YES];
+    //[borderView setHidden:YES];
     [self addSubview:borderView];
     self.minWidth = kSPUserResizableViewDefaultMinWidth;
     self.minHeight = kSPUserResizableViewDefaultMinHeight;
@@ -117,6 +117,18 @@ static SPUserResizableViewAnchorPoint SPUserResizableViewLowerMiddleAnchorPoint 
         [self setupDefaultAttributes];
     }
     return self;
+}
+- (CGSize)getFrameSize {
+    return CGRectInset(self.frame, kSPUserResizableViewGlobalInset + kSPUserResizableViewInteractiveBorderSize/2, kSPUserResizableViewGlobalInset + kSPUserResizableViewInteractiveBorderSize/2).size;
+}
+- (UIImage*)captureImage {
+    UIGraphicsBeginImageContext(CGRectInset(self.bounds, kSPUserResizableViewInteractiveBorderSize/2, kSPUserResizableViewInteractiveBorderSize/2).size);
+    
+    [[self layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return screenshot;
+    //[self.testImageView setImage:screenshot];
 }
 
 - (void)setContentView:(UIView *)newContentView {

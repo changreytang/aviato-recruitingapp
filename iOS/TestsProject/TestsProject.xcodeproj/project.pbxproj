@@ -334,7 +334,7 @@
 				TargetAttributes = {
 					4115B95A1A3EF8E90004EC0A = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = SZVLL8KQSW;
+						DevelopmentTeam = 3CZNDNRV95;
 					};
 					4115B9731A3EF8E90004EC0A = {
 						CreatedOnToolsVersion = 6.1;
@@ -576,7 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 3CZNDNRV95;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -589,7 +589,7 @@
 					"-ObjC",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.TestsProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tliew.TestsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -599,7 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 3CZNDNRV95;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -612,7 +612,7 @@
 					"-ObjC",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.TestsProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tliew.TestsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -712,7 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 3CZNDNRV95;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -725,7 +725,7 @@
 					"-ObjC",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.TestsProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tliew.TestsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Coverage;

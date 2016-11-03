@@ -41,7 +41,6 @@
                                 </state>
                                 <connections>
                                     <action selector="openCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zIB-3y-4aU"/>
-                                    <segue destination="8Xu-M3-c6R" kind="push" identifier="cropSegue" id="XVp-SA-w6U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Ei-4qY">
@@ -73,10 +72,12 @@
                     </view>
                     <connections>
                         <outlet property="imageToRecognize" destination="a6g-8P-2MZ" id="6Ll-HE-vOQ"/>
+                        <segue destination="8Xu-M3-c6R" kind="modal" identifier="cropSegue" id="N8f-5k-6tk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40" y="36"/>
         </scene>
         <!--Crop View Controller-->
         <scene sceneID="2C0-oy-LKl">
@@ -91,16 +92,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uex-EQ-qbq"/>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-HP-ClZ" customClass="SPUserResizableView">
+                                <frame key="frameInset" minX="46" minY="28" width="282" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-3p-qzU">
+                                <state key="normal" title="Capture"/>
+                                <connections>
+                                    <action selector="captureCropBox:" destination="8Xu-M3-c6R" eventType="touchUpInside" id="nS9-3Z-vin"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIe-cN-Avx">
+                                <frame key="frameInset" minX="16" minY="341" width="343" height="217"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5iB-tc-pIt" firstAttribute="top" secondItem="uex-EQ-qbq" secondAttribute="bottom" constant="78" id="crf-3X-b4e"/>
-                            <constraint firstItem="uex-EQ-qbq" firstAttribute="top" secondItem="iTQ-Af-NsV" secondAttribute="bottom" constant="60" id="mFf-ht-SxN"/>
+                            <constraint firstItem="lIe-cN-Avx" firstAttribute="top" secondItem="uex-EQ-qbq" secondAttribute="bottom" constant="-261" id="13J-DK-z5X"/>
+                            <constraint firstItem="rl2-3p-qzU" firstAttribute="top" secondItem="uex-EQ-qbq" secondAttribute="bottom" constant="8" id="AfN-Gz-sfX"/>
+                            <constraint firstItem="rl2-3p-qzU" firstAttribute="leading" secondItem="Z2e-Zc-oYi" secondAttribute="leadingMargin" constant="115" id="G3k-5P-HIO"/>
+                            <constraint firstItem="5iB-tc-pIt" firstAttribute="top" secondItem="rl2-3p-qzU" secondAttribute="bottom" constant="27" id="Z6Q-lB-5Ts"/>
+                            <constraint firstItem="lIe-cN-Avx" firstAttribute="leading" secondItem="uex-EQ-qbq" secondAttribute="trailing" constant="-351" id="aLs-ee-V8P"/>
+                            <constraint firstItem="5iB-tc-pIt" firstAttribute="top" secondItem="uex-EQ-qbq" secondAttribute="bottom" constant="65" id="crf-3X-b4e"/>
+                            <constraint firstItem="uex-EQ-qbq" firstAttribute="top" secondItem="iTQ-Af-NsV" secondAttribute="bottom" id="mFf-ht-SxN"/>
                             <constraint firstItem="uex-EQ-qbq" firstAttribute="centerX" secondItem="Z2e-Zc-oYi" secondAttribute="centerX" id="pWg-tR-V9U"/>
-                            <constraint firstItem="uex-EQ-qbq" firstAttribute="leading" secondItem="Z2e-Zc-oYi" secondAttribute="leadingMargin" constant="17" id="v5i-MB-UIf"/>
+                            <constraint firstItem="uex-EQ-qbq" firstAttribute="leading" secondItem="Z2e-Zc-oYi" secondAttribute="leadingMargin" constant="-8" id="v5i-MB-UIf"/>
+                            <constraint firstItem="5iB-tc-pIt" firstAttribute="top" secondItem="lIe-cN-Avx" secondAttribute="bottom" constant="109" id="vMg-JR-WSf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mV5-DV-Jf3"/>
+                    <connections>
+                        <outlet property="cropBoxView" destination="jZi-HP-ClZ" id="YcG-Mg-b7b"/>
+                        <outlet property="resumeImageView" destination="uex-EQ-qbq" id="woP-Aa-myB"/>
+                        <outlet property="testImageView" destination="lIe-cN-Avx" id="q9J-Nf-NWQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS5-UQ-vXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
