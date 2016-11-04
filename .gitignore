@@ -2,24 +2,4 @@
 build
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
-.DS_Store
-build
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-.DS_Store
-build
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-.DS_Store
-build
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-.DS_Store
-build
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-.DS_Store
-build
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
 
