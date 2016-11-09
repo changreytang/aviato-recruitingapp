@@ -11,7 +11,7 @@
 #import "CropViewController.h"
 #import "TOCropViewController.h"
 
-@interface G8ViewController ()
+@interface G8ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, TOCropViewControllerDelegate>
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
@@ -152,12 +152,10 @@ UIImage* resumeImage;
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    TOCropViewController *cropViewController = [[TOCropViewController alloc] initWithImage:image];
-    cropViewController.delegate = self;
-    [self presentViewController:cropViewController animated:YES completion:nil];
-//    resumeImage = image;
-//    [picker dismissViewControllerAnimated:YES completion:nil];
-//    [self performSegueWithIdentifier:@"cropSegue" sender:self];
+
+    resumeImage = image;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    [self performSegueWithIdentifier:@"cropSegue" sender:self];
     //[self recognizeImageWithTesseract:image];
 }
 

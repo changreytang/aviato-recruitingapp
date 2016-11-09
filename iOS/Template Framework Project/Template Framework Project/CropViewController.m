@@ -9,9 +9,10 @@
 #import "CropViewController.h"
 #import "G8ViewController.h"
 #import "SPUserResizableView.h"
+#import "TOCropViewController.h"
 
 
-@interface CropViewController ()
+@interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet SPUserResizableView *cropBoxView;
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
 - (IBAction)captureCropBox:(id)sender;
@@ -40,9 +41,15 @@
     UIGraphicsBeginImageContext(self.cropBoxView.frame.size);
 
     //NSLog(@"%@",self.cropBoxView.frame);
-    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
-    [self.testImageView setImage:screenshot];
+//    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+//    [self.testImageView setImage:screenshot];
+    TOCropViewController *cropViewController = [[TOCropViewController alloc] initWithImage:self.resumeImage];
+    cropViewController.delegate = self;
+    [self presentViewController:cropViewController animated:YES completion:nil];
 }
-
+- (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect)cropRect angle:(NSInteger)angle
+{
+    [self.resumeImageView setImage:image1];
+}
 @end
