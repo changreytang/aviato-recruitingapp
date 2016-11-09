@@ -9,6 +9,7 @@
 
 #import "G8ViewController.h"
 #import "CropViewController.h"
+#import "TOCropViewController.h"
 
 @interface G8ViewController ()
 
@@ -151,9 +152,12 @@ UIImage* resumeImage;
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    resumeImage = image;
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    [self performSegueWithIdentifier:@"cropSegue" sender:self];
+    TOCropViewController *cropViewController = [[TOCropViewController alloc] initWithImage:image];
+    cropViewController.delegate = self;
+    [self presentViewController:cropViewController animated:YES completion:nil];
+//    resumeImage = image;
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//    [self performSegueWithIdentifier:@"cropSegue" sender:self];
     //[self recognizeImageWithTesseract:image];
 }
 

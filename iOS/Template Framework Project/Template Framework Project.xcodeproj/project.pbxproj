@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15332F471DD29D40003A5794 /* Header Files in Resources */ = {isa = PBXBuildFile; fileRef = 15332F461DD29D40003A5794 /* Header Files */; };
 		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
 		31703EAD1DCADFB400CD22A4 /* SPUserResizableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EAB1DCADFB400CD22A4 /* SPUserResizableView.m */; };
 		428615B71845F340005D5A2E /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428615B61845F340005D5A2E /* image_sample.jpg */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15332F461DD29D40003A5794 /* Header Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Header Files"; sourceTree = "<group>"; };
 		31703EA81DCADFB400CD22A4 /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
 		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
 		31703EAA1DCADFB400CD22A4 /* SPUserResizableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserResizableView.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				31703EAB1DCADFB400CD22A4 /* SPUserResizableView.m */,
 				6400DDEA180C5DE000443362 /* Main.storyboard */,
 				6400DDF0180C5DE000443362 /* Images.xcassets */,
+				15332F461DD29D40003A5794 /* Header Files */,
 				6400DDDF180C5DE000443362 /* Supporting Files */,
 			);
 			path = "Template Framework Project";
@@ -191,6 +194,7 @@
 			files = (
 				6400DDF1180C5DE000443362 /* Images.xcassets in Resources */,
 				428615B71845F340005D5A2E /* image_sample.jpg in Resources */,
+				15332F471DD29D40003A5794 /* Header Files in Resources */,
 				64DDA75B188FD9140025590D /* tessdata in Resources */,
 				6400DDE3180C5DE000443362 /* InfoPlist.strings in Resources */,
 				64DDA74E188FD7D10025590D /* Main.storyboard in Resources */,
