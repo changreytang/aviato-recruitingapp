@@ -9,13 +9,15 @@
 #import "CropViewController.h"
 #import "G8ViewController.h"
 #import "SPUserResizableView.h"
+#import "ResumeContactParser.h"
 
 
 @interface CropViewController ()
 @property (weak, nonatomic) IBOutlet SPUserResizableView *cropBoxView;
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
-- (IBAction)captureCropBox:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
+
+- (IBAction)captureCropBox:(id)sender;
 
 
 @end
@@ -42,7 +44,37 @@
     //NSLog(@"%@",self.cropBoxView.frame);
     [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
-    [self.testImageView setImage:screenshot];
+    // [self.testImageView setImage:screenshot];
+    NSString *tesseract_contact_info = [self recognizeImageWithTesseract:screenshot];
+    
+    ResumeContactParser *parser = [[ResumeContactParser alloc] init];
+    [parser parseContactInfo:tesseract_contact_info];
+}
+
+
+-(NSString*)recognizeImageWithTesseract:(UIImage *)image
+{
+    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
+    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
+    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    operation.delegate = self;
+    operation.tesseract.image = image;
+    __block NSString *recognizedText = nil;
+    operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
+        recognizedText = tesseract.recognizedText;
+    };
+    
+    return recognizedText;
+}
+
+
+- (void)progressImageRecognitionForTesseract:(G8Tesseract *)tesseract {
+    NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
+}
+
+
+- (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract {
+    return NO;  // return YES, if you need to cancel recognition prematurely
 }
 
 @end

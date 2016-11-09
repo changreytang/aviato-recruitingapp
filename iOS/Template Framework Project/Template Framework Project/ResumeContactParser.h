@@ -14,4 +14,6 @@
 @property (readonly, nonatomic) NSString* email;
 @property (readonly, nonatomic) NSString* phone_number;
 
+- (void)parseContactInfo:(NSString*)contact_info;
+
 @end

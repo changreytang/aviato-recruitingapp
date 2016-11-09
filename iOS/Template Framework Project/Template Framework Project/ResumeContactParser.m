@@ -11,16 +11,23 @@
 @implementation ResumeContactParser
 
 - (void)parseContactInfo:(NSString*)contact_info {
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Raw Contact Information"
+                                                    message:contact_info
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    NSArray *contact_array = [contact_info componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    contact_array = [contact_array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
 }
 
-//- (IBAction)captureCropBox:(id)sender {
-//    UIGraphicsBeginImageContext(self.cropBoxView.frame.size);
-//    
-//    //NSLog(@"%@",self.cropBoxView.frame);
-//    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
-//    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
-//    [self.testImageView setImage:screenshot];
-//}
+//// Spawn an alert with the recognized text
+//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+//                                                message:recognizedText
+//                                               delegate:nil
+//                                      cancelButtonTitle:@"OK"
+//                                      otherButtonTitles:nil];
+//[alert show];
+
 
 @end
