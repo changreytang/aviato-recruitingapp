@@ -73,11 +73,14 @@
 //    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
 //    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
 //    [self.testImageView setImage:screenshot];
+}
 
-- (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect)cropRect angle:(NSInteger)angle {
+- (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
     NSString* c_info = [self recognizeImageWithTesseract:image1];
     ResumeContactParser* parser = [[ResumeContactParser alloc] init];
     [parser parseContactInfo:c_info];
     //[self.resumeImageView setImage:image1];
 }
+
 @end
+
