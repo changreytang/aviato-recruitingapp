@@ -1,0 +1,1 @@
+iOS Tesseract Sample App
