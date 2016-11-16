@@ -10,9 +10,10 @@
 #import "G8ViewController.h"
 #import "SPUserResizableView.h"
 #import "ResumeContactParser.h"
+#import "TOCropViewController.h"
 
 
-@interface CropViewController ()
+@interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet SPUserResizableView *cropBoxView;
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
@@ -28,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.resumeImageView setImage:self.resumeImage];
-    
+
 
 }
 
@@ -39,16 +40,9 @@
 
 
 - (IBAction)captureCropBox:(id)sender {
-    UIGraphicsBeginImageContext(self.cropBoxView.frame.size);
-
-    //NSLog(@"%@",self.cropBoxView.frame);
-    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
-    // [self.testImageView setImage:screenshot];
-    NSString *tesseract_contact_info = [self recognizeImageWithTesseract:screenshot];
-    
-    ResumeContactParser *parser = [[ResumeContactParser alloc] init];
-    [parser parseContactInfo:tesseract_contact_info];
+    TOCropViewController *cropViewController = [[TOCropViewController alloc] initWithImage:self.resumeImage];
+    cropViewController.delegate = self;
+    [self presentViewController:cropViewController animated:YES completion:nil];
 }
 
 
@@ -63,7 +57,7 @@
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
         recognizedText = tesseract.recognizedText;
     };
-    
+
     return recognizedText;
 }
 
@@ -75,6 +69,15 @@
 
 - (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract {
     return NO;  // return YES, if you need to cancel recognition prematurely
-}
 
+//    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+//    [self.testImageView setImage:screenshot];
+
+- (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect)cropRect angle:(NSInteger)angle {
+    NSString* c_info = [self recognizeImageWithTesseract:image1];
+    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
+    [parser parseContactInfo:c_info];
+    //[self.resumeImageView setImage:image1];
+}
 @end
