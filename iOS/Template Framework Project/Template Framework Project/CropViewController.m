@@ -8,15 +8,16 @@
 
 #import "CropViewController.h"
 #import "G8ViewController.h"
-#import "SPUserResizableView.h"
-#import "ResumeContactParser.h"
-#import "TOCropViewController.h"
+//#import "ResumeContactParser.h"
+#import "Headers/TOCropViewController.h"
 
 
 @interface CropViewController () <TOCropViewControllerDelegate>
-@property (weak, nonatomic) IBOutlet SPUserResizableView *cropBoxView;
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
+
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+
 
 - (IBAction)captureCropBox:(id)sender;
 
@@ -28,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self.resumeImageView setImage:self.resumeImage];
+    
+    // Create a queue to perform recognition operations
+    self.operationQueue = [[NSOperationQueue alloc] init];
 
 
 }
@@ -46,19 +51,86 @@
 }
 
 
--(NSString*)recognizeImageWithTesseract:(UIImage *)image
+-(void)recognizeImageWithTesseract:(UIImage *)image
 {
+//    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
+//    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
+//    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+//    operation.delegate = self;
+//    operation.tesseract.image = image;
+//    __block NSString *recognizedText = nil;
+//    operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
+//        recognizedText = tesseract.recognizedText;
+//    };
+//
+//    return recognizedText;
+    
+    
+    // Animate a progress activity indicator
+    //[self.activityIndicator startAnimating];
+    
+    // Create a new `G8RecognitionOperation` to perform the OCR asynchronously
+    // It is assumed that there is a .traineddata file for the language pack
+    // you want Tesseract to use in the "tessdata" folder in the root of the
+    // project AND that the "tessdata" folder is a referenced folder and NOT
+    // a symbolic group in your project
     G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
+    
+    // Use the original Tesseract engine mode in performing the recognition
+    // (see G8Constants.h) for other engine mode options
     operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
-    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    
+    // Let Tesseract automatically segment the page into blocks of text
+    // based on its analysis (see G8Constants.h) for other page segmentation
+    // mode options
+    //operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    
+    // Optionally limit the time Tesseract should spend performing the
+    // recognition
+    //operation.tesseract.maximumRecognitionTime = 1.0;
+    
+    // Set the delegate for the recognition to be this class
+    // (see `progressImageRecognitionForTesseract` and
+    // `shouldCancelImageRecognitionForTesseract` methods below)
     operation.delegate = self;
+    
+    // Optionally limit Tesseract's recognition to the following whitelist
+    // and blacklist of characters
+    //operation.tesseract.charWhitelist = @"01234";
+    //operation.tesseract.charBlacklist = @"56789";
+    
+    // Set the image on which Tesseract should perform recognition
     operation.tesseract.image = image;
-    __block NSString *recognizedText = nil;
+    
+    // Optionally limit the region in the image on which Tesseract should
+    // perform recognition to a rectangle
+    //operation.tesseract.rect = CGRectMake(20, 20, 100, 100);
+    
+    // Specify the function block that should be executed when Tesseract
+    // finishes performing recognition on the image
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
-        recognizedText = tesseract.recognizedText;
+        // Fetch the recognized text
+        NSString *recognizedText = tesseract.recognizedText;
+        
+        NSLog(@"%@", recognizedText);
+        
+        // Remove the animated progress activity indicator
+        //[self.activityIndicator stopAnimating];
+        
+        // Spawn an alert with the recognized text
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+                                                        message:recognizedText
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     };
-
-    return recognizedText;
+    
+    // Display the image to be recognized in the view
+    //self.imageToRecognize.image = operation.tesseract.thresholdedImage;
+    
+    // Finally, add the recognition operation to the queue
+    [self.operationQueue addOperation:operation];
 }
 
 
@@ -76,9 +148,10 @@
 }
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
-    NSString* c_info = [self recognizeImageWithTesseract:image1];
-    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
-    [parser parseContactInfo:c_info];
+    [self recognizeImageWithTesseract:image1];
+    //NSString* c_info = [self recognizeImageWithTesseract:image1];
+    //ResumeContactParser* parser = [[ResumeContactParser alloc] init];
+    //[parser parseContactInfo:c_info];
     //[self.resumeImageView setImage:image1];
 }
 

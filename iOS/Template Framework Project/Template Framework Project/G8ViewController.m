@@ -17,11 +17,6 @@
 
 @end
 
-
-/**
- *  For more information about using `G8Tesseract`, visit the GitHub page at:
- *  https://github.com/gali8/Tesseract-OCR-iOS
- */
 @implementation G8ViewController
 UIImage* resumeImage;
 

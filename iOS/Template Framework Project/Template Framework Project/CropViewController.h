@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SPUserResizableView.h"
 #import <TesseractOCR/TesseractOCR.h>
 
 @class G8ViewController;
 
-@interface CropViewController : UIViewController <G8TesseractDelegate, UIGestureRecognizerDelegate, SPUserResizableViewDelegate>
+@interface CropViewController : UIViewController <G8TesseractDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic) UIImage* resumeImage;
 @end
