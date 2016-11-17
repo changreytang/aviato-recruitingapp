@@ -50,7 +50,7 @@
 }
 
 
--(void)recognizeImageWithTesseract:(UIImage *)image
+-(NSString*)recognizeImageWithTesseract:(UIImage *)image
 {
 //    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
 //    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
@@ -107,9 +107,11 @@
     
     // Specify the function block that should be executed when Tesseract
     // finishes performing recognition on the image
+    
+    __block NSString *recognizedText = @"";
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
         // Fetch the recognized text
-        NSString *recognizedText = tesseract.recognizedText;
+        recognizedText = tesseract.recognizedText;
         
         NSLog(@"%@", recognizedText);
         
@@ -130,6 +132,8 @@
     
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
+
+    return recognizedText;
 }
 
 

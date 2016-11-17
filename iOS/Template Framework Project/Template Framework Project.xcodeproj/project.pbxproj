@@ -10,6 +10,8 @@
 		15F362191DD3C3DD00C231A3 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
 		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
 		31C513E21DDE353E002AC8BF /* Applicant.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E11DDE353E002AC8BF /* Applicant.m */; };
+		31C513E51DDE6D8A002AC8BF /* ApplicantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */; };
+		31C513E81DDE6E5A002AC8BF /* ResumeContactParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */; };
 		428615B71845F340005D5A2E /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428615B61845F340005D5A2E /* image_sample.jpg */; };
 		6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
 		6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
@@ -32,6 +34,10 @@
 		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
 		31C513E01DDE353E002AC8BF /* Applicant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Applicant.h; sourceTree = "<group>"; };
 		31C513E11DDE353E002AC8BF /* Applicant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Applicant.m; sourceTree = "<group>"; };
+		31C513E31DDE6D8A002AC8BF /* ApplicantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicantViewController.h; sourceTree = "<group>"; };
+		31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicantViewController.m; sourceTree = "<group>"; };
+		31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeContactParser.h; sourceTree = "<group>"; };
+		31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeContactParser.m; sourceTree = "<group>"; };
 		428615B61845F340005D5A2E /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
 		6400DDD5180C5DE000443362 /* Template Framework Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Framework Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6400DDD8180C5DE000443362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,10 @@
 				6400DDEE180C5DE000443362 /* G8ViewController.m */,
 				31703EA81DCADFB400CD22A4 /* CropViewController.h */,
 				31703EA91DCADFB400CD22A4 /* CropViewController.m */,
+				31C513E31DDE6D8A002AC8BF /* ApplicantViewController.h */,
+				31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */,
+				31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */,
+				31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */,
 				6400DDEA180C5DE000443362 /* Main.storyboard */,
 				6400DDF0180C5DE000443362 /* Images.xcassets */,
 				15F362181DD3C3DD00C231A3 /* Headers */,
@@ -213,6 +223,8 @@
 				31C513E21DDE353E002AC8BF /* Applicant.m in Sources */,
 				31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */,
 				6400DDEF180C5DE000443362 /* G8ViewController.m in Sources */,
+				31C513E51DDE6D8A002AC8BF /* ApplicantViewController.m in Sources */,
+				31C513E81DDE6E5A002AC8BF /* ResumeContactParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
