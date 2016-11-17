@@ -15,8 +15,11 @@
     NSString* phoneNum;
 }
 
--(void)initApplicant:(NSString*)name withEmail:(NSString*)email withPhoneNum:(NSString*)phoneNum withAddress:(NSString*)address{
-    
+-(void)initApplicant:(NSString*)name withEmail:(NSString*)email withPhoneNum:(NSString*)phoneNum withAddress:(NSString*)address {
+    [self setEmail:email];
+    [self setPhoneNumber:phoneNum];
+    [self setAddress:address];
+    [self setName:name];
 }
 -(NSString*)getName{
     return name;
