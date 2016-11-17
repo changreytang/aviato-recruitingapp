@@ -19,28 +19,28 @@
     
 }
 -(NSString*)getName{
-    return @"stub";
+    return name;
 }
 -(NSString*)getPhoneNumber{
-    return @"stub";
+    return phoneNum;
 }
 -(NSString*)getAddress{
-    return @"stub";
+    return address;
 }
 -(NSString*)getEmail{
-    return @"stub";
+    return email;
 }
--(void)setEmail:(NSString*)email{
-    
+-(void)setEmail:(NSString*)aEmail{
+    email = aEmail;
 }
--(void)setPhoneNumber:(NSString*)phoneNum{
-    
+-(void)setPhoneNumber:(NSString*)aPhoneNum{
+    phoneNum = aPhoneNum;
 }
--(void)setAddress:(NSString*)address{
-    
+-(void)setAddress:(NSString*)aAddress{
+    address = aAddress;
 }
--(void)setName:(NSString*)name{
-    
+-(void)setName:(NSString*)aName{
+    name = aName;
 }
 
 @end

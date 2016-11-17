@@ -9,7 +9,7 @@
 
 #import "G8ViewController.h"
 #import "CropViewController.h"
-#import "TOCropViewController.h"
+#import "Headers/TOCropViewController.h"
 
 @interface G8ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, TOCropViewControllerDelegate>
 
