@@ -14,7 +14,6 @@
 
 @interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *testImageView;
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 

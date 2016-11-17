@@ -21,7 +21,7 @@
 -(NSString*)getName{
     return @"stub";
 }
--(NSString*)getPhoneNumber;{
+-(NSString*)getPhoneNumber{
     return @"stub";
 }
 -(NSString*)getAddress{
