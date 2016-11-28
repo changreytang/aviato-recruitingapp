@@ -9,18 +9,18 @@
 #import "ApplicantViewController.h"
 #import "XLForm.h"
 
-NSString *const kName = @"name";
-NSString *const kEmail = @"email";
-NSString *const kTwitter = @"twitter";
-NSString *const kZipCode = @"zipCode";
-NSString *const kNumber = @"number";
-NSString *const kInteger = @"integer";
-NSString *const kDecimal = @"decimal";
-NSString *const kPassword = @"password";
-NSString *const kPhone = @"phone";
-NSString *const kUrl = @"url";
-NSString *const kTextView = @"textView";
-NSString *const kNotes = @"notes";
+static NSString *const kName = @"name";
+static NSString *const kEmail = @"email";
+static NSString *const kTwitter = @"twitter";
+static NSString *const kZipCode = @"zipCode";
+static NSString *const kNumber = @"number";
+static NSString *const kInteger = @"integer";
+static NSString *const kDecimal = @"decimal";
+static NSString *const kPassword = @"password";
+static NSString *const kPhone = @"phone";
+static NSString *const kUrl = @"url";
+static NSString *const kTextView = @"textView";
+static NSString *const kNotes = @"notes";
 
 @interface ApplicantViewController ()
 
@@ -29,48 +29,74 @@ NSString *const kNotes = @"notes";
 
 @implementation ApplicantViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view.
+//}
+//
+//- (void)didReceiveMemoryWarning {
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self){
+        [self initializeForm];
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self){
+        [self initializeForm];
+    }
+    return self;
 }
 
-- (id)init {
-    XLFormDescriptor * formDescriptor = [XLFormDescriptor formDescriptorWithTitle:@"Text Fields"];
+#pragma mark - Helper
+
+- (void)initializeForm {
+    XLFormDescriptor * form = [XLFormDescriptor formDescriptorWithTitle:@"Text Fields"];
     XLFormSectionDescriptor * section;
     XLFormRowDescriptor * row;
     
-    formDescriptor.assignFirstResponderOnShow = YES;
+    form.assignFirstResponderOnShow = YES;
     
     // Basic Information - Section
     section = [XLFormSectionDescriptor formSectionWithTitle:@"TextField Types"];
     section.footerTitle = @"This is a long text that will appear on section footer";
-    [formDescriptor addFormSection:section];
+    [form addFormSection:section];
     
     // Name
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kName rowType:XLFormRowDescriptorTypeText title:@"Name"];
     row.required = YES;
+    row.value = @"Tim MLiew";
     [section addFormRow:row];
     
     // Email
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kEmail rowType:XLFormRowDescriptorTypeEmail title:@"Email"];
     // validate the email
     [row addValidator:[XLFormValidator emailValidator]];
+    row.value = @"tmliew@umal.ucsb.edu";
+    [section addFormRow:row];
+    
+    // Phone
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kPhone rowType:XLFormRowDescriptorTypePhone title:@"Phone"];
+    row.value = @"4083913282";
+    [section addFormRow:row];
+    
+    // Address
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kZipCode rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
+    row.value = @"6669 Sueno Rd, Isla Vista, CA93117";
     [section addFormRow:row];
     
     // Twitter
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kTwitter rowType:XLFormRowDescriptorTypeTwitter title:@"Twitter"];
-    row.disabled = @YES;
-    row.value = @"@no_editable";
-    [section addFormRow:row];
+//    row = [XLFormRowDescriptor formRowDescriptorWithTag:kTwitter rowType:XLFormRowDescriptorTypeTwitter title:@"Twitter"];
+//    row.disabled = @YES;
+//    row.value = @"@no_editable";
+//    [section addFormRow:row];
     
-    // Zip Code
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kZipCode rowType:XLFormRowDescriptorTypeZipCode title:@"Zip Code"];
-    [section addFormRow:row];
     
     // Number
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNumber rowType:XLFormRowDescriptorTypeNumber title:@"Number"];
@@ -88,17 +114,13 @@ NSString *const kNotes = @"notes";
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kPassword rowType:XLFormRowDescriptorTypePassword title:@"Password"];
     [section addFormRow:row];
     
-    // Phone
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kPhone rowType:XLFormRowDescriptorTypePhone title:@"Phone"];
-    [section addFormRow:row];
-    
     // Url
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kUrl rowType:XLFormRowDescriptorTypeURL title:@"Url"];
     [section addFormRow:row];
     
     
     section = [XLFormSectionDescriptor formSection];
-    [formDescriptor addFormSection:section];
+    [form addFormSection:section];
     
     
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kTextView rowType:XLFormRowDescriptorTypeTextView];
@@ -106,11 +128,11 @@ NSString *const kNotes = @"notes";
     [section addFormRow:row];
     
     section = [XLFormSectionDescriptor formSectionWithTitle:@"TextView With Label Example"];
-    [formDescriptor addFormSection:section];
+    [form addFormSection:section];
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
     [section addFormRow:row];
     
-    return [super initWithForm:formDescriptor];
+    self.form = form;
 
 }
 
