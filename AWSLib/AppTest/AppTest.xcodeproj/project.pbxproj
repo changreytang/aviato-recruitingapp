@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E017388F56B39FB91ABDE154 /* Pods_AppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EFBE520C6EDD63D70F90DA /* Pods_AppTest.framework */; };
+		E673DB581DEC0A5100F79DC9 /* linux.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E673DB571DEC0A5100F79DC9 /* linux.jpeg */; };
+		E673DB5A1DEC0BC100F79DC9 /* panda.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E673DB591DEC0BC100F79DC9 /* panda.jpeg */; };
 		E69306601DDC566900219B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693065F1DDC566900219B08 /* AppDelegate.swift */; };
 		E69306621DDC566900219B08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69306611DDC566900219B08 /* ViewController.swift */; };
 		E69306651DDC566900219B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E69306631DDC566900219B08 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		4A73AB5D3D4A1A7B74DB2C57 /* Pods-AppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTest/Pods-AppTest.debug.xcconfig"; sourceTree = "<group>"; };
 		63E5FE74BF0E88C453B757C3 /* Pods-AppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppTest/Pods-AppTest.release.xcconfig"; sourceTree = "<group>"; };
 		D3EFBE520C6EDD63D70F90DA /* Pods_AppTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E673DB571DEC0A5100F79DC9 /* linux.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = linux.jpeg; path = ../../../../../../Downloads/linux.jpeg; sourceTree = "<group>"; };
+		E673DB591DEC0BC100F79DC9 /* panda.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = panda.jpeg; path = ../../../../../../Downloads/panda.jpeg; sourceTree = "<group>"; };
 		E693065C1DDC566900219B08 /* AppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E693065F1DDC566900219B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E69306611DDC566900219B08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			children = (
 				E693065F1DDC566900219B08 /* AppDelegate.swift */,
 				E693068F1DDC62E200219B08 /* Random_pyramids.jpeg */,
+				E673DB571DEC0A5100F79DC9 /* linux.jpeg */,
+				E673DB591DEC0BC100F79DC9 /* panda.jpeg */,
 				E69306611DDC566900219B08 /* ViewController.swift */,
 				E69306631DDC566900219B08 /* Main.storyboard */,
 				E69306661DDC566900219B08 /* Assets.xcassets */,
@@ -262,7 +268,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E673DB581DEC0A5100F79DC9 /* linux.jpeg in Resources */,
 				E693066A1DDC566900219B08 /* LaunchScreen.storyboard in Resources */,
+				E673DB5A1DEC0BC100F79DC9 /* panda.jpeg in Resources */,
 				E69306901DDC62E200219B08 /* Random_pyramids.jpeg in Resources */,
 				E69306671DDC566900219B08 /* Assets.xcassets in Resources */,
 				E69306651DDC566900219B08 /* Main.storyboard in Resources */,
