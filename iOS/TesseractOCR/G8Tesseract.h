@@ -47,7 +47,7 @@ extern NSInteger const kG8MaxCredibleResolution;
  *  recognition is in progress. It's also called automatically on 
  *  UIApplicationDidReceiveMemoryWarningNotification
  */
-//+ (void)clearCache;
++ (void)clearCache;
 
 /**
  *  The language pack to use during recognition. A corresponding trained data

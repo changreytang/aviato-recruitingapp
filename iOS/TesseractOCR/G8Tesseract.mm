@@ -67,7 +67,13 @@ namespace tesseract {
 
 + (void)didReceiveMemoryWarningNotification:(NSNotification*)notification {
     
+    [self clearCache];
     // some more cleaning here if necessary
+}
+
++ (void)clearCache
+{
+    tesseract::TessBaseAPI::ClearPersistentCache();
 }
 
 + (NSString *)version

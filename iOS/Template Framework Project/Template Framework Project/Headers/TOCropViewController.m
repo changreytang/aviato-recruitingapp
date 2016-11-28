@@ -801,6 +801,14 @@
     else {
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
+    
+    if (self.navigationController) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 #pragma mark - Property Methods -

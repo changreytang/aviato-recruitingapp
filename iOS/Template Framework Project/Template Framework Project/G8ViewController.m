@@ -144,10 +144,7 @@ UIImage* resumeImage;
     [self recognizeImageWithTesseract:[UIImage imageNamed:@"image_sample.jpg"]];
 }
 
-//- (IBAction)clearCache:(id)sender
-//{
-//    [G8Tesseract clearCache];
-//}
+
 
 #pragma mark - UIImagePickerController Delegate
 

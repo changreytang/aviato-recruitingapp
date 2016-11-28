@@ -16,12 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
-
-
-- (IBAction)captureCropBox:(id)sender;
-
-
-
 @end
 
 @implementation CropViewController{
@@ -50,6 +44,11 @@ NSString *contactInfo;
     cropViewController.delegate = self;
     [self presentViewController:cropViewController animated:YES completion:nil];
 }
+
+- (IBAction)backButton:(id)sender {
+    [G8Tesseract clearCache];
+}
+
 
 
 -(NSString*)recognizeImageWithTesseract:(UIImage *)image
@@ -160,6 +159,7 @@ NSString *contactInfo;
     //[parser parseContactInfo:c_info];
     //[self.resumeImageView setImage:image1];
 }
+
 
 @end
 
