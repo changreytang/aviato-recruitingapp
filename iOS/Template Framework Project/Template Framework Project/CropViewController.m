@@ -8,7 +8,7 @@
 
 #import "CropViewController.h"
 #import "G8ViewController.h"
-//#import "ResumeContactParser.h"
+#import "ResumeContactParser.h"
 #import "Headers/TOCropViewController.h"
 
 

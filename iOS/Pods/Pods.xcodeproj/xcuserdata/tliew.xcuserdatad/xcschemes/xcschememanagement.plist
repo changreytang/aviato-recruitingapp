@@ -6,33 +6,63 @@
 	<dict>
 		<key>Kiwi.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-TestsProjectTests.xcscheme</key>
+		<key>Pods-Template Framework Project.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TestsProject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TesseractOCRiOS.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XLForm-iOS10.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XLForm-iOS8.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>484574740A8B3D5A264D5ED8D2F567FF</key>
+		<key>1CD0FEB9AAE4B44DB59150626EAE4BCB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EC36F64B0CFE9941AF713CDCAE7DB82</key>
+		<key>2AF5899BD4B40F5CD7B9BD3D96696EF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDF056B636F461345EA712A9C43DDE24</key>
+		<key>30E7960CA2347DCEE62C7A01277C9416</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66CC6271DC33579B926649FC455C799E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C069659D0364DCF95715D12054D6BAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A439AF69B7501368099AB574DACCF25A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
