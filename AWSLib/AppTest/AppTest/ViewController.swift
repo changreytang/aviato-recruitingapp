@@ -30,8 +30,8 @@ class ViewController: UIViewController {
         
         // Set up AWS Transfer Manager Request
         let S3BucketName = "workdaycapstonetest"
-        let ext = "jpeg"
-        let localFileName = "panda" // local file name here
+        let ext = "txt"
+        let localFileName = "wordsEn" // local file name here
         let remoteName = localFileName + "." + ext
         //let fileName = NSUUID().UUIDString + "." + ext
         let imageURL = Bundle.main.url(forResource: localFileName, withExtension: ext)!
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         uploadRequest?.body = imageURL
         uploadRequest?.key = remoteName
         uploadRequest?.bucket = S3BucketName
-        uploadRequest?.contentType = "image/" + ext
+        uploadRequest?.contentType = "text/" + ext
         
         let transferManager = AWSS3TransferManager.default()
         
@@ -81,6 +81,7 @@ class ViewController: UIViewController {
             }
             return nil
         })
+        
         
     }
 }
