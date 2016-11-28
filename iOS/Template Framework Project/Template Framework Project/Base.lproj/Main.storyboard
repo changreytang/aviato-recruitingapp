@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,25 +24,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="267" translatesAutoresizingMaskIntoConstraints="NO" id="i3a-Pb-LXN">
-                                <rect key="frame" x="27" y="110" width="267" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="plc-fl-z6B"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Resume Parser">
-                                        <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qou-Zy-wCC">
-                                <rect key="frame" x="80" y="220" width="162" height="30"/>
+                                <rect key="frame" x="84" y="296" width="207" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Take Picture of Resume">
+                                    <color key="titleColor" red="0.13725490196078433" green="0.71372549019607845" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -50,8 +36,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Ei-4qY">
-                                <rect key="frame" x="112" y="265" width="98" height="30"/>
+                                <rect key="frame" x="115" y="365" width="153" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Parse Resume">
+                                    <color key="titleColor" red="0.13725490196078433" green="0.71372549019607845" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -59,24 +47,34 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-Aq-Bql">
-                                <rect key="frame" x="93" y="341" width="134" height="30"/>
-                                <state key="normal" title="Open Photo Library"/>
+                                <rect key="frame" x="98" y="416" width="187" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Open Photo Library">
+                                    <color key="titleColor" red="0.13725490196078433" green="0.71372549019607845" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="openPhotoLibrary:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3zu-Ex-ZNX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="csY-SC-Rjw">
+                                <rect key="frame" x="37" y="157" width="308" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="eV9-rC-snC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ylc-Ei-4qY" firstAttribute="top" secondItem="qou-Zy-wCC" secondAttribute="bottom" constant="15" id="8hp-zZ-h68"/>
-                            <constraint firstItem="i3a-Pb-LXN" firstAttribute="top" secondItem="Lfb-xc-blL" secondAttribute="bottom" constant="90" id="Ceh-Ha-EeU"/>
-                            <constraint firstItem="i3a-Pb-LXN" firstAttribute="centerX" secondItem="ylc-Ei-4qY" secondAttribute="centerX" id="F7S-Lm-sBW"/>
-                            <constraint firstItem="eEi-Aq-Bql" firstAttribute="centerX" secondItem="i3a-Pb-LXN" secondAttribute="centerX" id="JOx-XQ-J2o"/>
-                            <constraint firstItem="eEi-Aq-Bql" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="N4F-wp-haC"/>
-                            <constraint firstAttribute="bottom" secondItem="eEi-Aq-Bql" secondAttribute="bottom" constant="296" id="Zhq-Z2-Vvl"/>
-                            <constraint firstItem="qou-Zy-wCC" firstAttribute="top" secondItem="i3a-Pb-LXN" secondAttribute="bottom" constant="34" id="cct-of-jLG"/>
-                            <constraint firstItem="i3a-Pb-LXN" firstAttribute="centerX" secondItem="qou-Zy-wCC" secondAttribute="centerX" id="fSV-8M-6mC"/>
-                            <constraint firstItem="i3a-Pb-LXN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="11" id="yHB-bN-gbO"/>
+                            <constraint firstItem="csY-SC-Rjw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="3.5" id="DIp-fU-U4k"/>
+                            <constraint firstItem="csY-SC-Rjw" firstAttribute="top" secondItem="Lfb-xc-blL" secondAttribute="bottom" constant="137" id="GIc-PQ-2Hf"/>
+                            <constraint firstItem="csY-SC-Rjw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="21" id="J9b-Pb-bvq"/>
+                            <constraint firstItem="eEi-Aq-Bql" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="3.764450551638447" id="JyD-ze-RFu"/>
+                            <constraint firstItem="ylc-Ei-4qY" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="4.0000000000000284" id="NKt-hq-vkL"/>
+                            <constraint firstItem="ylc-Ei-4qY" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="46.5" id="Pb8-Zb-ZHp"/>
+                            <constraint firstItem="ylc-Ei-4qY" firstAttribute="top" secondItem="qou-Zy-wCC" secondAttribute="bottom" constant="39" id="Wfj-iY-Xpz"/>
+                            <constraint firstItem="qou-Zy-wCC" firstAttribute="top" secondItem="csY-SC-Rjw" secondAttribute="bottom" constant="38" id="YoL-BX-wwN"/>
+                            <constraint firstItem="eEi-Aq-Bql" firstAttribute="top" secondItem="ylc-Ei-4qY" secondAttribute="bottom" constant="21" id="e5Z-Z2-iki"/>
+                            <constraint firstItem="qou-Zy-wCC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="p74-na-LZV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7dy-Dw-G37"/>
@@ -168,6 +166,9 @@
             <point key="canvasLocation" x="1009" y="42"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Banner.png" width="498" height="109"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
