@@ -119,12 +119,6 @@
         //[self.activityIndicator stopAnimating];
         
         // Spawn an alert with the recognized text
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-                                                        message:recognizedText
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
     };
     
     // Display the image to be recognized in the view
@@ -152,7 +146,13 @@
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
     [self recognizeImageWithTesseract:image1];
-    //NSString* c_info = [self recognizeImageWithTesseract:image1];
+    NSString* c_info = [self recognizeImageWithTesseract:image1];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+                                                    message:c_info
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
     //ResumeContactParser* parser = [[ResumeContactParser alloc] init];
     //[parser parseContactInfo:c_info];
     //[self.resumeImageView setImage:image1];
