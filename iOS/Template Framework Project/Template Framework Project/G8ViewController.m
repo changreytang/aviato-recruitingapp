@@ -132,6 +132,17 @@ UIImage* resumeImage;
     }
 }
 
+- (IBAction)openPhotoLibrary:(id)sender {
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        UIImagePickerController *imgPicker = [UIImagePickerController new];
+        imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        imgPicker.delegate = self;
+        [self presentViewController:imgPicker animated:YES completion:nil];
+    }
+}
+
+
 - (IBAction)recognizeSampleImage:(id)sender {
     [self recognizeImageWithTesseract:[UIImage imageNamed:@"image_sample.jpg"]];
 }
