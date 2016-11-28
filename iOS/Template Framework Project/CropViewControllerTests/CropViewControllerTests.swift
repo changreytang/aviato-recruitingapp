@@ -41,6 +41,17 @@ class CropViewControllerTests: XCTestCase {
         XCTAssertNotEqual(emptyString, viewController.recognizeImageWithTesseract.contactInfo)
     }
     
+    func testRecognizeImageWithTesseractIncorrectParsing() {
+        // This function asserts that the contact info OCR result is not an empty string
+        // So contactInfo must have a value
+        let viewController = CropViewController()
+        let c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-,./;'1234567890%$()"
+        let emptyString = ""
+        for i in c.characters:
+            XCTAssertEqual(i, viewController.recognizeImageWithTesseract.contactInfo)
+        XCTAssertNotEqual(emptyString, viewController.recognizeImageWithTesseract.contactInfo)
+    }
+    
     func testDidCropToImage() {
         XCTAssertNotNil(image1)
     }
