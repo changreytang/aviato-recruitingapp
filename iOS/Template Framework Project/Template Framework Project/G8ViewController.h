@@ -15,7 +15,6 @@
                                                 UIImagePickerControllerDelegate,
                                                 UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageToRecognize;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)openCamera:(id)sender;

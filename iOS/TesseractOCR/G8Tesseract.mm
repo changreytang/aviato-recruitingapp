@@ -67,7 +67,6 @@ namespace tesseract {
 
 + (void)didReceiveMemoryWarningNotification:(NSNotification*)notification {
     
-    [self clearCache];
     // some more cleaning here if necessary
 }
 
@@ -77,10 +76,6 @@ namespace tesseract {
     return [NSString stringWithUTF8String:version];
 }
 
-+ (void)clearCache
-{
-    tesseract::TessBaseAPI::ClearPersistentCache();
-}
 
 - (instancetype)init {
     
