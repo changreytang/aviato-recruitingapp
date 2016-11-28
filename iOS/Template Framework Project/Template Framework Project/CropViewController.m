@@ -21,10 +21,12 @@
 - (IBAction)captureCropBox:(id)sender;
 
 
+
 @end
 
-@implementation CropViewController
-
+@implementation CropViewController{
+NSString *contactInfo;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -108,12 +110,13 @@
     // Specify the function block that should be executed when Tesseract
     // finishes performing recognition on the image
     
-    __block NSString *recognizedText = @"";
+    //__block NSString *recognizedText = @"";
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
         // Fetch the recognized text
-        recognizedText = tesseract.recognizedText;
+        NSString *recognizedText = tesseract.recognizedText;
         
         NSLog(@"%@", recognizedText);
+        contactInfo = recognizedText;
         
         // Remove the animated progress activity indicator
         //[self.activityIndicator stopAnimating];
@@ -127,7 +130,7 @@
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
 
-    return recognizedText;
+    return @"";//recognizedText;
 }
 
 
@@ -148,7 +151,7 @@
     [self recognizeImageWithTesseract:image1];
     NSString* c_info = [self recognizeImageWithTesseract:image1];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-                                                    message:c_info
+                                                    message:contactInfo
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
