@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "15AF920E1DEC2B8000129D08"
+               BuildableName = "CropViewControllerTests.xctest"
+               BlueprintName = "CropViewControllerTests"
+               ReferencedContainer = "container:Template Framework Project.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "15AF921C1DEC309900129D08"
+               BuildableName = "ApplicantTests.xctest"
+               BlueprintName = "ApplicantTests"
+               ReferencedContainer = "container:Template Framework Project.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "15AF922A1DEC319D00129D08"
+               BuildableName = "G8ViewControllerTests.xctest"
+               BlueprintName = "G8ViewControllerTests"
+               ReferencedContainer = "container:Template Framework Project.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -145,7 +145,6 @@ UIImage* resumeImage;
 }
 
 
-
 #pragma mark - UIImagePickerController Delegate
 
 -(void)imagePickerController:(UIImagePickerController *)picker

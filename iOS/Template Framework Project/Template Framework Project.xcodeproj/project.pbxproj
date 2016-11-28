@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15AF92121DEC2B8000129D08 /* CropViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF92111DEC2B8000129D08 /* CropViewControllerTests.swift */; };
+		15AF92201DEC309900129D08 /* ApplicantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF921F1DEC309900129D08 /* ApplicantTests.swift */; };
+		15AF922E1DEC319D00129D08 /* G8ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF922D1DEC319D00129D08 /* G8ViewControllerTests.swift */; };
 		15F362191DD3C3DD00C231A3 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
 		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
 		3188732C1DE9120600DF5CDE /* Headers in Sources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
@@ -41,8 +44,58 @@
 		73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		15AF91F51DEC224300129D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+		15AF92051DEC248A00129D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+		15AF92141DEC2B8000129D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+		15AF92221DEC309900129D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+		15AF92301DEC319D00129D08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Template Framework Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF91F01DEC224300129D08 /* TakePictureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakePictureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF92001DEC248900129D08 /* OCRResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCRResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF920A1DEC263600129D08 /* G8ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = G8ViewController.h; sourceTree = "<group>"; };
+		15AF920F1DEC2B8000129D08 /* CropViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF92111DEC2B8000129D08 /* CropViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewControllerTests.swift; sourceTree = "<group>"; };
+		15AF92131DEC2B8000129D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15AF921D1DEC309900129D08 /* ApplicantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF921F1DEC309900129D08 /* ApplicantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantTests.swift; sourceTree = "<group>"; };
+		15AF92211DEC309900129D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15AF922B1DEC319D00129D08 /* G8ViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = G8ViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15AF922D1DEC319D00129D08 /* G8ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G8ViewControllerTests.swift; sourceTree = "<group>"; };
+		15AF922F1DEC319D00129D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15F362181DD3C3DD00C231A3 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
 		31703EA81DCADFB400CD22A4 /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
 		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
@@ -86,7 +139,6 @@
 		6400DDE7180C5DE000443362 /* G8AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = G8AppDelegate.h; sourceTree = "<group>"; };
 		6400DDE8180C5DE000443362 /* G8AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = G8AppDelegate.m; sourceTree = "<group>"; };
 		6400DDEB180C5DE000443362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6400DDED180C5DE000443362 /* G8ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = G8ViewController.h; sourceTree = "<group>"; };
 		6400DDEE180C5DE000443362 /* G8ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = G8ViewController.m; sourceTree = "<group>"; };
 		6400DDF0180C5DE000443362 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6490748F198A5CD500D728CC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -98,6 +150,41 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		15AF91ED1DEC224300129D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF91FD1DEC248900129D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF920C1DEC2B8000129D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF921A1DEC309900129D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF92281DEC319D00129D08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6400DDD2180C5DE000443362 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,12 +202,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15AF92101DEC2B8000129D08 /* CropViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				15AF92111DEC2B8000129D08 /* CropViewControllerTests.swift */,
+				15AF92131DEC2B8000129D08 /* Info.plist */,
+			);
+			path = CropViewControllerTests;
+			sourceTree = "<group>";
+		};
+		15AF921E1DEC309900129D08 /* ApplicantTests */ = {
+			isa = PBXGroup;
+			children = (
+				15AF921F1DEC309900129D08 /* ApplicantTests.swift */,
+				15AF92211DEC309900129D08 /* Info.plist */,
+			);
+			path = ApplicantTests;
+			sourceTree = "<group>";
+		};
+		15AF922C1DEC319D00129D08 /* G8ViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				15AF922D1DEC319D00129D08 /* G8ViewControllerTests.swift */,
+				15AF922F1DEC319D00129D08 /* Info.plist */,
+			);
+			path = G8ViewControllerTests;
+			sourceTree = "<group>";
+		};
 		6400DDCC180C5DE000443362 = {
 			isa = PBXGroup;
 			children = (
 				3188732F1DE9127F00DF5CDE /* XLForm.m */,
 				3188732D1DE9125200DF5CDE /* XL */,
 				6400DDDE180C5DE000443362 /* Template Framework Project */,
+				15AF92101DEC2B8000129D08 /* CropViewControllerTests */,
+				15AF921E1DEC309900129D08 /* ApplicantTests */,
+				15AF922C1DEC319D00129D08 /* G8ViewControllerTests */,
 				6400DDD7180C5DE000443362 /* Frameworks */,
 				6400DDD6180C5DE000443362 /* Products */,
 				A31ED2601496880596E6541B /* Pods */,
@@ -131,6 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				6400DDD5180C5DE000443362 /* Template Framework Project.app */,
+				15AF91F01DEC224300129D08 /* TakePictureTests.xctest */,
+				15AF92001DEC248900129D08 /* OCRResultTests.xctest */,
+				15AF920F1DEC2B8000129D08 /* CropViewControllerTests.xctest */,
+				15AF921D1DEC309900129D08 /* ApplicantTests.xctest */,
+				15AF922B1DEC319D00129D08 /* G8ViewControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,8 +278,8 @@
 				64DDA75A188FD9140025590D /* tessdata */,
 				6400DDE7180C5DE000443362 /* G8AppDelegate.h */,
 				6400DDE8180C5DE000443362 /* G8AppDelegate.m */,
-				6400DDED180C5DE000443362 /* G8ViewController.h */,
 				6400DDEE180C5DE000443362 /* G8ViewController.m */,
+				15AF920A1DEC263600129D08 /* G8ViewController.h */,
 				31C513E01DDE353E002AC8BF /* Applicant.h */,
 				31C513E11DDE353E002AC8BF /* Applicant.m */,
 				31703EA81DCADFB400CD22A4 /* CropViewController.h */,
@@ -217,6 +339,96 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		15AF91EF1DEC224300129D08 /* TakePictureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15AF91F91DEC224300129D08 /* Build configuration list for PBXNativeTarget "TakePictureTests" */;
+			buildPhases = (
+				15AF91EC1DEC224300129D08 /* Sources */,
+				15AF91ED1DEC224300129D08 /* Frameworks */,
+				15AF91EE1DEC224300129D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15AF91F61DEC224300129D08 /* PBXTargetDependency */,
+			);
+			name = TakePictureTests;
+			productName = TakePictureTests;
+			productReference = 15AF91F01DEC224300129D08 /* TakePictureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15AF91FF1DEC248900129D08 /* OCRResultTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15AF92071DEC248A00129D08 /* Build configuration list for PBXNativeTarget "OCRResultTests" */;
+			buildPhases = (
+				15AF91FC1DEC248900129D08 /* Sources */,
+				15AF91FD1DEC248900129D08 /* Frameworks */,
+				15AF91FE1DEC248900129D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15AF92061DEC248A00129D08 /* PBXTargetDependency */,
+			);
+			name = OCRResultTests;
+			productName = OCRResultTests;
+			productReference = 15AF92001DEC248900129D08 /* OCRResultTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15AF920E1DEC2B8000129D08 /* CropViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15AF92161DEC2B8000129D08 /* Build configuration list for PBXNativeTarget "CropViewControllerTests" */;
+			buildPhases = (
+				15AF920B1DEC2B8000129D08 /* Sources */,
+				15AF920C1DEC2B8000129D08 /* Frameworks */,
+				15AF920D1DEC2B8000129D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15AF92151DEC2B8000129D08 /* PBXTargetDependency */,
+			);
+			name = CropViewControllerTests;
+			productName = CropViewControllerTests;
+			productReference = 15AF920F1DEC2B8000129D08 /* CropViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15AF921C1DEC309900129D08 /* ApplicantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15AF92241DEC309900129D08 /* Build configuration list for PBXNativeTarget "ApplicantTests" */;
+			buildPhases = (
+				15AF92191DEC309900129D08 /* Sources */,
+				15AF921A1DEC309900129D08 /* Frameworks */,
+				15AF921B1DEC309900129D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15AF92231DEC309900129D08 /* PBXTargetDependency */,
+			);
+			name = ApplicantTests;
+			productName = ApplicantTests;
+			productReference = 15AF921D1DEC309900129D08 /* ApplicantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15AF922A1DEC319D00129D08 /* G8ViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15AF92321DEC319D00129D08 /* Build configuration list for PBXNativeTarget "G8ViewControllerTests" */;
+			buildPhases = (
+				15AF92271DEC319D00129D08 /* Sources */,
+				15AF92281DEC319D00129D08 /* Frameworks */,
+				15AF92291DEC319D00129D08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15AF92311DEC319D00129D08 /* PBXTargetDependency */,
+			);
+			name = G8ViewControllerTests;
+			productName = G8ViewControllerTests;
+			productReference = 15AF922B1DEC319D00129D08 /* G8ViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6400DDD4180C5DE000443362 /* Template Framework Project */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6400DE07180C5DE100443362 /* Build configuration list for PBXNativeTarget "Template Framework Project" */;
@@ -244,9 +456,35 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = G8;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Daniele Galiotto - www.g8production.com";
 				TargetAttributes = {
+					15AF91EF1DEC224300129D08 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
+					15AF91FF1DEC248900129D08 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
+					15AF920E1DEC2B8000129D08 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
+					15AF921C1DEC309900129D08 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
+					15AF922A1DEC319D00129D08 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
 					6400DDD4180C5DE000443362 = {
 						DevelopmentTeam = SZVLL8KQSW;
 					};
@@ -266,11 +504,51 @@
 			projectRoot = "";
 			targets = (
 				6400DDD4180C5DE000443362 /* Template Framework Project */,
+				15AF91EF1DEC224300129D08 /* TakePictureTests */,
+				15AF91FF1DEC248900129D08 /* OCRResultTests */,
+				15AF920E1DEC2B8000129D08 /* CropViewControllerTests */,
+				15AF921C1DEC309900129D08 /* ApplicantTests */,
+				15AF922A1DEC319D00129D08 /* G8ViewControllerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		15AF91EE1DEC224300129D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF91FE1DEC248900129D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF920D1DEC2B8000129D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF921B1DEC309900129D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF92291DEC319D00129D08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6400DDD3180C5DE000443362 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +613,44 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		15AF91EC1DEC224300129D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF91FC1DEC248900129D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF920B1DEC2B8000129D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15AF92121DEC2B8000129D08 /* CropViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF92191DEC309900129D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15AF92201DEC309900129D08 /* ApplicantTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15AF92271DEC319D00129D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15AF922E1DEC319D00129D08 /* G8ViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6400DDD1180C5DE000443362 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +679,34 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		15AF91F61DEC224300129D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Template Framework Project */;
+			targetProxy = 15AF91F51DEC224300129D08 /* PBXContainerItemProxy */;
+		};
+		15AF92061DEC248A00129D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Template Framework Project */;
+			targetProxy = 15AF92051DEC248A00129D08 /* PBXContainerItemProxy */;
+		};
+		15AF92151DEC2B8000129D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Template Framework Project */;
+			targetProxy = 15AF92141DEC2B8000129D08 /* PBXContainerItemProxy */;
+		};
+		15AF92231DEC309900129D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Template Framework Project */;
+			targetProxy = 15AF92221DEC309900129D08 /* PBXContainerItemProxy */;
+		};
+		15AF92311DEC319D00129D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Template Framework Project */;
+			targetProxy = 15AF92301DEC319D00129D08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		6400DDE1180C5DE000443362 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -383,6 +727,236 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		15AF91F71DEC224300129D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = TakePictureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.TakePictureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Debug;
+		};
+		15AF91F81DEC224300129D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = TakePictureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.TakePictureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Release;
+		};
+		15AF92081DEC248A00129D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = OCRResultTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.OCRResultTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Debug;
+		};
+		15AF92091DEC248A00129D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = OCRResultTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.OCRResultTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Release;
+		};
+		15AF92171DEC2B8000129D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CropViewControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.CropViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Debug;
+		};
+		15AF92181DEC2B8000129D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CropViewControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.CropViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Release;
+		};
+		15AF92251DEC309900129D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ApplicantTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.ApplicantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Debug;
+		};
+		15AF92261DEC309900129D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ApplicantTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.ApplicantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Release;
+		};
+		15AF92331DEC319D00129D08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = G8ViewControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.G8ViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Debug;
+		};
+		15AF92341DEC319D00129D08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = G8ViewControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthewcheung.G8ViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Release;
+		};
 		6400DE05180C5DE100443362 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -533,6 +1107,46 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		15AF91F91DEC224300129D08 /* Build configuration list for PBXNativeTarget "TakePictureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15AF91F71DEC224300129D08 /* Debug */,
+				15AF91F81DEC224300129D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15AF92071DEC248A00129D08 /* Build configuration list for PBXNativeTarget "OCRResultTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15AF92081DEC248A00129D08 /* Debug */,
+				15AF92091DEC248A00129D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15AF92161DEC2B8000129D08 /* Build configuration list for PBXNativeTarget "CropViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15AF92171DEC2B8000129D08 /* Debug */,
+				15AF92181DEC2B8000129D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15AF92241DEC309900129D08 /* Build configuration list for PBXNativeTarget "ApplicantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15AF92251DEC309900129D08 /* Debug */,
+				15AF92261DEC309900129D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15AF92321DEC319D00129D08 /* Build configuration list for PBXNativeTarget "G8ViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15AF92331DEC319D00129D08 /* Debug */,
+				15AF92341DEC319D00129D08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Template Framework Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

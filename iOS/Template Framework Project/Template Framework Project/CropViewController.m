@@ -148,7 +148,6 @@ NSString *contactInfo;
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
     [self recognizeImageWithTesseract:image1];
-    NSString* c_info = [self recognizeImageWithTesseract:image1];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
                                                     message:contactInfo
                                                    delegate:nil
