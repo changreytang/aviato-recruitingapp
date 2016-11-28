@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         // Set up AWS Transfer Manager Request
         let S3BucketName = "workdaycapstonetest"
         let ext = "jpeg"
-        let localFileName = "Random_pyramids" // local file name here
+        let localFileName = "panda" // local file name here
         let remoteName = localFileName + "." + ext
         //let fileName = NSUUID().UUIDString + "." + ext
         let imageURL = Bundle.main.url(forResource: localFileName, withExtension: ext)!

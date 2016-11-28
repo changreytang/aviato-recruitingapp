@@ -1,1 +1,1 @@
-.
+This test aims to send picture from front end to be stored on database. We are using AWS S3 as our datbase to hold images and information. In this test I run various images from the front end and test to see if it is sent and stored in our database. I also test to make sure error messages pops up if image does not exist.
