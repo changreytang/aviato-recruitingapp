@@ -90,9 +90,6 @@ UIImage* resumeImage;
         [alert show];
     };
     
-    // Display the image to be recognized in the view
-     self.imageToRecognize.image = operation.tesseract.thresholdedImage;
-
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
 }

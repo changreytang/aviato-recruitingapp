@@ -47,7 +47,7 @@
                                     <action selector="openCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zIB-3y-4aU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Ei-4qY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Ei-4qY">
                                 <rect key="frame" x="112" y="265" width="98" height="30"/>
                                 <state key="normal" title="Parse Resume">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +66,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ylc-Ei-4qY" firstAttribute="top" secondItem="qou-Zy-wCC" secondAttribute="bottom" constant="15" id="8hp-zZ-h68"/>
                             <constraint firstItem="i3a-Pb-LXN" firstAttribute="top" secondItem="Lfb-xc-blL" secondAttribute="bottom" constant="90" id="Ceh-Ha-EeU"/>
                             <constraint firstItem="i3a-Pb-LXN" firstAttribute="centerX" secondItem="ylc-Ei-4qY" secondAttribute="centerX" id="F7S-Lm-sBW"/>
                             <constraint firstItem="eEi-Aq-Bql" firstAttribute="centerX" secondItem="i3a-Pb-LXN" secondAttribute="centerX" id="JOx-XQ-J2o"/>
