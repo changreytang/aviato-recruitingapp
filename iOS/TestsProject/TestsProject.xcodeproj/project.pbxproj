@@ -15,7 +15,6 @@
 		4115B97B1A3EF8E90004EC0A /* RecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4115B97A1A3EF8E90004EC0A /* RecognitionTests.m */; };
 		4115B9851A3EF9920004EC0A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4115B9841A3EF9920004EC0A /* Launch Screen.xib */; };
 		41184B4B1A3EFA8B007F5923 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41184B4A1A3EFA8B007F5923 /* UIKit.framework */; };
-		41184B4D1A3EFA93007F5923 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 41184B4C1A3EFA93007F5923 /* libstdc++.6.0.9.dylib */; };
 		41184B4F1A3EFA9B007F5923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41184B4E1A3EFA9B007F5923 /* Foundation.framework */; };
 		41184B511A3EFAA8007F5923 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41184B501A3EFAA8007F5923 /* CoreGraphics.framework */; };
 		41184B591A3EFD41007F5923 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 41184B551A3EFCAD007F5923 /* tessdata */; };
@@ -27,12 +26,10 @@
 		41C68DB51A41854600848AE1 /* image_sample_tr.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C68DB41A41854600848AE1 /* image_sample_tr.png */; };
 		732C54761A514DA6000322DA /* InitializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 732C54751A514DA5000322DA /* InitializationTests.m */; };
 		732C54791A5288CC000322DA /* Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 732C54781A5288CC000322DA /* Defaults.m */; };
-		733DD5CD1A5E7CE50042374D /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DD5CC1A5E7CE50042374D /* TesseractOCR.framework */; };
 		733DD5E71A64300E0042374D /* RecognizedBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 733DD5E61A64300E0042374D /* RecognizedBlock.m */; };
 		736EFF271A5882730031B432 /* tessdata-rus in Resources */ = {isa = PBXBuildFile; fileRef = 736EFF231A5872CA0031B432 /* tessdata-rus */; };
 		73BE4C311A5B404C002C15F1 /* well_scaned_page.hOCR in Resources */ = {isa = PBXBuildFile; fileRef = 73BE4C301A5B404C002C15F1 /* well_scaned_page.hOCR */; };
 		73BE4C351A5BD324002C15F1 /* image_sample.hOCR in Resources */ = {isa = PBXBuildFile; fileRef = 73BE4C341A5BD324002C15F1 /* image_sample.hOCR */; };
-		73BE4C441A5DADDD002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C431A5DADDD002C15F1 /* TesseractOCR.framework */; };
 		84E1362A1B66AF480062F5A2 /* image_sample_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84E136291B66AF480062F5A2 /* image_sample_right.jpg */; };
 		84E1362C1B66AF6F0062F5A2 /* image_sample_down.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84E1362B1B66AF6F0062F5A2 /* image_sample_down.jpg */; };
 		84E1362E1B66B7950062F5A2 /* image_sample_down_mirrored.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84E1362D1B66B7950062F5A2 /* image_sample_down_mirrored.jpg */; };
@@ -51,7 +48,6 @@
 		F1A7AB8E1B34B91000FE9650 /* well_scaned_page.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F1A7AB8D1B34B91000FE9650 /* well_scaned_page.pdf */; };
 		F1D1AFF21B4580C100AB59EE /* well_scaned_page.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D1AFF11B4580C100AB59EE /* well_scaned_page.png */; };
 		F1DF11991AE5772400FA6F5D /* image_sample_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1DF11981AE5772400FA6F5D /* image_sample_left.jpg */; };
-		F7959C6116F2156CB5124892 /* libPods-TestsProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3A246CF7FFB53AE1486CC8 /* libPods-TestsProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +63,6 @@
 /* Begin PBXFileReference section */
 		1339C6EF4019C5B096CA457E /* Pods-TestsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsProject.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TestsProject/Pods-TestsProject.release.xcconfig"; sourceTree = "<group>"; };
 		15930F291DB74DA300112AE3 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
-		2D3A246CF7FFB53AE1486CC8 /* libPods-TestsProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestsProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4115B95B1A3EF8E90004EC0A /* TestsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4115B95F1A3EF8E90004EC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4115B9601A3EF8E90004EC0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,7 +76,6 @@
 		4115B97A1A3EF8E90004EC0A /* RecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognitionTests.m; sourceTree = "<group>"; };
 		4115B9841A3EF9920004EC0A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		41184B4A1A3EFA8B007F5923 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		41184B4C1A3EFA93007F5923 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		41184B4E1A3EFA9B007F5923 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		41184B501A3EFAA8007F5923 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		41184B551A3EFCAD007F5923 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = TestsProjectTests/tessdata; sourceTree = SOURCE_ROOT; };
@@ -94,16 +88,13 @@
 		41C68DB21A41849100848AE1 /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
 		41C68DB41A41854600848AE1 /* image_sample_tr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_sample_tr.png; sourceTree = "<group>"; };
 		590F24EE548A45AE8FB45B4C /* Pods-TestsProject.coverage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsProject.coverage.xcconfig"; path = "../Pods/Target Support Files/Pods-TestsProject/Pods-TestsProject.coverage.xcconfig"; sourceTree = "<group>"; };
-		5CD3C116A45C293ADAC81D1B /* libPods-TestsProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestsProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		732C54751A514DA5000322DA /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
 		732C54771A5288CC000322DA /* Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defaults.h; sourceTree = "<group>"; };
 		732C54781A5288CC000322DA /* Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defaults.m; sourceTree = "<group>"; };
-		733DD5CC1A5E7CE50042374D /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../build/Debug-iphoneos/TesseractOCR.framework"; sourceTree = "<group>"; };
 		733DD5E61A64300E0042374D /* RecognizedBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecognizedBlock.m; sourceTree = "<group>"; };
 		736EFF231A5872CA0031B432 /* tessdata-rus */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "tessdata-rus"; path = "TestsProjectTests/tessdata-rus"; sourceTree = SOURCE_ROOT; };
 		73BE4C301A5B404C002C15F1 /* well_scaned_page.hOCR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = well_scaned_page.hOCR; sourceTree = "<group>"; };
 		73BE4C341A5BD324002C15F1 /* image_sample.hOCR */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = image_sample.hOCR; sourceTree = "<group>"; };
-		73BE4C431A5DADDD002C15F1 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../build/Debug-iphoneos/TesseractOCR.framework"; sourceTree = "<group>"; };
 		73C0A7BC1A59561F00D823D4 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E136291B66AF480062F5A2 /* image_sample_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample_right.jpg; sourceTree = "<group>"; };
 		84E1362B1B66AF6F0062F5A2 /* image_sample_down.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample_down.jpg; sourceTree = "<group>"; };
@@ -133,12 +124,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15930F2A1DB74DA300112AE3 /* libz.1.1.3.tbd in Frameworks */,
-				73BE4C441A5DADDD002C15F1 /* TesseractOCR.framework in Frameworks */,
-				41184B4D1A3EFA93007F5923 /* libstdc++.6.0.9.dylib in Frameworks */,
 				41184B511A3EFAA8007F5923 /* CoreGraphics.framework in Frameworks */,
 				41184B4F1A3EFA9B007F5923 /* Foundation.framework in Frameworks */,
 				41184B4B1A3EFA8B007F5923 /* UIKit.framework in Frameworks */,
-				F7959C6116F2156CB5124892 /* libPods-TestsProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733DD5CD1A5E7CE50042374D /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,15 +217,10 @@
 			isa = PBXGroup;
 			children = (
 				15930F291DB74DA300112AE3 /* libz.1.1.3.tbd */,
-				733DD5CC1A5E7CE50042374D /* TesseractOCR.framework */,
-				73BE4C431A5DADDD002C15F1 /* TesseractOCR.framework */,
 				73C0A7BC1A59561F00D823D4 /* TesseractOCR.framework */,
 				41184B501A3EFAA8007F5923 /* CoreGraphics.framework */,
 				41184B4E1A3EFA9B007F5923 /* Foundation.framework */,
-				41184B4C1A3EFA93007F5923 /* libstdc++.6.0.9.dylib */,
 				41184B4A1A3EFA8B007F5923 /* UIKit.framework */,
-				5CD3C116A45C293ADAC81D1B /* libPods-TestsProjectTests.a */,
-				2D3A246CF7FFB53AE1486CC8 /* libPods-TestsProject.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

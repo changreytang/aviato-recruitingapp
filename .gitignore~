@@ -3,4 +3,4 @@ build
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 
-iOS/Template Framework Project/ExternalFramework/*
+iOS/Template Framework Project/ExternalFramework
