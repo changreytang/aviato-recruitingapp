@@ -7,7 +7,6 @@
 //  All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <TesseractOCR/TesseractOCR.h>
 @class CropViewController;
 

@@ -11,7 +11,6 @@
 #import "ResumeContactParser.h"
 #import "Headers/TOCropViewController.h"
 
-
 @interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
 

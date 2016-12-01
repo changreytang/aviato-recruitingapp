@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="RBs-UX-pra">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -167,6 +167,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTA-rF-seZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1009" y="42"/>
+        </scene>
+        <!--Preprocess View Controller-->
+        <scene sceneID="rUE-cq-ULM">
+            <objects>
+                <viewController id="RBs-UX-pra" customClass="PreprocessViewController" customModule="Template_Framework_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n0H-EF-gJo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lrg-Pn-271"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TEJ-H7-fuV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Iw-Xet">
+                                <rect key="frame" x="38" y="28" width="300" height="490"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-9G-l2B">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="DVX-te-dVM"/>
+                                            <constraint firstAttribute="height" constant="400" id="Myl-YF-tKg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON4-jr-HxC">
+                                        <rect key="frame" x="97.5" y="400" width="105" height="30"/>
+                                        <state key="normal" title="Detect Corners"/>
+                                        <connections>
+                                            <action selector="detectCorners:" destination="RBs-UX-pra" eventType="touchUpInside" id="ob7-Mb-osb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-Gb-pUn">
+                                        <rect key="frame" x="99.5" y="430" width="101" height="30"/>
+                                        <state key="normal" title="Process Image"/>
+                                        <connections>
+                                            <action selector="processImage:" destination="RBs-UX-pra" eventType="touchUpInside" id="lAb-Id-ldl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-hH-lmd">
+                                        <rect key="frame" x="130.5" y="460" width="39" height="30"/>
+                                        <state key="normal" title="Parse"/>
+                                        <connections>
+                                            <action selector="parseText:" destination="RBs-UX-pra" eventType="touchUpInside" id="wzH-ao-KCG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="DK5-9G-l2B" id="hqP-le-uSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIx-hM-EX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462.5" y="-20.5"/>
         </scene>
     </scenes>
     <resources>
