@@ -129,6 +129,7 @@ NSString *contactInfo;
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
 
+    //SEND contactInfo TO PARSER THEN TO FORM
     return @"";//recognizedText;
 }
 

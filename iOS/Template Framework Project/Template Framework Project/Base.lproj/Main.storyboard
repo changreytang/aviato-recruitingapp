@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89R-8Y-enu">
-                                <rect key="frame" x="151" y="617" width="72" height="30"/>
+                                <rect key="frame" x="117" y="617" width="140" height="30"/>
                                 <state key="normal" title="Applicant"/>
                                 <connections>
                                     <segue destination="5s4-dS-o9f" kind="modal" id="0zG-Cd-dBc"/>
@@ -132,7 +132,7 @@
                             <constraint firstItem="Ug4-1H-kiu" firstAttribute="leading" secondItem="Z2e-Zc-oYi" secondAttribute="leading" id="TRh-5k-VVY"/>
                             <constraint firstAttribute="bottom" secondItem="rl2-3p-qzU" secondAttribute="bottom" constant="20" symbolic="YES" id="UWl-j9-n95"/>
                             <constraint firstItem="5iB-tc-pIt" firstAttribute="top" secondItem="uex-EQ-qbq" secondAttribute="bottom" constant="65" id="crf-3X-b4e"/>
-                            <constraint firstItem="89R-8Y-enu" firstAttribute="leading" secondItem="Ug4-1H-kiu" secondAttribute="trailing" constant="81" id="gSc-3M-oko"/>
+                            <constraint firstItem="89R-8Y-enu" firstAttribute="leading" secondItem="Ug4-1H-kiu" secondAttribute="trailing" constant="47" id="gSc-3M-oko"/>
                             <constraint firstItem="Ug4-1H-kiu" firstAttribute="top" secondItem="rl2-3p-qzU" secondAttribute="top" id="kIG-az-8pK"/>
                             <constraint firstItem="uex-EQ-qbq" firstAttribute="top" secondItem="iTQ-Af-NsV" secondAttribute="bottom" id="mFf-ht-SxN"/>
                             <constraint firstItem="uex-EQ-qbq" firstAttribute="centerX" secondItem="Z2e-Zc-oYi" secondAttribute="centerX" id="pWg-tR-V9U"/>
