@@ -9,7 +9,8 @@
 #import "XLFormViewController.h"
 #import "Applicant.h"
 
-@interface ApplicantViewController : XLFormViewController{
-    Applicant *applicantInfo;
-}
+@interface ApplicantViewController : XLFormViewController
+
+@property Applicant *applicantInstance;
+@property NSString* rawInfo;
 @end

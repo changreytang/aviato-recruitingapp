@@ -3,13 +3,13 @@
 //  Template Framework Project
 //
 //  Created by Tim Liew on 11/2/16.
-//  Copyright © 2016 Daniele Galiotto - www.g8production.com. All rights reserved.
 //
 
 #import "CropViewController.h"
 #import "G8ViewController.h"
 #import "ResumeContactParser.h"
 #import "Headers/TOCropViewController.h"
+#import "ApplicantViewController.h"
 
 
 @interface CropViewController () <TOCropViewControllerDelegate>
@@ -161,6 +161,15 @@ NSString *contactInfo;
     //[self.resumeImageView setImage:image1];
 }
 
+// Sends resume image from camera to other CropViewController
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"applicantFormSegue"]){
+        ApplicantViewController *controller = (ApplicantViewController *)segue.destinationViewController;
+        //This should be passing in applicant class which should already be intialized and set through the parser.
+        controller.rawInfo = contactInfo;
+        
+    }
+}
 
 @end
 

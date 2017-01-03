@@ -13,6 +13,7 @@
     NSString* email;
     NSString* address;
     NSString* phoneNum;
+    NSString* rawInfo;
 }
 
 -(void)initApplicant:(NSString*)aName withEmail:(NSString*)aEmail withPhoneNum:(NSString*)aPhoneNum withAddress:(NSString*)aAddress {

@@ -70,24 +70,24 @@ static NSString *const kNotes = @"notes";
     // Name
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kName rowType:XLFormRowDescriptorTypeText title:@"Name"];
     row.required = YES;
-    row.value = @"Tim MLiew";
+    row.value = self.rawInfo;
     [section addFormRow:row];
     
     // Email
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kEmail rowType:XLFormRowDescriptorTypeEmail title:@"Email"];
     // validate the email
     [row addValidator:[XLFormValidator emailValidator]];
-    row.value = @"tmliew@umal.ucsb.edu";
+    row.value = self.rawInfo;
     [section addFormRow:row];
     
     // Phone
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kPhone rowType:XLFormRowDescriptorTypePhone title:@"Phone"];
-    row.value = @"4083913282";
+    row.value = self.rawInfo;
     [section addFormRow:row];
     
     // Address
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kZipCode rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
-    row.value = @"6669 Sueno Rd, Isla Vista, CA93117";
+    row.value = self.rawInfo;
     [section addFormRow:row];
     
     // Twitter
