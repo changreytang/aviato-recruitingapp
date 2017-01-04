@@ -149,15 +149,15 @@ NSString *contactInfo;
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
     [self recognizeImageWithTesseract:image1];
-    NSString* c_info = [self recognizeImageWithTesseract:image1];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-                                                    message:contactInfo
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-    //ResumeContactParser* parser = [[ResumeContactParser alloc] init];
-    //[parser parseContactInfo:c_info];
+    //NSString* c_info = [self recognizeImageWithTesseract:image1];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+//                                                    message:contactInfo
+//                                                   delegate:nil
+//                                          cancelButtonTitle:@"OK"
+//                                          otherButtonTitles:nil];
+//    [alert show];
+    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
+    [parser parseContactInfo:@"Rey Tang tang.changrey@gmail.com (510)283-1574"];
     //[self.resumeImageView setImage:image1];
 }
 

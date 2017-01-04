@@ -15,5 +15,6 @@
 @property (readonly, nonatomic) NSString* phone_number;
 
 - (void)parseContactInfo:(NSString*)contact_info;
+- (void)consoleLog:(NSString*)info;
 
 @end
