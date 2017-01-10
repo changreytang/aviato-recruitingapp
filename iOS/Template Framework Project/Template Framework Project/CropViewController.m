@@ -115,7 +115,10 @@ NSString *contactInfo;
         NSString *recognizedText = tesseract.recognizedText;
         
         NSLog(@"%@", recognizedText);
-        contactInfo = recognizedText;
+        //contactInfo = recognizedText;
+        
+        ResumeContactParser* parser = [[ResumeContactParser alloc] init];
+        [parser parseContactInfo:recognizedText];
         
         // Remove the animated progress activity indicator
         //[self.activityIndicator stopAnimating];
@@ -150,14 +153,15 @@ NSString *contactInfo;
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
     [self recognizeImageWithTesseract:image1];
     //NSString* c_info = [self recognizeImageWithTesseract:image1];
+    //NSString* test = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
 //                                                    message:contactInfo
 //                                                   delegate:nil
 //                                          cancelButtonTitle:@"OK"
 //                                          otherButtonTitles:nil];
 //    [alert show];
-    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
-    [parser parseContactInfo:@"Rey Tang tang.changrey@gmail.com (510)283-1574"];
+//    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
+//    [parser parseContactInfo:test];
     //[self.resumeImageView setImage:image1];
 }
 
