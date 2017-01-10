@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="RBs-UX-pra">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="RBs-UX-pra">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -180,32 +180,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Iw-Xet">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Iw-Xet">
                                 <rect key="frame" x="38" y="28" width="300" height="490"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-9G-l2B">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-9G-l2B">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="DVX-te-dVM"/>
                                             <constraint firstAttribute="height" constant="400" id="Myl-YF-tKg"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON4-jr-HxC">
-                                        <rect key="frame" x="97.5" y="400" width="105" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON4-jr-HxC">
+                                        <rect key="frame" x="98" y="400" width="104" height="30"/>
                                         <state key="normal" title="Detect Corners"/>
                                         <connections>
                                             <action selector="detectCorners:" destination="RBs-UX-pra" eventType="touchUpInside" id="ob7-Mb-osb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-Gb-pUn">
-                                        <rect key="frame" x="99.5" y="430" width="101" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-Gb-pUn">
+                                        <rect key="frame" x="99" y="430" width="102" height="30"/>
                                         <state key="normal" title="Process Image"/>
                                         <connections>
                                             <action selector="processImage:" destination="RBs-UX-pra" eventType="touchUpInside" id="lAb-Id-ldl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-hH-lmd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-hH-lmd">
                                         <rect key="frame" x="130.5" y="460" width="39" height="30"/>
                                         <state key="normal" title="Parse"/>
                                         <connections>
@@ -213,9 +212,18 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DK5-9G-l2B" secondAttribute="trailing" id="KxW-mW-Dnf"/>
+                                    <constraint firstItem="ON4-jr-HxC" firstAttribute="leading" secondItem="eNd-Iw-Xet" secondAttribute="leading" constant="98" id="cOW-80-xY2"/>
+                                    <constraint firstAttribute="trailing" secondItem="eJf-Gb-pUn" secondAttribute="trailing" constant="99" id="kwS-mo-jm2"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eNd-Iw-Xet" firstAttribute="leading" secondItem="TEJ-H7-fuV" secondAttribute="leadingMargin" constant="22" id="5NY-y2-YU2"/>
+                            <constraint firstItem="eNd-Iw-Xet" firstAttribute="top" secondItem="n0H-EF-gJo" secondAttribute="bottom" constant="8" symbolic="YES" id="YxD-jg-Wxp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="DK5-9G-l2B" id="hqP-le-uSg"/>

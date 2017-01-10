@@ -7,21 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1540914F1DEF9363003C43BD /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33871DEE3AEB005C94A2 /* DrawAction.framework */; };
-		154091501DEF9363003C43BD /* DrawAction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33871DEE3AEB005C94A2 /* DrawAction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		154091511DEF9363003C43BD /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33881DEE3AEB005C94A2 /* DynamicTesseractOCR.framework */; };
-		154091521DEF9363003C43BD /* DynamicTesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33881DEE3AEB005C94A2 /* DynamicTesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		154091531DEF9363003C43BD /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33891DEE3AEB005C94A2 /* OpenCV.framework */; };
-		154091541DEF9363003C43BD /* OpenCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33891DEE3AEB005C94A2 /* OpenCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		154091551DEF9363003C43BD /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC338A1DEE3AEB005C94A2 /* WDReceiptOCR.framework */; };
-		154091561DEF9363003C43BD /* WDReceiptOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC338A1DEE3AEB005C94A2 /* WDReceiptOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		154091571DEF9363003C43BD /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC338B1DEE3AEB005C94A2 /* WDUtils.framework */; };
-		154091581DEF9363003C43BD /* WDUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC338B1DEE3AEB005C94A2 /* WDUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15EC338C1DEE3AEB005C94A2 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33871DEE3AEB005C94A2 /* DrawAction.framework */; };
-		15EC338D1DEE3AEB005C94A2 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33881DEE3AEB005C94A2 /* DynamicTesseractOCR.framework */; };
-		15EC338E1DEE3AEB005C94A2 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC33891DEE3AEB005C94A2 /* OpenCV.framework */; };
-		15EC338F1DEE3AEB005C94A2 /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC338A1DEE3AEB005C94A2 /* WDReceiptOCR.framework */; };
-		15EC33901DEE3AEB005C94A2 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EC338B1DEE3AEB005C94A2 /* WDUtils.framework */; };
+		15692D611E1A46EA00A5FB96 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D471E1A46A900A5FB96 /* DrawAction.framework */; };
+		15692D631E1A46EA00A5FB96 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D491E1A46A900A5FB96 /* OpenCV.framework */; };
+		15692D651E1A46EA00A5FB96 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D4B1E1A46A900A5FB96 /* WDUtils.framework */; };
+		15692D671E1A470F00A5FB96 /* DrawAction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D471E1A46A900A5FB96 /* DrawAction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15692D691E1A470F00A5FB96 /* DynamicTesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D481E1A46A900A5FB96 /* DynamicTesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15692D6B1E1A470F00A5FB96 /* OpenCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D491E1A46A900A5FB96 /* OpenCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15692D6C1E1A470F00A5FB96 /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D4A1E1A46A900A5FB96 /* WDReceiptOCR.framework */; };
+		15692D6D1E1A470F00A5FB96 /* WDReceiptOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D4A1E1A46A900A5FB96 /* WDReceiptOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15692D6F1E1A470F00A5FB96 /* WDUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 15692D4B1E1A46A900A5FB96 /* WDUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15EC33931DEF8318005C94A2 /* PreprocessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC33921DEF8318005C94A2 /* PreprocessViewController.swift */; };
 		15F362191DD3C3DD00C231A3 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
 		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
@@ -31,14 +25,6 @@
 		31C513E21DDE353E002AC8BF /* Applicant.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E11DDE353E002AC8BF /* Applicant.m */; };
 		31C513E51DDE6D8A002AC8BF /* ApplicantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */; };
 		31C513E81DDE6E5A002AC8BF /* ResumeContactParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */; };
-		31C514021DE4298B002AC8BF /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */; };
-		31C514031DE4298B002AC8BF /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */; };
-		31C514041DE4298B002AC8BF /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F41DE4298B002AC8BF /* TOCroppedImageAttributes.m */; };
-		31C514051DE4298B002AC8BF /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F61DE4298B002AC8BF /* TOCropScrollView.m */; };
-		31C514061DE4298B002AC8BF /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F81DE4298B002AC8BF /* TOCropToolbar.m */; };
-		31C514071DE4298B002AC8BF /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FA1DE4298B002AC8BF /* TOCropView.m */; };
-		31C514081DE4298B002AC8BF /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FD1DE4298B002AC8BF /* TOCropViewController.m */; };
-		31C514091DE4298B002AC8BF /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */; };
 		31C5140A1DE4298B002AC8BF /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */; };
 		428615B71845F340005D5A2E /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428615B61845F340005D5A2E /* image_sample.jpg */; };
 		58583EB8A3673FAF5607A4D3 /* libPods-Template Framework Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */; };
@@ -56,17 +42,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		154091591DEF9364003C43BD /* Embed Frameworks */ = {
+		15692D701E1A470F00A5FB96 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				154091541DEF9363003C43BD /* OpenCV.framework in Embed Frameworks */,
-				154091561DEF9363003C43BD /* WDReceiptOCR.framework in Embed Frameworks */,
-				154091521DEF9363003C43BD /* DynamicTesseractOCR.framework in Embed Frameworks */,
-				154091501DEF9363003C43BD /* DrawAction.framework in Embed Frameworks */,
-				154091581DEF9363003C43BD /* WDUtils.framework in Embed Frameworks */,
+				15692D6B1E1A470F00A5FB96 /* OpenCV.framework in Embed Frameworks */,
+				15692D6D1E1A470F00A5FB96 /* WDReceiptOCR.framework in Embed Frameworks */,
+				15692D691E1A470F00A5FB96 /* DynamicTesseractOCR.framework in Embed Frameworks */,
+				15692D671E1A470F00A5FB96 /* DrawAction.framework in Embed Frameworks */,
+				15692D6F1E1A470F00A5FB96 /* WDUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +61,11 @@
 
 /* Begin PBXFileReference section */
 		0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Template Framework Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15692D471E1A46A900A5FB96 /* DrawAction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DrawAction.framework; path = "../../../../../Downloads/Frameworks-1/DrawAction.framework"; sourceTree = "<group>"; };
+		15692D481E1A46A900A5FB96 /* DynamicTesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicTesseractOCR.framework; path = "../../../../../Downloads/Frameworks-1/DynamicTesseractOCR.framework"; sourceTree = "<group>"; };
+		15692D491E1A46A900A5FB96 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCV.framework; path = "../../../../../Downloads/Frameworks-1/OpenCV.framework"; sourceTree = "<group>"; };
+		15692D4A1E1A46A900A5FB96 /* WDReceiptOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WDReceiptOCR.framework; path = "../../../../../Downloads/Frameworks-1/WDReceiptOCR.framework"; sourceTree = "<group>"; };
+		15692D4B1E1A46A900A5FB96 /* WDUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WDUtils.framework; path = "../../../../../Downloads/Frameworks-1/WDUtils.framework"; sourceTree = "<group>"; };
 		15EC33871DEE3AEB005C94A2 /* DrawAction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DrawAction.framework; path = ExternalFramework/DrawAction.framework; sourceTree = "<group>"; };
 		15EC33881DEE3AEB005C94A2 /* DynamicTesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicTesseractOCR.framework; path = ExternalFramework/DynamicTesseractOCR.framework; sourceTree = "<group>"; };
 		15EC33891DEE3AEB005C94A2 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCV.framework; path = ExternalFramework/OpenCV.framework; sourceTree = "<group>"; };
@@ -93,23 +84,6 @@
 		31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicantViewController.m; sourceTree = "<group>"; };
 		31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeContactParser.h; sourceTree = "<group>"; };
 		31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeContactParser.m; sourceTree = "<group>"; };
-		31C513EF1DE4298B002AC8BF /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOActivityCroppedImageProvider.h; path = Headers/TOActivityCroppedImageProvider.h; sourceTree = "<group>"; };
-		31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = Headers/TOActivityCroppedImageProvider.m; sourceTree = "<group>"; };
-		31C513F11DE4298B002AC8BF /* TOCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = Headers/TOCropOverlayView.h; sourceTree = "<group>"; };
-		31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = Headers/TOCropOverlayView.m; sourceTree = "<group>"; };
-		31C513F31DE4298B002AC8BF /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCroppedImageAttributes.h; path = Headers/TOCroppedImageAttributes.h; sourceTree = "<group>"; };
-		31C513F41DE4298B002AC8BF /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCroppedImageAttributes.m; path = Headers/TOCroppedImageAttributes.m; sourceTree = "<group>"; };
-		31C513F51DE4298B002AC8BF /* TOCropScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = Headers/TOCropScrollView.h; sourceTree = "<group>"; };
-		31C513F61DE4298B002AC8BF /* TOCropScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = Headers/TOCropScrollView.m; sourceTree = "<group>"; };
-		31C513F71DE4298B002AC8BF /* TOCropToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = Headers/TOCropToolbar.h; sourceTree = "<group>"; };
-		31C513F81DE4298B002AC8BF /* TOCropToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = Headers/TOCropToolbar.m; sourceTree = "<group>"; };
-		31C513F91DE4298B002AC8BF /* TOCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = Headers/TOCropView.h; sourceTree = "<group>"; };
-		31C513FA1DE4298B002AC8BF /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropView.m; path = Headers/TOCropView.m; sourceTree = "<group>"; };
-		31C513FB1DE4298B002AC8BF /* TOCropViewController-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TOCropViewController-Bridging-Header.h"; path = "Headers/TOCropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
-		31C513FC1DE4298B002AC8BF /* TOCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropViewController.h; path = Headers/TOCropViewController.h; sourceTree = "<group>"; };
-		31C513FD1DE4298B002AC8BF /* TOCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropViewController.m; path = Headers/TOCropViewController.m; sourceTree = "<group>"; };
-		31C513FE1DE4298B002AC8BF /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = Headers/TOCropViewControllerTransitioning.h; sourceTree = "<group>"; };
-		31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = Headers/TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
 		31C514001DE4298B002AC8BF /* UIImage+CropRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropRotate.h"; path = "Headers/UIImage+CropRotate.h"; sourceTree = "<group>"; };
 		31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropRotate.m"; path = "Headers/UIImage+CropRotate.m"; sourceTree = "<group>"; };
 		391DBEDB21F7D2ECE09B2AAC /* Pods-Template Framework Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Framework Project.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Template Framework Project/Pods-Template Framework Project.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,21 +113,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				154091511DEF9363003C43BD /* DynamicTesseractOCR.framework in Frameworks */,
-				15EC338C1DEE3AEB005C94A2 /* DrawAction.framework in Frameworks */,
-				15EC338D1DEE3AEB005C94A2 /* DynamicTesseractOCR.framework in Frameworks */,
-				15EC338E1DEE3AEB005C94A2 /* OpenCV.framework in Frameworks */,
-				15EC338F1DEE3AEB005C94A2 /* WDReceiptOCR.framework in Frameworks */,
-				154091551DEF9363003C43BD /* WDReceiptOCR.framework in Frameworks */,
-				15EC33901DEE3AEB005C94A2 /* WDUtils.framework in Frameworks */,
+				15692D611E1A46EA00A5FB96 /* DrawAction.framework in Frameworks */,
+				15692D631E1A46EA00A5FB96 /* OpenCV.framework in Frameworks */,
+				15692D6C1E1A470F00A5FB96 /* WDReceiptOCR.framework in Frameworks */,
+				15692D651E1A46EA00A5FB96 /* WDUtils.framework in Frameworks */,
 				64907490198A5CD500D728CC /* CoreImage.framework in Frameworks */,
 				6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */,
 				6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */,
-				154091531DEF9363003C43BD /* OpenCV.framework in Frameworks */,
-				1540914F1DEF9363003C43BD /* DrawAction.framework in Frameworks */,
 				6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */,
 				58583EB8A3673FAF5607A4D3 /* libPods-Template Framework Project.a in Frameworks */,
-				154091571DEF9363003C43BD /* WDUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +151,11 @@
 		6400DDD7180C5DE000443362 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15692D471E1A46A900A5FB96 /* DrawAction.framework */,
+				15692D481E1A46A900A5FB96 /* DynamicTesseractOCR.framework */,
+				15692D491E1A46A900A5FB96 /* OpenCV.framework */,
+				15692D4A1E1A46A900A5FB96 /* WDReceiptOCR.framework */,
+				15692D4B1E1A46A900A5FB96 /* WDUtils.framework */,
 				15EC33871DEE3AEB005C94A2 /* DrawAction.framework */,
 				15EC33881DEE3AEB005C94A2 /* DynamicTesseractOCR.framework */,
 				15EC33891DEE3AEB005C94A2 /* OpenCV.framework */,
@@ -214,23 +187,6 @@
 				31C513E31DDE6D8A002AC8BF /* ApplicantViewController.h */,
 				31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */,
 				31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */,
-				31C513EF1DE4298B002AC8BF /* TOActivityCroppedImageProvider.h */,
-				31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */,
-				31C513F11DE4298B002AC8BF /* TOCropOverlayView.h */,
-				31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */,
-				31C513F31DE4298B002AC8BF /* TOCroppedImageAttributes.h */,
-				31C513F41DE4298B002AC8BF /* TOCroppedImageAttributes.m */,
-				31C513F51DE4298B002AC8BF /* TOCropScrollView.h */,
-				31C513F61DE4298B002AC8BF /* TOCropScrollView.m */,
-				31C513F71DE4298B002AC8BF /* TOCropToolbar.h */,
-				31C513F81DE4298B002AC8BF /* TOCropToolbar.m */,
-				31C513F91DE4298B002AC8BF /* TOCropView.h */,
-				31C513FA1DE4298B002AC8BF /* TOCropView.m */,
-				31C513FB1DE4298B002AC8BF /* TOCropViewController-Bridging-Header.h */,
-				31C513FC1DE4298B002AC8BF /* TOCropViewController.h */,
-				31C513FD1DE4298B002AC8BF /* TOCropViewController.m */,
-				31C513FE1DE4298B002AC8BF /* TOCropViewControllerTransitioning.h */,
-				31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */,
 				31C514001DE4298B002AC8BF /* UIImage+CropRotate.h */,
 				31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */,
 				31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */,
@@ -277,7 +233,7 @@
 				6400DDD3180C5DE000443362 /* Resources */,
 				41040937EDF8B1C4E172C24B /* [CP] Embed Pods Frameworks */,
 				126FD3AD7C827CEDEFEC00D3 /* [CP] Copy Pods Resources */,
-				154091591DEF9364003C43BD /* Embed Frameworks */,
+				15692D701E1A470F00A5FB96 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,7 +251,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = G8;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Daniele Galiotto - www.g8production.com";
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
@@ -395,18 +351,10 @@
 				3188732E1DE9125200DF5CDE /* XL in Sources */,
 				3188732C1DE9120600DF5CDE /* Headers in Sources */,
 				6400DDE5180C5DE000443362 /* main.m in Sources */,
-				31C514081DE4298B002AC8BF /* TOCropViewController.m in Sources */,
 				6400DDE9180C5DE000443362 /* G8AppDelegate.m in Sources */,
 				15EC33931DEF8318005C94A2 /* PreprocessViewController.swift in Sources */,
-				31C514091DE4298B002AC8BF /* TOCropViewControllerTransitioning.m in Sources */,
-				31C514031DE4298B002AC8BF /* TOCropOverlayView.m in Sources */,
 				31C513E21DDE353E002AC8BF /* Applicant.m in Sources */,
 				31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */,
-				31C514041DE4298B002AC8BF /* TOCroppedImageAttributes.m in Sources */,
-				31C514021DE4298B002AC8BF /* TOActivityCroppedImageProvider.m in Sources */,
-				31C514051DE4298B002AC8BF /* TOCropScrollView.m in Sources */,
-				31C514071DE4298B002AC8BF /* TOCropView.m in Sources */,
-				31C514061DE4298B002AC8BF /* TOCropToolbar.m in Sources */,
 				6400DDEF180C5DE000443362 /* G8ViewController.m in Sources */,
 				31C513E51DDE6D8A002AC8BF /* ApplicantViewController.m in Sources */,
 				31C5140A1DE4298B002AC8BF /* UIImage+CropRotate.m in Sources */,
@@ -518,6 +466,7 @@
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-lstdc++";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -535,12 +484,13 @@
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/ExternalFramework",
+					"$(PROJECT_DIR)",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Template Framework Project/Template Framework Project-Prefix.pch";
 				INFOPLIST_FILE = "Template Framework Project/Template Framework Project-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -571,12 +521,13 @@
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
 					"$(PROJECT_DIR)/ExternalFramework",
+					"$(PROJECT_DIR)",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Template Framework Project/Template Framework Project-Prefix.pch";
 				INFOPLIST_FILE = "Template Framework Project/Template Framework Project-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (

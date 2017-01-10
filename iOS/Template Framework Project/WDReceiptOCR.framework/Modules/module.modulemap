@@ -1,0 +1,10 @@
+framework module WDReceiptOCR {
+  umbrella header "WDReceiptOCR.h"
+
+  export *
+  module * { export * }
+}
+
+module WDReceiptOCR.Swift {
+    header "WDReceiptOCR-Swift.h"
+}
