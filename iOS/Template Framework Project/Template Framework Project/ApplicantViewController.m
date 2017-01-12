@@ -10,16 +10,11 @@
 
 static NSString *const kName = @"name";
 static NSString *const kEmail = @"email";
-static NSString *const kTwitter = @"twitter";
-static NSString *const kZipCode = @"zipCode";
-static NSString *const kNumber = @"number";
-static NSString *const kInteger = @"integer";
-static NSString *const kDecimal = @"decimal";
-static NSString *const kPassword = @"password";
 static NSString *const kPhone = @"phone";
-static NSString *const kUrl = @"url";
-static NSString *const kTextView = @"textView";
+static NSString *const kAddress = @"address";
+static NSString *const kWebsite = @"websites";
 static NSString *const kNotes = @"notes";
+static NSString *const kSelectorAlertView = @"selectorAlertView";
 
 @interface ApplicantViewController ()
 
@@ -64,7 +59,7 @@ static NSString *const kNotes = @"notes";
     
     // Basic Information - Section
     section = [XLFormSectionDescriptor formSectionWithTitle:@"TextField Types"];
-    section.footerTitle = @"This is a long text that will appear on section footer";
+    section.footerTitle = @"Aviato";
     [form addFormSection:section];
     
     // Name
@@ -86,48 +81,25 @@ static NSString *const kNotes = @"notes";
     [section addFormRow:row];
     
     // Address
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kZipCode rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kAddress rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
     row.value = self.rawInfo;
     [section addFormRow:row];
     
-    // Twitter
-//    row = [XLFormRowDescriptor formRowDescriptorWithTag:kTwitter rowType:XLFormRowDescriptorTypeTwitter title:@"Twitter"];
-//    row.disabled = @YES;
-//    row.value = @"@no_editable";
-//    [section addFormRow:row];
+    // Websites
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kWebsite rowType:XLFormRowDescriptorTypeURL title:@"Websites"];
+    [section addFormRow:row];
+
+//    section = [XLFormSectionDescriptor formSection];
+//    [form addFormSection:section];
     
-    
-    // Number
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kNumber rowType:XLFormRowDescriptorTypeNumber title:@"Number"];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kSelectorAlertView rowType:XLFormRowDescriptorTypeSelectorAlertView title:@"Position Type"];
+    row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"Full Time"],
+                            [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"Part Time"],
+                            [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Internship"],
+                            ];
+    row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
     [section addFormRow:row];
     
-    // Integer
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kInteger rowType:XLFormRowDescriptorTypeInteger title:@"Integer"];
-    [section addFormRow:row];
-    
-    // Decimal
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kDecimal rowType:XLFormRowDescriptorTypeDecimal title:@"Decimal"];
-    [section addFormRow:row];
-    
-    // Password
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kPassword rowType:XLFormRowDescriptorTypePassword title:@"Password"];
-    [section addFormRow:row];
-    
-    // Url
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kUrl rowType:XLFormRowDescriptorTypeURL title:@"Url"];
-    [section addFormRow:row];
-    
-    
-    section = [XLFormSectionDescriptor formSection];
-    [form addFormSection:section];
-    
-    
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kTextView rowType:XLFormRowDescriptorTypeTextView];
-    [row.cellConfigAtConfigure setObject:@"TEXT VIEW EXAMPLE" forKey:@"textView.placeholder"];
-    [section addFormRow:row];
-    
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"TextView With Label Example"];
-    [form addFormSection:section];
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
     [section addFormRow:row];
     

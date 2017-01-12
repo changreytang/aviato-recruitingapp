@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "30E7960CA2347DCEE62C7A01277C9416"
-               BuildableName = "libXLForm-iOS10.0.a"
-               BlueprintName = "XLForm-iOS10.0"
+               BlueprintIdentifier = "99CB6621E6FECB33C0DAEBE3B571E703"
+               BuildableName = "XLForm.framework"
+               BlueprintName = "XLForm-framework"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30E7960CA2347DCEE62C7A01277C9416"
-            BuildableName = "libXLForm-iOS10.0.a"
-            BlueprintName = "XLForm-iOS10.0"
+            BlueprintIdentifier = "99CB6621E6FECB33C0DAEBE3B571E703"
+            BuildableName = "XLForm.framework"
+            BlueprintName = "XLForm-framework"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30E7960CA2347DCEE62C7A01277C9416"
-            BuildableName = "libXLForm-iOS10.0.a"
-            BlueprintName = "XLForm-iOS10.0"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -85,13 +85,10 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/XLForm-framework/XLForm.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/XLForm-framework/XLForm.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
 fi
 if [[ "$CONFIGURATION" == "Coverage" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/XLForm-framework/XLForm.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
 fi

@@ -19,6 +19,6 @@ workspace 'Tesseract-OCR-iOS'
 target 'Template Framework Project' do
        use_frameworks!
         pod 'XLForm' , '~> 3.0'
-	pod 'Alamofire' , '~> 4.0'
+	#pod 'Alamofire' , '~> 4.0'
 
 end
