@@ -46,5 +46,16 @@
 -(void)setName:(NSString*)aName{
     name = aName;
 }
+-(NSData*)toJSON{
+    
+    NSDictionary *gradedetails = @{@"studentresult" : @"pass", @"marksheet" : @"provided"};
+    NSDictionary *grade = @{ @"Grade1" : gradedetails}
+    NSDictionary *contactInfo = @{@"firstName" : name, @"lastName" : name, @"Student1" : @"Name"};
+    NSArray *resultsArray = @[grade, sdetails];
+    NSDictionary *results= @{@"results" : resultsArray};
+    NSDictionary *stud = @{@"Students" : results};
+    
+    NSData *jsondata = [NSJSONSerialization dataWithJSONObject:stud options:NSJSONWritingPrettyPrinted error:&error];
+}
 
 @end

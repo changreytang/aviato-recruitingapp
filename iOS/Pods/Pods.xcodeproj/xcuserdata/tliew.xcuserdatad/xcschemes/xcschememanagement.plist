@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kiwi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,12 +29,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>XLForm-iOS10.0.xcscheme</key>
+		<key>XLForm-framework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>XLForm-iOS8.0.xcscheme</key>
+		<key>XLForm-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,22 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CD0FEB9AAE4B44DB59150626EAE4BCB</key>
+		<key>1F250B23C4DA16AA11835252A8757363</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2AF5899BD4B40F5CD7B9BD3D96696EF4</key>
+		<key>49FA767FBA625A8F523B3A24CD1FCADD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30E7960CA2347DCEE62C7A01277C9416</key>
+		<key>6521E34F66DF46FD3D7A10F8C91EE69B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66CC6271DC33579B926649FC455C799E</key>
+		<key>66B239826EF1D39D2D6C594AC2DBFF77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7AD9E924DE4FE5588595F37549F430C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A439AF69B7501368099AB574DACCF25A</key>
+		<key>D9D29040E92E06AC3FE3E77346E719D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

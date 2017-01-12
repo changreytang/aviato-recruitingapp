@@ -1,18 +1,21 @@
 PODS:
+  - Alamofire (4.2.0)
   - Kiwi (2.3.1)
   - TesseractOCRiOS (4.0.0)
   - XLForm (3.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - Kiwi (~> 2.3.1)
   - TesseractOCRiOS (= 4.0.0)
   - XLForm (~> 3.0)
 
 SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
   XLForm: d5c391dfc62865927b5bcab0a5a0dbfb3e02b0ec
 
-PODFILE CHECKSUM: b4b20454862605dabbf50070eb9c534a8f4f8548
+PODFILE CHECKSUM: b5c587d9563073b3a366a060091b83d81aed1e45
 
 COCOAPODS: 1.1.1

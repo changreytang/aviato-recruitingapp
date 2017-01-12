@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1CD0FEB9AAE4B44DB59150626EAE4BCB'
-               BlueprintName = 'XLForm-iOS8.0'
+               BlueprintIdentifier = '66B239826EF1D39D2D6C594AC2DBFF77'
+               BlueprintName = 'Alamofire'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libXLForm-iOS8.0.a'>
+               BuildableName = 'Alamofire.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

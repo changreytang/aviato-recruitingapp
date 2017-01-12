@@ -2,8 +2,23 @@ source 'https://github.com/CocoaPods/Specs.git'
 workspace 'Tesseract-OCR-iOS'
 xcodeproj 'TestsProject/TestsProject.xcodeproj/', 'Coverage' => :debug
 
-target 'TestsProjectTests' do
-
+target 'TestsProject' do
+        workspace 'Tesseract-OCR-iOS'
+	xcodeproj 'TestsProject/TestsProject.xcodeproj/', 'Coverage' => :debug
 	pod 'Kiwi', '~> 2.3.1'
+
+	pod 'TesseractOCRiOS', '4.0.0'
+
+	pod 'XLForm' , '~> 3.0'
+
+end
+
+xcodeproj 'Template Framework Project/Template Framework Project.xcodeproj/'
+workspace 'Tesseract-OCR-iOS'
+
+target 'Template Framework Project' do
+
+        pod 'XLForm' , '~> 3.0'
+	pod 'Alamofire' , '~> 4.0'
 
 end
