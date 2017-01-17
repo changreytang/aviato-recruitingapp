@@ -10,5 +10,6 @@
 
 @interface HTTPRequester : NSObject <NSURLConnectionDataDelegate>
 
+- (void)sendHttpPost:(NSData *)postData;
 
 @end

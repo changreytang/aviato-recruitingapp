@@ -10,6 +10,7 @@
 #import "ResumeContactParser.h"
 #import "Headers/TOCropViewController.h"
 #import "ApplicantViewController.h"
+#import "Applicant.h"
 
 
 @interface CropViewController () <TOCropViewControllerDelegate>

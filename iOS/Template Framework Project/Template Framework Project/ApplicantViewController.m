@@ -32,6 +32,7 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
 //    [super didReceiveMemoryWarning];
 //    // Dispose of any resources that can be recreated.
 //}
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self){
@@ -51,14 +52,15 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
 #pragma mark - Helper
 
 - (void)initializeForm {
-    XLFormDescriptor * form = [XLFormDescriptor formDescriptorWithTitle:@"Text Fields"];
+    XLFormDescriptor * form = [XLFormDescriptor formDescriptorWithTitle:@"Applicant Information"];
     XLFormSectionDescriptor * section;
     XLFormRowDescriptor * row;
     
     form.assignFirstResponderOnShow = YES;
     
+    
     // Basic Information - Section
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"TextField Types"];
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"Contact Information"];
     section.footerTitle = @"Aviato";
     [form addFormSection:section];
     
@@ -107,4 +109,32 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
 
 }
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    navBar.backgroundColor = [UIColor whiteColor];
+    
+    UINavigationItem *navItem = [[UINavigationItem alloc] init];
+    navItem.title = @"Applicant Information";
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backBtnPressed:)];
+    navItem.leftBarButtonItem = leftButton;
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnPressed:)];
+    navItem.rightBarButtonItem = rightButton;
+    
+    navBar.items = @[navItem];
+    
+    [self.view addSubview:navBar];
+}
+
+-(void)doneBtnPressed:(UIBarButtonItem * )button{
+
+}
+
+/*
+-(IBAction)doneBtnClicked:(id)sender{
+
+}
+ */
 @end
