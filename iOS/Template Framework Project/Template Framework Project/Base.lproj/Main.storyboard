@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="q5t-TG-z1W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,7 +15,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="G8ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rootVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="G8ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lfb-xc-blL"/>
                         <viewControllerLayoutGuide type="bottom" id="RCk-I1-Jc5"/>
@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qou-Zy-wCC">
-                                <rect key="frame" x="80" y="220" width="162" height="30"/>
+                                <rect key="frame" x="80" y="264" width="162" height="30"/>
                                 <state key="normal" title="Take Picture of Resume">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylc-Ei-4qY">
-                                <rect key="frame" x="112" y="265" width="98" height="30"/>
+                                <rect key="frame" x="112" y="309" width="98" height="30"/>
                                 <state key="normal" title="Parse Resume">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -43,14 +43,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-Aq-Bql">
-                                <rect key="frame" x="120" y="341" width="134" height="30"/>
+                                <rect key="frame" x="120" y="385" width="134" height="30"/>
                                 <state key="normal" title="Open Photo Library"/>
                                 <connections>
                                     <action selector="openPhotoLibrary:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3zu-Ex-ZNX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="RtD-VI-1Dm">
-                                <rect key="frame" x="53" y="134" width="240" height="64"/>
+                                <rect key="frame" x="53" y="178" width="240" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="3sc-Fg-qhp"/>
                                 </constraints>
@@ -71,12 +71,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="7dy-Dw-G37"/>
                     <connections>
-                        <segue destination="8Xu-M3-c6R" kind="modal" identifier="cropSegue" id="N8f-5k-6tk"/>
+                        <segue destination="8Xu-M3-c6R" kind="push" identifier="cropSegue" id="N8f-5k-6tk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.5" y="35.5"/>
+            <point key="canvasLocation" x="626.5" y="35.5"/>
         </scene>
         <!--Crop View Controller-->
         <scene sceneID="2C0-oy-LKl">
@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uex-EQ-qbq">
-                                <rect key="frame" x="8" y="20" width="359" height="582"/>
+                                <rect key="frame" x="8" y="64" width="359" height="538"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-1H-kiu">
                                 <rect key="frame" x="0.0" y="615" width="70" height="32"/>
@@ -101,7 +101,7 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButton:" destination="8Xu-M3-c6R" eventType="touchUpInside" id="pVO-Xj-UuE"/>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="anZ-ac-AwS"/>
+                                    <segue destination="q5t-TG-z1W" kind="modal" id="anZ-ac-AwS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-3p-qzU">
@@ -118,7 +118,7 @@
                                 <rect key="frame" x="117" y="617" width="140" height="30"/>
                                 <state key="normal" title="Applicant"/>
                                 <connections>
-                                    <segue destination="5s4-dS-o9f" kind="modal" identifier="applicantFormSegue" id="0zG-Cd-dBc"/>
+                                    <action selector="newApplicantBtn:" destination="8Xu-M3-c6R" eventType="touchUpInside" id="pdy-g9-RRq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOx-0o-pap">
@@ -149,12 +149,12 @@
                     <navigationItem key="navigationItem" id="mV5-DV-Jf3"/>
                     <connections>
                         <outlet property="resumeImageView" destination="uex-EQ-qbq" id="woP-Aa-myB"/>
-                        <segue destination="5s4-dS-o9f" kind="modal" id="jEh-gH-gWS"/>
+                        <segue destination="5s4-dS-o9f" kind="push" identifier="applicantVCSegue" id="jEh-gH-gWS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS5-UQ-vXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503.5" y="35.5"/>
+            <point key="canvasLocation" x="1090.5" y="35.5"/>
         </scene>
         <!--Applicant View Controller-->
         <scene sceneID="DdR-4H-WaR">
@@ -167,32 +167,31 @@
                     <view key="view" contentMode="scaleToFill" id="z1h-5j-eyn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbx-Xh-HiG">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Applicant" id="h9K-tn-4Ad">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="FxM-Xb-Jo8">
-                                            <connections>
-                                                <segue destination="8Xu-M3-c6R" kind="modal" id="NwA-Ok-r7J"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="v1e-Yl-UiF" firstAttribute="top" secondItem="sbx-Xh-HiG" secondAttribute="bottom" constant="603" id="6G4-Ah-p7K"/>
-                            <constraint firstItem="sbx-Xh-HiG" firstAttribute="top" secondItem="vpW-Px-372" secondAttribute="bottom" id="N5T-hk-c5X"/>
-                            <constraint firstItem="sbx-Xh-HiG" firstAttribute="leading" secondItem="z1h-5j-eyn" secondAttribute="leadingMargin" constant="-16" id="UnE-xk-3Ld"/>
-                            <constraint firstItem="sbx-Xh-HiG" firstAttribute="centerX" secondItem="z1h-5j-eyn" secondAttribute="centerX" id="cL5-Jb-Mqk"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="d4h-ot-3EK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTA-rF-seZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="42"/>
+            <point key="canvasLocation" x="1595.5" y="41.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="96k-7b-QYf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q5t-TG-z1W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3YO-wx-BRT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="iMV-Jo-53K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5K-OV-Lku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39.5" y="35.5"/>
         </scene>
     </scenes>
     <resources>
@@ -203,8 +202,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="0zG-Cd-dBc"/>
-        <segue reference="NwA-Ok-r7J"/>
-    </inferredMetricsTieBreakers>
 </document>

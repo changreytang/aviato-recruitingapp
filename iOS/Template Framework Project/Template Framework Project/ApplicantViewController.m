@@ -61,7 +61,7 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     
     // Basic Information - Section
     section = [XLFormSectionDescriptor formSectionWithTitle:@"Contact Information"];
-    section.footerTitle = @"Aviato";
+    //section.footerTitle = @"Aviato";
     [form addFormSection:section];
     
     // Name
@@ -102,6 +102,12 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
     [section addFormRow:row];
     
+    // For Recruiter - Section
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"For Recruiter"];
+    section.footerTitle = @"Aviato";
+    [form addFormSection:section];
+    
+    //Notes for recruiter
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
     [section addFormRow:row];
     
@@ -111,6 +117,7 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    /*
     UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
     navBar.backgroundColor = [UIColor whiteColor];
     
@@ -126,12 +133,16 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     navBar.items = @[navItem];
     
     [self.view addSubview:navBar];
+     */
 }
 
 -(void)doneBtnPressed:(UIBarButtonItem * )button{
 
 }
 
+-(void)backBtnPressed:(UIBarButtonItem *)button{
+    
+}
 /*
 -(IBAction)doneBtnClicked:(id)sender{
 
