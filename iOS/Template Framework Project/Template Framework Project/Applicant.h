@@ -19,6 +19,7 @@
 -(void)setPhoneNumber:(NSString*)phoneNum;
 -(void)setAddress:(NSString*)address;
 -(void)setName:(NSString*)name;
+-(NSData*)toJSON;
 
 @end
 

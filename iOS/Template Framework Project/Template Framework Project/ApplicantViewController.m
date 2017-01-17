@@ -7,6 +7,7 @@
 
 #import "ApplicantViewController.h"
 #import "XLForm.h"
+#import "HTTPRequester.h"
 
 static NSString *const kName = @"name";
 static NSString *const kEmail = @"email";
@@ -117,35 +118,23 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    /*
-    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
-    navBar.backgroundColor = [UIColor whiteColor];
     
-    UINavigationItem *navItem = [[UINavigationItem alloc] init];
-    navItem.title = @"Applicant Information";
-    
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backBtnPressed:)];
-    navItem.leftBarButtonItem = leftButton;
-    
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnPressed:)];
-    navItem.rightBarButtonItem = rightButton;
-    
-    navBar.items = @[navItem];
-    
-    [self.view addSubview:navBar];
-     */
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(doneBtnPressed:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 -(void)doneBtnPressed:(UIBarButtonItem * )button{
-
-}
-
--(void)backBtnPressed:(UIBarButtonItem *)button{
+    NSLog(@"%@",self.formValues);
+    NSDictionary * values = self.formValues;
+    Applicant * newApplicant = [[Applicant alloc] init];
+    [newApplicant initApplicant:[values objectForKey:@"name"] withEmail:[values objectForKey:@"email"] withPhoneNum:[values objectForKey:@"phone"] withAddress:[values objectForKey:@"address"]];
+    //HTTPRequester *requester = [[HTTPRequester alloc] init];
+    NSData * jsonToSend = [newApplicant toJSON];
+    [[[HTTPRequester alloc] init] sendHttpPost:jsonToSend];
+    
     
 }
-/*
--(IBAction)doneBtnClicked:(id)sender{
 
-}
- */
+
 @end
