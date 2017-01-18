@@ -121,10 +121,6 @@
                                     <action selector="newApplicantBtn:" destination="8Xu-M3-c6R" eventType="touchUpInside" id="pdy-g9-RRq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOx-0o-pap">
-                                <rect key="frame" x="251" y="617" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,9 +131,7 @@
                             <constraint firstAttribute="trailing" secondItem="rl2-3p-qzU" secondAttribute="trailing" id="QBE-Dm-tbU"/>
                             <constraint firstItem="Ug4-1H-kiu" firstAttribute="leading" secondItem="Z2e-Zc-oYi" secondAttribute="leading" id="TRh-5k-VVY"/>
                             <constraint firstAttribute="bottom" secondItem="rl2-3p-qzU" secondAttribute="bottom" constant="20" symbolic="YES" id="UWl-j9-n95"/>
-                            <constraint firstItem="lOx-0o-pap" firstAttribute="baseline" secondItem="89R-8Y-enu" secondAttribute="baseline" id="WVx-UR-vJw"/>
                             <constraint firstItem="5iB-tc-pIt" firstAttribute="top" secondItem="uex-EQ-qbq" secondAttribute="bottom" constant="65" id="crf-3X-b4e"/>
-                            <constraint firstItem="rl2-3p-qzU" firstAttribute="leading" secondItem="lOx-0o-pap" secondAttribute="trailing" constant="8" symbolic="YES" id="emt-b8-42z"/>
                             <constraint firstItem="89R-8Y-enu" firstAttribute="leading" secondItem="Ug4-1H-kiu" secondAttribute="trailing" constant="47" id="gSc-3M-oko"/>
                             <constraint firstItem="Ug4-1H-kiu" firstAttribute="top" secondItem="rl2-3p-qzU" secondAttribute="top" id="kIG-az-8pK"/>
                             <constraint firstItem="uex-EQ-qbq" firstAttribute="top" secondItem="iTQ-Af-NsV" secondAttribute="bottom" id="mFf-ht-SxN"/>
@@ -180,7 +174,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q5t-TG-z1W" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3YO-wx-BRT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3YO-wx-BRT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -27,6 +27,7 @@
     NSURLConnection *conn = [NSURLConnection connectionWithRequest:request delegate:self];
     if(conn) {
         NSLog(@"Connection Successful");
+        NSLog(@"%@",[[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding]);
     } else {
         NSLog(@"Connection could not be made");
     }

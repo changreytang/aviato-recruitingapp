@@ -128,10 +128,22 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     NSLog(@"%@",self.formValues);
     NSDictionary * values = self.formValues;
     Applicant * newApplicant = [[Applicant alloc] init];
-    [newApplicant initApplicant:[values objectForKey:@"name"] withEmail:[values objectForKey:@"email"] withPhoneNum:[values objectForKey:@"phone"] withAddress:[values objectForKey:@"address"]];
+    NSString *aName = [NSString stringWithString:[values valueForKey:@"name"]];
+    NSString *aEmail = [NSString stringWithString:[values valueForKey:@"email"]];
+    NSString *aPhone = [NSString stringWithString:[values valueForKey:@"phone"]];
+    NSString *aAddr = [NSString stringWithString:[values valueForKey:@"address"]];
+    //NSArray *aSites = [NSString stringWithString:[values valueForKey:@"websites"]];
+    [newApplicant setName:aName];
+    [newApplicant setEmail:aEmail];
+    [newApplicant setPhoneNumber:aPhone];
+    [newApplicant setAddress:aAddr];
+    //[newApplicant setWebsites:[aSites objectAtIndex:0]];
+
+    //[newApplicant initApplicant:aName withEmail:aEmail withPhoneNum:aPhone withAddress:aAddr];
     //HTTPRequester *requester = [[HTTPRequester alloc] init];
     NSData * jsonToSend = [newApplicant toJSON];
     [[[HTTPRequester alloc] init] sendHttpPost:jsonToSend];
+    //NSLog
     
     
 }
