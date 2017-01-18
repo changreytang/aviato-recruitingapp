@@ -171,7 +171,6 @@ NSString *contactInfo;
         ApplicantViewController *controller = (ApplicantViewController *)segue.destinationViewController;
         //This should be passing in applicant class which should already be intialized and set through the parser.
         controller.rawInfo = contactInfo;
-        
     }
 }
 
