@@ -7,19 +7,15 @@
 
 #import "ApplicantViewController.h"
 #import "XLForm.h"
+#import "HTTPRequester.h"
 
 static NSString *const kName = @"name";
 static NSString *const kEmail = @"email";
-static NSString *const kTwitter = @"twitter";
-static NSString *const kZipCode = @"zipCode";
-static NSString *const kNumber = @"number";
-static NSString *const kInteger = @"integer";
-static NSString *const kDecimal = @"decimal";
-static NSString *const kPassword = @"password";
 static NSString *const kPhone = @"phone";
-static NSString *const kUrl = @"url";
-static NSString *const kTextView = @"textView";
+static NSString *const kAddress = @"address";
+static NSString *const kWebsite = @"websites";
 static NSString *const kNotes = @"notes";
+static NSString *const kSelectorAlertView = @"selectorAlertView";
 
 @interface ApplicantViewController ()
 
@@ -37,6 +33,7 @@ static NSString *const kNotes = @"notes";
 //    [super didReceiveMemoryWarning];
 //    // Dispose of any resources that can be recreated.
 //}
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self){
@@ -56,15 +53,16 @@ static NSString *const kNotes = @"notes";
 #pragma mark - Helper
 
 - (void)initializeForm {
-    XLFormDescriptor * form = [XLFormDescriptor formDescriptorWithTitle:@"Text Fields"];
+    XLFormDescriptor * form = [XLFormDescriptor formDescriptorWithTitle:@"Applicant Information"];
     XLFormSectionDescriptor * section;
     XLFormRowDescriptor * row;
     
     form.assignFirstResponderOnShow = YES;
     
+    
     // Basic Information - Section
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"TextField Types"];
-    section.footerTitle = @"This is a long text that will appear on section footer";
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"Contact Information"];
+    //section.footerTitle = @"Aviato";
     [form addFormSection:section];
     
     // Name
@@ -86,53 +84,69 @@ static NSString *const kNotes = @"notes";
     [section addFormRow:row];
     
     // Address
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kZipCode rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kAddress rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
     row.value = self.rawInfo;
     [section addFormRow:row];
     
-    // Twitter
-//    row = [XLFormRowDescriptor formRowDescriptorWithTag:kTwitter rowType:XLFormRowDescriptorTypeTwitter title:@"Twitter"];
-//    row.disabled = @YES;
-//    row.value = @"@no_editable";
-//    [section addFormRow:row];
+    // Websites
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kWebsite rowType:XLFormRowDescriptorTypeURL title:@"Websites"];
+    [section addFormRow:row];
+
+//    section = [XLFormSectionDescriptor formSection];
+//    [form addFormSection:section];
     
-    
-    // Number
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kNumber rowType:XLFormRowDescriptorTypeNumber title:@"Number"];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kSelectorAlertView rowType:XLFormRowDescriptorTypeSelectorAlertView title:@"Position Type"];
+    row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"Full Time"],
+                            [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"Part Time"],
+                            [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Internship"],
+                            ];
+    row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
     [section addFormRow:row];
     
-    // Integer
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kInteger rowType:XLFormRowDescriptorTypeInteger title:@"Integer"];
-    [section addFormRow:row];
-    
-    // Decimal
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kDecimal rowType:XLFormRowDescriptorTypeDecimal title:@"Decimal"];
-    [section addFormRow:row];
-    
-    // Password
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kPassword rowType:XLFormRowDescriptorTypePassword title:@"Password"];
-    [section addFormRow:row];
-    
-    // Url
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kUrl rowType:XLFormRowDescriptorTypeURL title:@"Url"];
-    [section addFormRow:row];
-    
-    
-    section = [XLFormSectionDescriptor formSection];
+    // For Recruiter - Section
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"For Recruiter"];
+    section.footerTitle = @"Aviato";
     [form addFormSection:section];
     
-    
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kTextView rowType:XLFormRowDescriptorTypeTextView];
-    [row.cellConfigAtConfigure setObject:@"TEXT VIEW EXAMPLE" forKey:@"textView.placeholder"];
-    [section addFormRow:row];
-    
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"TextView With Label Example"];
-    [form addFormSection:section];
+    //Notes for recruiter
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
     [section addFormRow:row];
     
     self.form = form;
 
 }
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(doneBtnPressed:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+-(void)doneBtnPressed:(UIBarButtonItem * )button{
+    NSLog(@"%@",self.formValues);
+    NSDictionary * values = self.formValues;
+    Applicant * newApplicant = [[Applicant alloc] init];
+    NSString *aName = [NSString stringWithString:[values valueForKey:@"name"]];
+    NSString *aEmail = [NSString stringWithString:[values valueForKey:@"email"]];
+    NSString *aPhone = [NSString stringWithString:[values valueForKey:@"phone"]];
+    NSString *aAddr = [NSString stringWithString:[values valueForKey:@"address"]];
+    //NSArray *aSites = [NSString stringWithString:[values valueForKey:@"websites"]];
+    [newApplicant setName:aName];
+    [newApplicant setEmail:aEmail];
+    [newApplicant setPhoneNumber:aPhone];
+    [newApplicant setAddress:aAddr];
+    //[newApplicant setWebsites:[aSites objectAtIndex:0]];
+
+    //[newApplicant initApplicant:aName withEmail:aEmail withPhoneNum:aPhone withAddress:aAddr];
+    //HTTPRequester *requester = [[HTTPRequester alloc] init];
+    NSData * jsonToSend = [newApplicant toJSON];
+    [[[HTTPRequester alloc] init] sendHttpPost:jsonToSend];
+    //NSLog
+    
+    
+}
+
 
 @end

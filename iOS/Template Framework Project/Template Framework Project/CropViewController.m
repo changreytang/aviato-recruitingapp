@@ -10,6 +10,7 @@
 #import "ResumeContactParser.h"
 #import "Headers/TOCropViewController.h"
 #import "ApplicantViewController.h"
+#import "Applicant.h"
 
 
 @interface CropViewController () <TOCropViewControllerDelegate>
@@ -164,10 +165,13 @@ NSString *contactInfo;
 //    [parser parseContactInfo:test];
     //[self.resumeImageView setImage:image1];
 }
+- (IBAction)newApplicantBtn:(id)sender {
+    [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
+}
 
 // Sends resume image from camera to other CropViewController
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"applicantFormSegue"]){
+    if([segue.identifier isEqualToString:@"applicantVCSegue"]){
         ApplicantViewController *controller = (ApplicantViewController *)segue.destinationViewController;
         //This should be passing in applicant class which should already be intialized and set through the parser.
         controller.rawInfo = contactInfo;

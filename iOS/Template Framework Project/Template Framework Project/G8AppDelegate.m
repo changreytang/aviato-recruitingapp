@@ -9,12 +9,14 @@
 // testing
 
 #import "G8AppDelegate.h"
+#import "G8ViewController.h"
 
 @implementation G8AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+ 
     return YES;
 }
 

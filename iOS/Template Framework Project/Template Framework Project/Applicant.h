@@ -15,10 +15,15 @@
 -(NSString*)getPhoneNumber;
 -(NSString*)getAddress;
 -(NSString*)getEmail;
+-(NSString*)getWebsites;
+
 -(void)setEmail:(NSString*)email;
 -(void)setPhoneNumber:(NSString*)phoneNum;
 -(void)setAddress:(NSString*)address;
 -(void)setName:(NSString*)name;
+-(void)setWebsites:(NSArray*)aWebsite;
+
+-(NSData*)toJSON;
 
 @end
 
