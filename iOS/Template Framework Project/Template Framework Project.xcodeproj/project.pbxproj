@@ -39,7 +39,18 @@
 		64DDA75B188FD9140025590D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 64DDA75A188FD9140025590D /* tessdata */; };
 		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
 		73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
+		C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3EBF1A71E301B8C00F4054E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Template Framework Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +106,9 @@
 		6CF9B2403D6C27E98536FAEE /* Pods-Template Framework Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Framework Project.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Template Framework Project/Pods-Template Framework Project.release.xcconfig"; sourceTree = "<group>"; };
 		73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../build/Debug-iphoneos/TesseractOCR.framework"; sourceTree = "<group>"; };
 		73C0A7BE1A59565100D823D4 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBF1A21E301B8C00F4054E /* Template Framework ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Template Framework ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Template_Framework_ProjectTests.m; sourceTree = "<group>"; };
+		C3EBF1A61E301B8C00F4054E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3EBF19F1E301B8C00F4054E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,6 +142,7 @@
 				3188732F1DE9127F00DF5CDE /* XLForm.m */,
 				3188732D1DE9125200DF5CDE /* XL */,
 				6400DDDE180C5DE000443362 /* Template Framework Project */,
+				C3EBF1A31E301B8C00F4054E /* Template Framework ProjectTests */,
 				6400DDD7180C5DE000443362 /* Frameworks */,
 				6400DDD6180C5DE000443362 /* Products */,
 				A31ED2601496880596E6541B /* Pods */,
@@ -131,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				6400DDD5180C5DE000443362 /* Template Framework Project.app */,
+				C3EBF1A21E301B8C00F4054E /* Template Framework ProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,6 +237,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C3EBF1A31E301B8C00F4054E /* Template Framework ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */,
+				C3EBF1A61E301B8C00F4054E /* Info.plist */,
+			);
+			path = "Template Framework ProjectTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +269,24 @@
 			productReference = 6400DDD5180C5DE000443362 /* Template Framework Project.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C3EBF1A11E301B8C00F4054E /* Template Framework ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3EBF1AB1E301B8C00F4054E /* Build configuration list for PBXNativeTarget "Template Framework ProjectTests" */;
+			buildPhases = (
+				C3EBF19E1E301B8C00F4054E /* Sources */,
+				C3EBF19F1E301B8C00F4054E /* Frameworks */,
+				C3EBF1A01E301B8C00F4054E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EBF1A81E301B8C00F4054E /* PBXTargetDependency */,
+			);
+			name = "Template Framework ProjectTests";
+			productName = "Template Framework ProjectTests";
+			productReference = C3EBF1A21E301B8C00F4054E /* Template Framework ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,6 +299,11 @@
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
 						DevelopmentTeam = SZVLL8KQSW;
+					};
+					C3EBF1A11E301B8C00F4054E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
 					};
 				};
 			};
@@ -266,6 +321,7 @@
 			projectRoot = "";
 			targets = (
 				6400DDD4180C5DE000443362 /* Template Framework Project */,
+				C3EBF1A11E301B8C00F4054E /* Template Framework ProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +337,13 @@
 				15F362191DD3C3DD00C231A3 /* Headers in Resources */,
 				6400DDE3180C5DE000443362 /* InfoPlist.strings in Resources */,
 				64DDA74E188FD7D10025590D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBF1A01E301B8C00F4054E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +424,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3EBF19E1E301B8C00F4054E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3EBF1A81E301B8C00F4054E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Template Framework Project */;
+			targetProxy = C3EBF1A71E301B8C00F4054E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6400DDE1180C5DE000443362 /* InfoPlist.strings */ = {
@@ -530,6 +609,45 @@
 			};
 			name = Release;
 		};
+		C3EBF1A91E301B8C00F4054E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Template Framework ProjectTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.changreytang.test.Template-Framework-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Debug;
+		};
+		C3EBF1AA1E301B8C00F4054E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Template Framework ProjectTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.changreytang.test.Template-Framework-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Template Framework Project.app/Template Framework Project";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -550,6 +668,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C3EBF1AB1E301B8C00F4054E /* Build configuration list for PBXNativeTarget "Template Framework ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EBF1A91E301B8C00F4054E /* Debug */,
+				C3EBF1AA1E301B8C00F4054E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
