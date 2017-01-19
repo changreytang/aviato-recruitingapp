@@ -11,5 +11,7 @@
 @interface HTTPRequester : NSObject <NSURLConnectionDataDelegate>
 
 - (void)sendHttpPost:(NSData *)postData;
+- (void)sendHttpPostPicture:(UIImage *)imageToPost withID:(NSString *)currentID;
+
 
 @end

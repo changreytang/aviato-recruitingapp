@@ -11,7 +11,7 @@
 #import "Headers/TOCropViewController.h"
 #import "ApplicantViewController.h"
 #import "Applicant.h"
-
+#import "HTTPRequester.h"
 
 @interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
@@ -30,7 +30,10 @@ NSString *contactInfo;
     
     // Create a queue to perform recognition operations
     self.operationQueue = [[NSOperationQueue alloc] init];
+    
+    NSString *randID = [[NSProcessInfo processInfo] globallyUniqueString];
 
+    [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: randID];
 
 }
 
