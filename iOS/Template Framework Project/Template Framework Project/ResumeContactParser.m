@@ -61,11 +61,16 @@
         }
     }
     
-    [self consoleLog:[contact_array componentsJoinedByString:@","]];
-    [self consoleLog:[numbers componentsJoinedByString:@""]];
-    [self consoleLog:[emails componentsJoinedByString:@""]];
-    [self consoleLog:[websites componentsJoinedByString:@""]];
-    [self consoleLog:[names componentsJoinedByString:@" "]];
+    [self setNames:names];
+    [self setEmails:emails];
+    [self setPhoneNumbers:numbers];
+    [self setWebsites:websites];
+    
+    //[self consoleLog:[contact_array componentsJoinedByString:@","]];
+    //[self consoleLog:[numbers componentsJoinedByString:@""]];
+    //[self consoleLog:[emails componentsJoinedByString:@""]];
+    //[self consoleLog:[websites componentsJoinedByString:@""]];
+    //[self consoleLog:[names componentsJoinedByString:@" "]];
 }
 
 //// Spawn an alert with the recognized text
