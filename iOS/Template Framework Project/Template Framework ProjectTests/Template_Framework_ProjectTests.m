@@ -56,7 +56,7 @@
     parsed_str = @"tang.changrey@gmail.com erictang@gmail.com";
     resume_contact_parser = [[ResumeContactParser alloc] init];
     [resume_contact_parser parseContactInfo:parsed_str];
-    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.com erictang@gmail.com", @"Name Parse Five Failed");
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.comerictang@gmail.com", @"Name Parse Five Failed");
 }
 
 - (void)testEmailParsing {

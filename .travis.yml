@@ -1,3 +1,3 @@
 language: objective-c
-xcode_project: iOS/Template Framework Project/Template Framework Project.xcodeproj
-xcode_scheme: iOS/Template Framework Project/Template Framework ProjectTests
+osx_image: xcode8
+script: - xcodebuild clean build -workspace iOS/Tesseract-OCR-iOS.xcworkspace -scheme Template Framework Project -destination "platform=iOS Simulation,name=iPhone 6S"
