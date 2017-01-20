@@ -10,7 +10,7 @@
 
 @interface HTTPRequester : NSObject <NSURLConnectionDataDelegate>
 
-- (void)sendHttpPost:(NSData *)postData;
+- (void)sendHttpPost:(NSData *)postData withID:(NSString *)currentID;
 - (void)sendHttpPostPicture:(UIImage *)imageToPost withID:(NSString *)currentID;
 
 

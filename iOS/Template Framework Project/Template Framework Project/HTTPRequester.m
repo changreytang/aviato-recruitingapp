@@ -14,7 +14,7 @@
  *  Sends synchronous HTTP POST request.
  *  Gather response data inside the same method.
  */
-- (void)sendHttpPost:(NSData *)postData {
+- (void)sendHttpPost:(NSData *)postData withID:(NSString *)currentID {
     //NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",@"_username",@"_password"];
     NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -81,7 +81,10 @@
     NSData *imageData = UIImageJPEGRepresentation(imageToPost, 1.0);
     if (imageData) {
         [body appendData:[[NSString stringWithFormat:@"--%@\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
-        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"image.jpg\"\r\n", FileParamConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", FileParamConstant, currentID] dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        //to send jpeg
+        //[body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@.jpg\"\r\n", FileParamConstant, currentID] dataUsingEncoding:NSUTF8StringEncoding]];
         [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
         [body appendData:imageData];
         [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -102,7 +105,9 @@
     if(conn) {
         NSLog(@"Connection Successful");
         NSLog(@"with ID: %@", currentID);
-        //NSLog(@"%@",[[NSString alloc] initWithData:imageToPost encoding:NSUTF8StringEncoding]);
+        //NSLog(@"%@",[[NSString alloc] initWithData:imageData encoding:NSUTF8StringEncoding]);
+        //NSLog(@"body is %@", body);
+        //NSLog(@"%@", [request http])
     } else {
         NSLog(@"Connection could not be made");
     }

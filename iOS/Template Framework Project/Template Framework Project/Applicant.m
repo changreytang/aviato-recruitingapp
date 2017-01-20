@@ -15,6 +15,7 @@
     NSString* phoneNum;
     NSString* rawInfo;
     NSArray* websites;
+    NSString* myID;
 }
 
 -(void)initApplicant:(NSString*)aName withEmail:(NSString*)aEmail withPhoneNum:(NSString*)aPhoneNum withAddress:(NSString*)aAddress withWebsites:aWebsites {
@@ -55,6 +56,9 @@
 -(void)setName:(NSString*)aName{
     name = aName;
 }
+-(void)setID:(NSString *)aID{
+    myID = aID;
+}
 -(NSData*)toJSON{
     NSError *error = nil;
 
@@ -66,8 +70,10 @@
     //NSArray *jsonArray = @[names, website, phones, emails];
     NSArray *jsonArray = @[names, phones, emails];
 
-    NSDictionary *contact= @{@"contact" : jsonArray};
-    
+    NSString* contactKey = [NSString stringWithFormat:@"%@", myID];
+    NSDictionary *contact= @{contactKey : jsonArray};
+    //Workday's format: NSDictionary *contact= @{@"contact" : jsonArray};
+
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:contact options:NSJSONWritingPrettyPrinted error:&error];
     return jsonData;
 }

@@ -137,12 +137,13 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     [newApplicant setEmail:aEmail];
     [newApplicant setPhoneNumber:aPhone];
     [newApplicant setAddress:aAddr];
+    [newApplicant setID:self.applicantID];
     //[newApplicant setWebsites:[aSites objectAtIndex:0]];
 
     //[newApplicant initApplicant:aName withEmail:aEmail withPhoneNum:aPhone withAddress:aAddr];
     //HTTPRequester *requester = [[HTTPRequester alloc] init];
     NSData * jsonToSend = [newApplicant toJSON];
-    [[[HTTPRequester alloc] init] sendHttpPost:jsonToSend];
+    [[[HTTPRequester alloc] init] sendHttpPost:jsonToSend withID:self.applicantID];
     //NSLog
     
     

@@ -22,6 +22,7 @@
 -(void)setAddress:(NSString*)address;
 -(void)setName:(NSString*)name;
 -(void)setWebsites:(NSArray*)aWebsite;
+-(void)setID:(NSString*)aID;
 
 -(NSData*)toJSON;
 
