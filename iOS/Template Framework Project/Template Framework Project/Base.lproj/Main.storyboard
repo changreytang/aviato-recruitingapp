@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="q5t-TG-z1W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="muP-Ie-7d5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -168,6 +168,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTA-rF-seZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1595.5" y="41.5"/>
+        </scene>
+        <!--Preprocess View Controller-->
+        <scene sceneID="C0k-mq-hcD">
+            <objects>
+                <viewController id="muP-Ie-7d5" customClass="PreprocessViewController" customModule="Template_Framework_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wYN-S0-j0W"/>
+                        <viewControllerLayoutGuide type="bottom" id="SAm-iR-smK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5WJ-Lz-L6G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-cg-LgM">
+                                <rect key="frame" x="37.5" y="83.5" width="300" height="500"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X1C-7a-51y">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="9Z7-HM-iSW"/>
+                                            <constraint firstAttribute="height" constant="400" id="aAh-s0-N5X"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GsW-iw-By9">
+                                        <rect key="frame" x="98.5" y="410" width="103" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XE-VE-xBs">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
+                                                <state key="normal" title="Detect corners"/>
+                                                <connections>
+                                                    <action selector="detectCorners:" destination="muP-Ie-7d5" eventType="touchUpInside" id="JrB-6b-nim"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUe-bG-WfZ">
+                                                <rect key="frame" x="12.5" y="30" width="78" height="30"/>
+                                                <state key="normal" title="Preprocess"/>
+                                                <connections>
+                                                    <action selector="processImage:" destination="muP-Ie-7d5" eventType="touchUpInside" id="RqP-DR-7lh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-mk-XU9">
+                                                <rect key="frame" x="32" y="60" width="39" height="30"/>
+                                                <state key="normal" title="parse"/>
+                                                <connections>
+                                                    <action selector="parseText:" destination="muP-Ie-7d5" eventType="touchUpInside" id="Kvj-QI-zxi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MT0-cg-LgM" firstAttribute="centerX" secondItem="5WJ-Lz-L6G" secondAttribute="centerX" id="TN0-fJ-FKf"/>
+                            <constraint firstItem="MT0-cg-LgM" firstAttribute="centerY" secondItem="5WJ-Lz-L6G" secondAttribute="centerY" id="v3C-qu-kR4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="X1C-7a-51y" id="B7n-Yr-2xi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moz-oQ-KIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2051" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96k-7b-QYf">

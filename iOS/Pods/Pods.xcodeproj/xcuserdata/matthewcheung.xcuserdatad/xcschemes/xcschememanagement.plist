@@ -19,7 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TesseractOCRiOS.xcscheme</key>
+		<key>TesseractOCRiOS-framework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TesseractOCRiOS-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,22 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06DDC1646E8989F09180D6DBBF7876A6</key>
+		<key>187206C9C6DDFBA1489265741FDD8F0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6521E34F66DF46FD3D7A10F8C91EE69B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7AD9E924DE4FE5588595F37549F430C2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>99CB6621E6FECB33C0DAEBE3B571E703</key>
+		<key>4D34E36F23131060060D5327FE55A7BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D9D29040E92E06AC3FE3E77346E719D7</key>
+		<key>C91AAFED58C658CA7CDE5D11A2D7C08A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDA07548CC6E162E63656715586F6DCB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA57848556C2AE0BB863130096286B0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6B1B486EDDE7FF49EC3229264E6CFA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
