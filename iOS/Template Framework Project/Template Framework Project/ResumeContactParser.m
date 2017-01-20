@@ -61,10 +61,17 @@
         }
     }
     
+<<<<<<< HEAD
     //[self setNames:names];
     //[self setEmails:emails];
     //[self setPhoneNumbers:numbers];
     //[self setWebsites:websites];
+=======
+//    [self setNames:names];
+//    [self setEmails:emails];
+//    [self setPhoneNumbers:numbers];
+//    [self setWebsites:websites];
+>>>>>>> 4ec612d3ebf755697b253dd47a367c93d4a3a043
     
     //[self consoleLog:[contact_array componentsJoinedByString:@","]];
     //[self consoleLog:[numbers componentsJoinedByString:@""]];

@@ -1,0 +1,6 @@
+framework module TesseractOCR {
+  umbrella header "TesseractOCRiOS-framework-umbrella.h"
+
+  export *
+  module * { export * }
+}

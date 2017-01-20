@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "99CB6621E6FECB33C0DAEBE3B571E703"
+               BlueprintIdentifier = "187206C9C6DDFBA1489265741FDD8F0F"
                BuildableName = "XLForm.framework"
                BlueprintName = "XLForm-framework"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "99CB6621E6FECB33C0DAEBE3B571E703"
+            BlueprintIdentifier = "187206C9C6DDFBA1489265741FDD8F0F"
             BuildableName = "XLForm.framework"
             BlueprintName = "XLForm-framework"
             ReferencedContainer = "container:Pods.xcodeproj">
