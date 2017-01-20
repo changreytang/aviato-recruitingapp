@@ -32,10 +32,112 @@
     [super tearDown];
 }
 
+- (void)testNameParsing {
+    NSString* parsed_str = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.com", @"Name Parse One Failed");
+
+    parsed_str = @"tang.changrey@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Name Parse Two Failed");
+
+    parsed_str = @"tang.changrey@gmail.com eric at gmail.com gibberish";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Name Parse Three Failed");
+
+    parsed_str = @"";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"", @"Name Parse Four Failed");
+
+    parsed_str = @"tang.changrey@gmail.com erictang@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.com erictang@gmail.com", @"Name Parse Five Failed");
+}
+
 - (void)testEmailParsing {
     NSString* parsed_str = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
     resume_contact_parser = [[ResumeContactParser alloc] init];
-    XCTAssertEqualObjects([[parser getEmails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Email Parse One Failed");
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Email Parse One Failed");
+
+    parsed_str = @"tang.changrey@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Email Parse Two Failed");
+
+    parsed_str = @"tang.changrey@gmail.com eric at gmail.com gibberish";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Email Parse Three Failed");
+
+    parsed_str = @"";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"", @"Email Parse Four Failed");
+
+    parsed_str = @"tang.changrey@gmail.com erictang@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.com erictang@gmail.com", @"Email Parse Five Failed");
+}
+
+- (void)testPhoneNumberParsing {
+    NSString* parsed_str = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Phone Number Parse One Failed");
+
+    parsed_str = @"tang.changrey@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Phone Number Parse Two Failed");
+
+    parsed_str = @"tang.changrey@gmail.com eric at gmail.com gibberish";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Phone Number Parse Three Failed");
+
+    parsed_str = @"";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"", @"Phone Number Parse Four Failed");
+
+    parsed_str = @"tang.changrey@gmail.com erictang@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.com erictang@gmail.com", @"Phone Number Parse Five Failed");
+}
+
+- (void)testWebsiteParsing {
+    NSString* parsed_str = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Website Parse One Failed");
+
+    parsed_str = @"tang.changrey@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Website Parse Two Failed");
+
+    parsed_str = @"tang.changrey@gmail.com eric at gmail.com gibberish";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"tang.changrey@gmail.com", @"Website Parse Three Failed");
+
+    parsed_str = @"";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@""], @"", @"Website Parse Four Failed");
+
+    parsed_str = @"tang.changrey@gmail.com erictang@gmail.com";
+    resume_contact_parser = [[ResumeContactParser alloc] init];
+    [resume_contact_parser parseContactInfo:parsed_str];
+    XCTAssertEqualObjects([[resume_contact_parser emails] componentsJoinedByString:@" "], @"tang.changrey@gmail.com erictang@gmail.com", @"Website Parse Five Failed");
 }
 
 //[self consoleLog:[numbers componentsJoinedByString:@""]];
