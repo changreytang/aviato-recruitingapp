@@ -1,0 +1,3 @@
+language: objective-c
+xcode_workspace: iOS/Tesseract-OCR-iOS.xcworkspace
+xcode_scheme: iOS/Template\ Framework\ Project/Template\ Framework\ ProjectTests
