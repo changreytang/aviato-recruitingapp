@@ -9,7 +9,8 @@
 #import "XLForm.h"
 #import "HTTPRequester.h"
 
-static NSString *const kName = @"name";
+static NSString *const kFName = @"fname";
+static NSString *const kLName = @"lname";
 static NSString *const kEmail = @"email";
 static NSString *const kPhone = @"phone";
 static NSString *const kAddress = @"address";
@@ -65,8 +66,14 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     //section.footerTitle = @"Aviato";
     [form addFormSection:section];
     
-    // Name
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kName rowType:XLFormRowDescriptorTypeText title:@"Name"];
+    // First Name
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kFName rowType:XLFormRowDescriptorTypeText title:@"First Name"];
+    row.required = YES;
+    row.value = self.rawInfo;
+    [section addFormRow:row];
+
+    // Last Name
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kLName rowType:XLFormRowDescriptorTypeText title:@"Last Name"];
     row.required = YES;
     row.value = self.rawInfo;
     [section addFormRow:row];
@@ -128,12 +135,14 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     NSLog(@"%@",self.formValues);
     NSDictionary * values = self.formValues;
     Applicant * newApplicant = [[Applicant alloc] init];
-    NSString *aName = [NSString stringWithString:[values valueForKey:@"name"]];
+    NSString *aFName = [NSString stringWithString:[values valueForKey:@"fname"]];
+    NSString *aLName = [NSString stringWithString:[values valueForKey:@"lname"]];
     NSString *aEmail = [NSString stringWithString:[values valueForKey:@"email"]];
     NSString *aPhone = [NSString stringWithString:[values valueForKey:@"phone"]];
     NSString *aAddr = [NSString stringWithString:[values valueForKey:@"address"]];
     //NSArray *aSites = [NSString stringWithString:[values valueForKey:@"websites"]];
-    [newApplicant setName:aName];
+    [newApplicant setFName:aFName];
+    [newApplicant setLName:aLName];
     [newApplicant setEmail:aEmail];
     [newApplicant setPhoneNumber:aPhone];
     [newApplicant setAddress:aAddr];

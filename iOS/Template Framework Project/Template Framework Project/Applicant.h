@@ -20,7 +20,8 @@
 -(void)setEmail:(NSString*)email;
 -(void)setPhoneNumber:(NSString*)phoneNum;
 -(void)setAddress:(NSString*)address;
--(void)setName:(NSString*)name;
+-(void)setFName:(NSString*)fname;
+-(void)setLName:(NSString*)lname;
 -(void)setWebsites:(NSArray*)aWebsite;
 -(void)setID:(NSString*)aID;
 

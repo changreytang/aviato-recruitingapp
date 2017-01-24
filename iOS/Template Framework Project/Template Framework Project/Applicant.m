@@ -9,7 +9,8 @@
 #import "Applicant.h"
 
 @implementation Applicant{
-    NSString* name;
+    NSString* fname;
+    NSString* lname;
     NSString* email;
     NSString* address;
     NSString* phoneNum;
@@ -22,12 +23,13 @@
     [self setEmail:aEmail];
     [self setPhoneNumber:aPhoneNum];
     [self setAddress:aAddress];
-    [self setName:aName];
+    //[self setName:aName];
+    
     [self setWebsites:aWebsites];
     
 }
 -(NSString*)getName{
-    return name;
+    return fname;
 }
 -(NSString*)getPhoneNumber{
     return phoneNum;
@@ -53,8 +55,11 @@
 -(void)setWebsites:(NSArray*)aWebsite{
     websites = aWebsite;
 }
--(void)setName:(NSString*)aName{
-    name = aName;
+-(void)setFName:(NSString*)aName{
+    fname = aName;
+}
+-(void)setLName:(NSString*)aName{
+    lname = aName;
 }
 -(void)setID:(NSString *)aID{
     myID = aID;
@@ -62,7 +67,7 @@
 -(NSData*)toJSON{
     NSError *error = nil;
 
-    NSDictionary *nameInfo = @{@"firstName" : name, @"lastName" : name, @"suffixes" : @""};
+    NSDictionary *nameInfo = @{@"firstName" : fname, @"lastName" : lname, @"suffixes" : @""};
     NSDictionary *names = @{@"name" : nameInfo};
     //NSDictionary *website = @{@"websites" : websites};
     NSDictionary *phones = @{@"phones" : phoneNum};
