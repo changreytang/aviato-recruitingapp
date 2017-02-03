@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDF056B636F461345EA712A9C43DDE24"
-               BuildableName = "libPods-TestsProjectTests.a"
-               BlueprintName = "Pods-TestsProjectTests"
+               BlueprintIdentifier = "99CB6621E6FECB33C0DAEBE3B571E703"
+               BuildableName = "XLForm.framework"
+               BlueprintName = "XLForm-framework"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDF056B636F461345EA712A9C43DDE24"
-            BuildableName = "libPods-TestsProjectTests.a"
-            BlueprintName = "Pods-TestsProjectTests"
+            BlueprintIdentifier = "99CB6621E6FECB33C0DAEBE3B571E703"
+            BuildableName = "XLForm.framework"
+            BlueprintName = "XLForm-framework"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDF056B636F461345EA712A9C43DDE24"
-            BuildableName = "libPods-TestsProjectTests.a"
-            BlueprintName = "Pods-TestsProjectTests"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

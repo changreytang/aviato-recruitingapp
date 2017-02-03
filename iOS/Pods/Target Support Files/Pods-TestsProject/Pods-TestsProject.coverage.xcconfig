@@ -1,4 +1,3 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 CLANG_CXX_LIBRARY = compiler-default
 FRAMEWORK_SEARCH_PATHS = $(inherited) $(SDKROOT)/Developer/Library/Frameworks $(inherited) $(DEVELOPER_FRAMEWORKS_DIR) "$(PLATFORM_DIR)/Developer/Library/Frameworks"
 FRAMEWORK_SEARCH_PATHS[sdk=iphoneos8.0] = $(inherited) $(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/Library/Frameworks

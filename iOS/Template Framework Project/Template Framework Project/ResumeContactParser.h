@@ -10,10 +10,10 @@
 
 @interface ResumeContactParser : NSObject
 
-@property (readonly, nonatomic) NSArray* names;
-@property (readonly, nonatomic) NSArray* emails;
-@property (readonly, nonatomic) NSArray* phoneNumbers;
-@property (readonly, nonatomic) NSArray* websites;
+@property (nonatomic) NSArray* names;
+@property (nonatomic) NSArray* emails;
+@property (nonatomic) NSArray* phoneNumbers;
+@property (nonatomic) NSArray* websites;
 
 
 - (void)parseContactInfo:(NSString*)contact_info;

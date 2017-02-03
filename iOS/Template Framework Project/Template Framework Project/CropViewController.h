@@ -7,10 +7,11 @@
 
 #import <UIKit/UIKit.h>
 #import <TesseractOCR/TesseractOCR.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @class G8ViewController;
 
 @interface CropViewController : UIViewController <G8TesseractDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic) UIImage* resumeImage;
+@property (nonatomic, strong) UIImage* resumeImage;
 @end

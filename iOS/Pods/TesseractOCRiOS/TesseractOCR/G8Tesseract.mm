@@ -383,18 +383,18 @@ copyFilesFromResources:(BOOL)copyFilesFromResources
         Pix *pix = nullptr;
 
         if ([self.delegate respondsToSelector:@selector(preprocessedImageForTesseract:sourceImage:)]) {
-            UIImage *thresholdedImage = [self.delegate preprocessedImageForTesseract:self sourceImage:image];
-            if (thresholdedImage != nil) {
-                self.imageSize = thresholdedImage.size;
+            UIImage *thresholdedImage = image;//[self.delegate preprocessedImageForTesseract:self sourceImage:image];
+            //if (thresholdedImage != nil) {
+            //    self.imageSize = thresholdedImage.size;
 
-                Pix *pixs = [self pixForImage:thresholdedImage];
-                pix = pixConvertTo1(pixs, UINT8_MAX / 2);
-                pixDestroy(&pixs);
+            //    Pix *pixs = [self pixForImage:thresholdedImage];
+            //    pix = pixConvertTo1(pixs, UINT8_MAX / 2);
+            //    pixDestroy(&pixs);
 
-                if (pix == nullptr) {
-                    NSLog(@"WARNING: Can't create Pix for custom thresholded image!");
-                }
-            }
+            //    if (pix == nullptr) {
+            //        NSLog(@"WARNING: Can't create Pix for custom thresholded image!");
+            //    }
+            //}
         }
 
         if (pix == nullptr) {

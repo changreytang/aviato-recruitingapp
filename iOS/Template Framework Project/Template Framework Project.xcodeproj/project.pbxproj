@@ -25,7 +25,6 @@
 		31C514091DE4298B002AC8BF /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */; };
 		31C5140A1DE4298B002AC8BF /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */; };
 		428615B71845F340005D5A2E /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428615B61845F340005D5A2E /* image_sample.jpg */; };
-		58583EB8A3673FAF5607A4D3 /* libPods-Template Framework Project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */; };
 		6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
 		6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
 		6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
@@ -39,6 +38,8 @@
 		64DDA75B188FD9140025590D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 64DDA75A188FD9140025590D /* tessdata */; };
 		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
 		73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
+		C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */; };
+		C3696BB31E40482000DED8BB /* HTTPRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C3696BB21E40482000DED8BB /* HTTPRequester.m */; };
 		C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Template Framework Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Framework_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F362181DD3C3DD00C231A3 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
 		31703EA81DCADFB400CD22A4 /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
 		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
@@ -106,6 +107,8 @@
 		6CF9B2403D6C27E98536FAEE /* Pods-Template Framework Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Framework Project.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Template Framework Project/Pods-Template Framework Project.release.xcconfig"; sourceTree = "<group>"; };
 		73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../build/Debug-iphoneos/TesseractOCR.framework"; sourceTree = "<group>"; };
 		73C0A7BE1A59565100D823D4 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3696BB11E40482000DED8BB /* HTTPRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequester.h; sourceTree = "<group>"; };
+		C3696BB21E40482000DED8BB /* HTTPRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequester.m; sourceTree = "<group>"; };
 		C3EBF1A21E301B8C00F4054E /* Template Framework ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Template Framework ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Template_Framework_ProjectTests.m; sourceTree = "<group>"; };
 		C3EBF1A61E301B8C00F4054E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,7 +125,7 @@
 				6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */,
 				6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */,
 				6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */,
-				58583EB8A3673FAF5607A4D3 /* libPods-Template Framework Project.a in Frameworks */,
+				C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +171,7 @@
 				6400DDD8180C5DE000443362 /* Foundation.framework */,
 				6400DDDA180C5DE000443362 /* CoreGraphics.framework */,
 				6400DDDC180C5DE000443362 /* UIKit.framework */,
-				0439FA6EAE38574418C73DA0 /* libPods-Template Framework Project.a */,
+				06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +192,8 @@
 				31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */,
 				31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */,
 				31C513EF1DE4298B002AC8BF /* TOActivityCroppedImageProvider.h */,
+				C3696BB11E40482000DED8BB /* HTTPRequester.h */,
+				C3696BB21E40482000DED8BB /* HTTPRequester.m */,
 				31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */,
 				31C513F11DE4298B002AC8BF /* TOCropOverlayView.h */,
 				31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */,
@@ -298,7 +303,7 @@
 				ORGANIZATIONNAME = "Daniele Galiotto - www.g8production.com";
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
-						DevelopmentTeam = SZVLL8KQSW;
+						DevelopmentTeam = 45U965DEU6;
 					};
 					C3EBF1A11E301B8C00F4054E = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -408,6 +413,7 @@
 				6400DDE5180C5DE000443362 /* main.m in Sources */,
 				31C514081DE4298B002AC8BF /* TOCropViewController.m in Sources */,
 				6400DDE9180C5DE000443362 /* G8AppDelegate.m in Sources */,
+				C3696BB31E40482000DED8BB /* HTTPRequester.m in Sources */,
 				31C514091DE4298B002AC8BF /* TOCropViewControllerTransitioning.m in Sources */,
 				31C514031DE4298B002AC8BF /* TOCropOverlayView.m in Sources */,
 				31C513E21DDE353E002AC8BF /* Applicant.m in Sources */,
@@ -555,7 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 45U965DEU6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -573,7 +579,7 @@
 					"-lz",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.Tesseract;
+				PRODUCT_BUNDLE_IDENTIFIER = reytang.Tesseract;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,7 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				DEVELOPMENT_TEAM = 45U965DEU6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -603,7 +609,7 @@
 					"-lz",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthew.cheung.Tesseract;
+				PRODUCT_BUNDLE_IDENTIFIER = reytang.Tesseract;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -676,6 +682,7 @@
 				C3EBF1AA1E301B8C00F4054E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

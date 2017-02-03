@@ -54,6 +54,7 @@ NSString *contactInfo;
 
 -(NSString*)recognizeImageWithTesseract:(UIImage *)image
 {
+    //self.resumeImageView.image = image;
 //    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
 //    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
 //    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
@@ -128,7 +129,7 @@ NSString *contactInfo;
     };
     
     // Display the image to be recognized in the view
-    //self.imageToRecognize.image = operation.tesseract.thresholdedImage;
+    self.resumeImageView.image = operation.tesseract.thresholdedImage;
     
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
@@ -152,7 +153,19 @@ NSString *contactInfo;
 }
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
-    [self recognizeImageWithTesseract:image1];
+    //UIImage *image = [UIImage imageNamed:@"Image.jpg"];
+    UIImageWriteToSavedPhotosAlbum(image1, nil, nil, nil);
+    //self.resumeImageView.image = image1;
+    //int i = 100000000;
+    //while(i > -10000000) i--;
+    double delayInSeconds = 0.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self croppedImageSaved];
+    });
+    
+    
+    //[self recognizeImageWithTesseract:image1];
     //NSString* c_info = [self recognizeImageWithTesseract:image1];
     //NSString* test = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
@@ -165,6 +178,38 @@ NSString *contactInfo;
 //    [parser parseContactInfo:test];
     //[self.resumeImageView setImage:image1];
 }
+
+- (void)croppedImageSaved {
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
+                                 usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                                     if (nil != group) {
+                                         // be sure to filter the group so you only get photos
+                                         [group setAssetsFilter:[ALAssetsFilter allPhotos]];
+                                         
+                                         if (group.numberOfAssets > 0) {
+                                             [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:group.numberOfAssets - 1]
+                                                                     options:0
+                                                                  usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                                                                      if (nil != result) {
+                                                                          ALAssetRepresentation *repr = [result defaultRepresentation];
+                                                                          // this is the most recent saved photo
+                                                                          UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage]];
+                                                                          [self recognizeImageWithTesseract:img];
+                                                                          // we only need the first (most recent) photo -- stop the enumeration
+                                                                          *stop = YES;
+                                                                      }
+                                                                  }];
+                                         }
+                                     }
+                                     
+                                     *stop = NO;
+                                 } failureBlock:^(NSError *error) {
+                                     NSLog(@"error: %@", error);
+                                 }];
+    //[self recognizeImageWithTesseract:image];
+}
+
 - (IBAction)newApplicantBtn:(id)sender {
     [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
 }
