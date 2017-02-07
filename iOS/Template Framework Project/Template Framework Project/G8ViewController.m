@@ -3,7 +3,6 @@
 //  Template Framework Project
 //
 //  Created by Daniele on 14/10/13.
-//  Copyright (c) 2013 Daniele Galiotto - www.g8production.com.
 //  All rights reserved.
 //
 
@@ -20,10 +19,19 @@
 @implementation G8ViewController
 UIImage* resumeImage;
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self.navigationController setNavigationBarHidden:YES];
     // Create a queue to perform recognition operations
     self.operationQueue = [[NSOperationQueue alloc] init];
 }

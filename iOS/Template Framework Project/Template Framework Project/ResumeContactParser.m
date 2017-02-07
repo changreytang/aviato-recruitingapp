@@ -7,8 +7,14 @@
 //
 
 #import "ResumeContactParser.h"
+#import "ApplicantViewController.h"
 
-@implementation ResumeContactParser
+@implementation ResumeContactParser{
+    Applicant *candidate;
+}
+
+@synthesize viewController;
+
 
 - (void)consoleLog:(NSString*)info {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Console Log"
@@ -19,7 +25,7 @@
     [alert show];
 }
 
-- (void)parseContactInfo:(NSString*)contact_info {
+- (Applicant *)parseContactInfo:(NSString*)contact_info {
     
     // contact_array contains all raw tesseract information separated by white spaces into array format
     //NSArray *contact_array = [contact_info componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -77,14 +83,28 @@
     [self setEmails:emails];
     [self setPhoneNumbers:numbers];
     [self setWebsites:websites];
+    
+    NSArray *array = [[self.names objectAtIndex:0] componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    array = [array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
+    candidate = [[Applicant alloc] init];
+    [candidate setFName:[array objectAtIndex:0]];
+    [candidate setLName:[array objectAtIndex:1]];
+    [candidate setEmail:[self.emails objectAtIndex:0]];
+    [candidate setWebsites:self.websites];
+    //[candidate setPhoneNumber:[self.phoneNumbers objectAtIndex:0]];
+    
+    return candidate;
 
     
-    [self consoleLog:[contact_log stringByAppendingString:[contact_array componentsJoinedByString:@","]]];
-    [self consoleLog:[numbers_log stringByAppendingString:[numbers componentsJoinedByString:@","]]];
-    [self consoleLog:[emails_log stringByAppendingString:[emails componentsJoinedByString:@","]]];
-    [self consoleLog:[websites_log stringByAppendingString:[websites componentsJoinedByString:@","]]];
-    [self consoleLog:[names_log stringByAppendingString:[names_mut componentsJoinedByString:@" "]]];
+    //[self consoleLog:[contact_log stringByAppendingString:[contact_array componentsJoinedByString:@","]]];
+    //[self consoleLog:[numbers_log stringByAppendingString:[numbers componentsJoinedByString:@","]]];
+    //[self consoleLog:[emails_log stringByAppendingString:[emails componentsJoinedByString:@","]]];
+    //[self consoleLog:[websites_log stringByAppendingString:[websites componentsJoinedByString:@","]]];
+    //[self consoleLog:[names_log stringByAppendingString:[names_mut componentsJoinedByString:@" "]]];
+    
 }
+
+
 
 //// Spawn an alert with the recognized text
 //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"

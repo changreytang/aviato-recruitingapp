@@ -10,7 +10,6 @@
 #import "ResumeContactParser.h"
 #import "Headers/TOCropViewController.h"
 #import "ApplicantViewController.h"
-#import "Applicant.h"
 #import "HTTPRequester.h"
 
 @interface CropViewController () <TOCropViewControllerDelegate>
@@ -36,7 +35,7 @@
     currentID = [[NSProcessInfo processInfo] globallyUniqueString];
     NSLog(@"randID is %@", currentID);
     [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,17 +59,17 @@
 -(NSString*)recognizeImageWithTesseract:(UIImage *)image
 {
     //self.resumeImageView.image = image;
-//    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
-//    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
-//    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
-//    operation.delegate = self;
-//    operation.tesseract.image = image;
-//    __block NSString *recognizedText = nil;
-//    operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
-//        recognizedText = tesseract.recognizedText;
-//    };
-//
-//    return recognizedText;
+    //    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
+    //    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
+    //    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    //    operation.delegate = self;
+    //    operation.tesseract.image = image;
+    //    __block NSString *recognizedText = nil;
+    //    operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
+    //        recognizedText = tesseract.recognizedText;
+    //    };
+    //
+    //    return recognizedText;
     
     
     // Animate a progress activity indicator
@@ -125,8 +124,10 @@
         //contactInfo = recognizedText;
         
         ResumeContactParser* parser = [[ResumeContactParser alloc] init];
-        [parser parseContactInfo:recognizedText];
+        parser.viewController=(CropViewController*)self.navigationController.visibleViewController;//Save view controller
+        self.candidate = [parser parseContactInfo:recognizedText];
         
+        [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
         // Remove the animated progress activity indicator
         //[self.activityIndicator stopAnimating];
         
@@ -138,7 +139,7 @@
     
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
-
+    
     //SEND contactInfo TO PARSER THEN TO FORM
     return @"";//recognizedText;
 }
@@ -151,10 +152,10 @@
 
 - (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract {
     return NO;  // return YES, if you need to cancel recognition prematurely
-
-//    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
-//    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
-//    [self.testImageView setImage:screenshot];
+    
+    //    [[self.resumeImageView layer] renderInContext:UIGraphicsGetCurrentContext()];
+    //    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    //    [self.testImageView setImage:screenshot];
 }
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image1 withRect:(CGRect) cropRect angle:(NSInteger)angle {
@@ -173,14 +174,14 @@
     //[self recognizeImageWithTesseract:image1];
     //NSString* c_info = [self recognizeImageWithTesseract:image1];
     //NSString* test = @"Rey Tang tang.changrey@gmail.com (510)283-1574 reytang.me github.com/changreytang linkedin.com/in/changreytang";
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
-//                                                    message:contactInfo
-//                                                   delegate:nil
-//                                          cancelButtonTitle:@"OK"
-//                                          otherButtonTitles:nil];
-//    [alert show];
-//    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
-//    [parser parseContactInfo:test];
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+    //                                                    message:contactInfo
+    //                                                   delegate:nil
+    //                                          cancelButtonTitle:@"OK"
+    //                                          otherButtonTitles:nil];
+    //    [alert show];
+    //    ResumeContactParser* parser = [[ResumeContactParser alloc] init];
+    //    [parser parseContactInfo:test];
     //[self.resumeImageView setImage:image1];
 }
 
@@ -219,12 +220,14 @@
     [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
 }
 
+
 // Sends resume image from camera to other CropViewController
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"applicantVCSegue"]){
         ApplicantViewController *controller = (ApplicantViewController *)segue.destinationViewController;
         //This should be passing in applicant class which should already be intialized and set through the parser.
         controller.rawInfo = contactInfo;
+        controller.applicantInstance = self.candidate;
         NSLog(@"randID is %@ sending to applicant VC", currentID);
         controller.applicantID = currentID;
     }

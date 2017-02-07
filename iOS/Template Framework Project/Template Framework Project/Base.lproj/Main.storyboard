@@ -174,7 +174,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q5t-TG-z1W" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3YO-wx-BRT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3YO-wx-BRT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -185,7 +185,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5K-OV-Lku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39.5" y="35.5"/>
+            <point key="canvasLocation" x="129" y="36"/>
         </scene>
     </scenes>
     <resources>

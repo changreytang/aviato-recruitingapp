@@ -18,6 +18,14 @@ static NSString *const kWebsite = @"websites";
 static NSString *const kNotes = @"notes";
 static NSString *const kSelectorAlertView = @"selectorAlertView";
 
+XLFormRowDescriptor *fnameRow;
+XLFormRowDescriptor *lnameRow;
+XLFormRowDescriptor *emailRow;
+XLFormRowDescriptor *phoneRow;
+XLFormRowDescriptor *addressRow;
+XLFormRowDescriptor *websitesRow;
+
+
 @interface ApplicantViewController ()
 
 @end
@@ -69,34 +77,40 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     // First Name
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kFName rowType:XLFormRowDescriptorTypeText title:@"First Name"];
     row.required = YES;
-    row.value = self.rawInfo;
+    row.value = [self.applicantInstance getFName];
+    fnameRow = row;
     [section addFormRow:row];
 
     // Last Name
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kLName rowType:XLFormRowDescriptorTypeText title:@"Last Name"];
     row.required = YES;
-    row.value = self.rawInfo;
+    row.value = [self.applicantInstance getLName];
+    lnameRow = row;
     [section addFormRow:row];
     
     // Email
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kEmail rowType:XLFormRowDescriptorTypeEmail title:@"Email"];
     // validate the email
     [row addValidator:[XLFormValidator emailValidator]];
-    row.value = self.rawInfo;
+    row.value = [self.applicantInstance getEmail];
+    emailRow = row;
     [section addFormRow:row];
     
     // Phone
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kPhone rowType:XLFormRowDescriptorTypePhone title:@"Phone"];
-    row.value = self.rawInfo;
+    row.value = [self.applicantInstance getPhoneNumber];
+    phoneRow = row;
     [section addFormRow:row];
     
     // Address
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kAddress rowType:XLFormRowDescriptorTypeZipCode title:@"Address"];
     row.value = self.rawInfo;
+    addressRow = row;
     [section addFormRow:row];
     
     // Websites
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kWebsite rowType:XLFormRowDescriptorTypeURL title:@"Websites"];
+    websitesRow = row;
     [section addFormRow:row];
 
 //    section = [XLFormSectionDescriptor formSection];
@@ -129,6 +143,24 @@ static NSString *const kSelectorAlertView = @"selectorAlertView";
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
                                                                     style:UIBarButtonItemStyleDone target:self action:@selector(doneBtnPressed:)];
     self.navigationItem.rightBarButtonItem = rightButton;
+    
+    [self loadFormFields];
+}
+
+//Function to load the form fields from parsed data
+-(void)loadFormFields{
+    fnameRow.value = [self.applicantInstance getFName];
+    [self reloadFormRow:fnameRow];
+    lnameRow.value = [self.applicantInstance getLName];
+    [self reloadFormRow:lnameRow];
+    emailRow.value = [self.applicantInstance getEmail];
+    [self reloadFormRow:emailRow];
+    addressRow.value = [self.applicantInstance getAddress];
+    [self reloadFormRow:addressRow];
+    phoneRow.value = [self.applicantInstance getPhoneNumber];
+    [self reloadFormRow:phoneRow];
+    websitesRow.value = [self.applicantInstance getWebsites];
+    [self reloadFormRow:websitesRow];
 }
 
 -(void)doneBtnPressed:(UIBarButtonItem * )button{

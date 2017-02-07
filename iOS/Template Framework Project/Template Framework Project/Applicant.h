@@ -11,7 +11,8 @@
 @interface Applicant : NSObject
 
 -(void)initApplicant:(NSString*)name withEmail:(NSString*)email withPhoneNum:(NSString*)phoneNum withAddress:(NSString*)address;
--(NSString*)getName;
+-(NSString*)getFName;
+-(NSString*)getLName;
 -(NSString*)getPhoneNumber;
 -(NSString*)getAddress;
 -(NSString*)getEmail;

@@ -28,8 +28,11 @@
     [self setWebsites:aWebsites];
     
 }
--(NSString*)getName{
+-(NSString*)getFName{
     return fname;
+}
+-(NSString*)getLName{
+    return lname;
 }
 -(NSString*)getPhoneNumber{
     return phoneNum;
