@@ -22,14 +22,16 @@
 - (void)parseContactInfo:(NSString*)contact_info {
     
     // contact_array contains all raw tesseract information separated by white spaces into array format
-    NSArray *contact_array = [contact_info componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    //NSArray *contact_array = [contact_info componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSArray *contact_array = [contact_info componentsSeparatedByString:@"\n"];
     contact_array = [contact_array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
     
     // emails contains all possible email matches from contact_array
     NSArray* emails = [contact_array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF CONTAINS[c] '@'"]];
     
     // numbers contain all possible number matches from contact_array
-    NSString* phone_regex = @"/^\\s*(?:\\+?(\\d{1,3}))?[- (]*(\\d{3})[- )]*(\\d{3})[- ]*(\\d{4})(?: *[x/#]{1}(\\d+))?\\s*$/";
+    //NSString* phone_regex = @"/^\\s*(?:\\+?(\\d{1,3}))?[- (]*(\\d{3})[- )]*(\\d{3})[- ]*(\\d{4})(?: *[x/#]{1}(\\d+))?\\s*$/";
+    NSString* phone_regex = @"^[2-9]\\d{2}-\\d{3}-\\d{4}$";
     NSArray* numbers = [contact_array filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", phone_regex]];
     
     NSString* web_regex = @"[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
@@ -60,9 +62,9 @@
             }
         }
     }
-    
-    NSString* name_regex = @"^[A-Za-z]+(((\\'|\\-|\\.)?([A-Za-z])+))?$";
-    NSArray* names = [names_mut filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", name_regex]];
+
+    //NSString* name_regex = @"^[A-Za-z]+(((\\'|\\-|\\.)?([A-Za-z])+))?$";
+    //NSArray* names = [names_mut filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", name_regex]];
     
 
     NSString *names_log = @"NAMES: ";
@@ -71,16 +73,17 @@
     NSString *websites_log = @"WEBSITE: ";
     NSString *contact_log = @"RAW CONTACT: ";
     
-    [self setNames:names];
+    [self setNames:names_mut];
     [self setEmails:emails];
     [self setPhoneNumbers:numbers];
     [self setWebsites:websites];
+
     
     [self consoleLog:[contact_log stringByAppendingString:[contact_array componentsJoinedByString:@","]]];
-    [self consoleLog:[numbers_log stringByAppendingString:[numbers componentsJoinedByString:@""]]];
-    [self consoleLog:[emails_log stringByAppendingString:[emails componentsJoinedByString:@""]]];
-    [self consoleLog:[websites_log stringByAppendingString:[websites componentsJoinedByString:@""]]];
-    [self consoleLog:[names_log stringByAppendingString:[names componentsJoinedByString:@" "]]];
+    [self consoleLog:[numbers_log stringByAppendingString:[numbers componentsJoinedByString:@","]]];
+    [self consoleLog:[emails_log stringByAppendingString:[emails componentsJoinedByString:@","]]];
+    [self consoleLog:[websites_log stringByAppendingString:[websites componentsJoinedByString:@","]]];
+    [self consoleLog:[names_log stringByAppendingString:[names_mut componentsJoinedByString:@" "]]];
 }
 
 //// Spawn an alert with the recognized text

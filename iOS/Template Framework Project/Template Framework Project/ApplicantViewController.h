@@ -13,4 +13,5 @@
 
 @property Applicant *applicantInstance;
 @property NSString* rawInfo;
+@property NSString* applicantID;
 @end

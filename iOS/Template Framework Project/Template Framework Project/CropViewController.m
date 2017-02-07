@@ -11,7 +11,7 @@
 #import "Headers/TOCropViewController.h"
 #import "ApplicantViewController.h"
 #import "Applicant.h"
-
+#import "HTTPRequester.h"
 
 @interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
@@ -20,8 +20,10 @@
 @end
 
 @implementation CropViewController{
-NSString *contactInfo;
+    NSString *contactInfo;
+    NSString *currentID;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -30,7 +32,10 @@ NSString *contactInfo;
     
     // Create a queue to perform recognition operations
     self.operationQueue = [[NSOperationQueue alloc] init];
-
+    
+    currentID = [[NSProcessInfo processInfo] globallyUniqueString];
+    NSLog(@"randID is %@", currentID);
+    [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
 
 }
 
@@ -220,6 +225,8 @@ NSString *contactInfo;
         ApplicantViewController *controller = (ApplicantViewController *)segue.destinationViewController;
         //This should be passing in applicant class which should already be intialized and set through the parser.
         controller.rawInfo = contactInfo;
+        NSLog(@"randID is %@ sending to applicant VC", currentID);
+        controller.applicantID = currentID;
     }
 }
 
