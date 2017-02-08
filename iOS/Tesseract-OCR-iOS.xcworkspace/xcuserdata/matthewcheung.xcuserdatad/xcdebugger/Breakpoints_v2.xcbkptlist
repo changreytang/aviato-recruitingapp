@@ -2,4 +2,99 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Template Framework Project/Template Framework Project/PictureViewController.swift"
+            timestampString = "508238506.4061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "PictureViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Template_Framework_Project.PictureViewController.__deallocating_deinit"
+                  moduleName = "Template Framework Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Template%20Framework%20Project/Template%20Framework%20Project/PictureViewController.swift"
+                  timestampString = "508238514.525001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Template_Framework_Project.PictureViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Template_Framework_Project.PictureViewController"
+                  moduleName = "Template Framework Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Template%20Framework%20Project/Template%20Framework%20Project/PictureViewController.swift"
+                  timestampString = "508238514.527457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Template_Framework_Project.PictureViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Template_Framework_Project.PictureViewController"
+                  moduleName = "Template Framework Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Template%20Framework%20Project/Template%20Framework%20Project/PictureViewController.swift"
+                  timestampString = "508238514.529395"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Template_Framework_Project.PictureViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Template_Framework_Project.PictureViewController&gt;"
+                  moduleName = "Template Framework Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Template%20Framework%20Project/Template%20Framework%20Project/PictureViewController.swift"
+                  timestampString = "508238514.530784"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Template_Framework_Project.PictureViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Template_Framework_Project.PictureViewController&gt;"
+                  moduleName = "Template Framework Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Template%20Framework%20Project/Template%20Framework%20Project/PictureViewController.swift"
+                  timestampString = "508238514.532712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

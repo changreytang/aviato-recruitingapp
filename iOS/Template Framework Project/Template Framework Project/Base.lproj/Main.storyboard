@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="LfI-it-77f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,72 +67,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qva-mi-esU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="558" y="42"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="KqY-NP-kJt">
-            <objects>
-                <viewController storyboardIdentifier="rootVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="359-tO-83z" customClass="G8ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Ae-tI-IDG"/>
-                        <viewControllerLayoutGuide type="bottom" id="OqE-AI-Q7I"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="it0-h2-ZJZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-cd-Vdk">
-                                <rect key="frame" x="80" y="220" width="162" height="30"/>
-                                <state key="normal" title="Take Picture of Resume">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="openCamera:" destination="359-tO-83z" eventType="touchUpInside" id="o0D-ch-6v2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTH-ec-wGp">
-                                <rect key="frame" x="112" y="265" width="98" height="30"/>
-                                <state key="normal" title="Parse Resume">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="recognizeSampleImage:" destination="359-tO-83z" eventType="touchUpInside" id="c2D-77-zYW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6D-ix-krn">
-                                <rect key="frame" x="120" y="341" width="134" height="30"/>
-                                <state key="normal" title="Open Photo Library"/>
-                                <connections>
-                                    <action selector="openPhotoLibrary:" destination="359-tO-83z" eventType="touchUpInside" id="K2O-zP-ujF"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="ufh-P4-E1D">
-                                <rect key="frame" x="53" y="134" width="240" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="7hu-NE-jZm"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="4y2-cd-Vdk" firstAttribute="top" secondItem="ufh-P4-E1D" secondAttribute="bottom" constant="22" id="9TF-AK-eiw"/>
-                            <constraint firstItem="hTH-ec-wGp" firstAttribute="top" secondItem="4y2-cd-Vdk" secondAttribute="bottom" constant="15" id="BMi-Xz-H6m"/>
-                            <constraint firstItem="4y2-cd-Vdk" firstAttribute="centerX" secondItem="hTH-ec-wGp" secondAttribute="centerX" id="U6z-53-JEm"/>
-                            <constraint firstItem="G6D-ix-krn" firstAttribute="centerX" secondItem="it0-h2-ZJZ" secondAttribute="centerX" id="UwY-pL-NyU"/>
-                            <constraint firstItem="G6D-ix-krn" firstAttribute="top" secondItem="hTH-ec-wGp" secondAttribute="bottom" constant="46" id="b0g-0f-tUm"/>
-                            <constraint firstItem="ufh-P4-E1D" firstAttribute="top" secondItem="8Ae-tI-IDG" secondAttribute="bottom" constant="114" id="bDu-aN-4bq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ufh-P4-E1D" secondAttribute="trailing" constant="66" id="dA8-Fx-yRX"/>
-                            <constraint firstItem="4y2-cd-Vdk" firstAttribute="leading" secondItem="it0-h2-ZJZ" secondAttribute="leadingMargin" constant="64" id="fgn-fe-SPP"/>
-                            <constraint firstItem="ufh-P4-E1D" firstAttribute="leading" secondItem="it0-h2-ZJZ" secondAttribute="leadingMargin" constant="37" id="n3W-GN-rph"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Y1p-9Q-cy3"/>
-                    <connections>
-                        <segue destination="vhV-QM-Yt8" kind="push" identifier="cropSeg" id="EBf-FF-40C"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bHp-R4-qR6" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="558" y="926"/>
         </scene>
         <!--Crop View Controller-->
         <scene sceneID="PNt-iB-Uol">
@@ -309,15 +243,9 @@
             <point key="canvasLocation" x="40" y="42"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Banner.png" width="498" height="109"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="EBf-FF-40C"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -63,7 +63,6 @@
 		06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Framework_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		150E13201E4B122F002BD1B2 /* Template Framework Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Template Framework Project-Bridging-Header.h"; sourceTree = "<group>"; };
 		150E13211E4B1230002BD1B2 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
-		150E13231E4B1268002BD1B2 /* Template Framework Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Template Framework Project-Bridging-Header.h"; sourceTree = "<group>"; };
 		150E13241E4B12BF002BD1B2 /* DrawAction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DrawAction.framework; path = ExternalFramework/DrawAction.framework; sourceTree = "<group>"; };
 		150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicTesseractOCR.framework; path = ExternalFramework/DynamicTesseractOCR.framework; sourceTree = "<group>"; };
 		150E13261E4B12BF002BD1B2 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCV.framework; path = ExternalFramework/OpenCV.framework; sourceTree = "<group>"; };
@@ -205,7 +204,6 @@
 			children = (
 				64DDA75A188FD9140025590D /* tessdata */,
 				150E13211E4B1230002BD1B2 /* PictureViewController.swift */,
-				150E13231E4B1268002BD1B2 /* Template Framework Project-Bridging-Header.h */,
 				6400DDE7180C5DE000443362 /* G8AppDelegate.h */,
 				6400DDE8180C5DE000443362 /* G8AppDelegate.m */,
 				6400DDED180C5DE000443362 /* G8ViewController.h */,
@@ -592,6 +590,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
@@ -627,6 +626,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
