@@ -179,7 +179,7 @@
     [candidate setFName:[array objectAtIndex:0]];
     [candidate setLName:[array objectAtIndex:1]];
     [candidate setEmail:[self.emails objectAtIndex:0]];
-    [candidate setWebsites:[self.websites objectAtIndex:1]];
+    //[candidate setWebsites:[self.websites objectAtIndex:1]];
     [candidate setPhoneNumber:[self.phoneNumbers objectAtIndex:0]];
     
     return candidate;
