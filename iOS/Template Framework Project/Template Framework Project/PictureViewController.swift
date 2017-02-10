@@ -20,7 +20,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     var corners : Corners!
     var resumeImage: UIImage?
     
-    @IBOutlet weak var imagePicked: UIImageView!
+//    @IBOutlet weak var imagePicked: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,16 +66,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
 //                topRight: CGPoint(x: 1, y: 0),
 //                bottomLeft: CGPoint(x: 0, y: 1),
 //                bottomRight: CGPoint(x: 1, y: 1))
-        let points = [corners.topLeft, corners.topRight,
-                      corners.bottomLeft, corners.bottomRight]
-        let size  = CGSize(width: 10, height: 10)
-        for point in points {
-            let convertedPoint = CGPoint(x: ((point.x/(image?.size.width)!)*imagePicked.bounds.size.width)-5,
-                                         y: ((point.y/(image?.size.height)!)*imagePicked.bounds.size.height)-5)
-            let view = UIView(frame: CGRect(origin: convertedPoint, size: size))
-            view.backgroundColor = UIColor.red
-            imagePicked.addSubview(view)
-        }
+//        let points = [corners.topLeft, corners.topRight,
+//                      corners.bottomLeft, corners.bottomRight]
+//        let size  = CGSize(width: 10, height: 10)
+//        for point in points {
+//            let convertedPoint = CGPoint(x: ((point.x/(image?.size.width)!)*imagePicked.bounds.size.width)-5,
+//                                         y: ((point.y/(image?.size.height)!)*imagePicked.bounds.size.height)-5)
+//            let view = UIView(frame: CGRect(origin: convertedPoint, size: size))
+//            view.backgroundColor = UIColor.red
+//            imagePicked.addSubview(view)
+//        }
         let newImage = ImagePreprocessor.preprocessImage(image!, corners: corners)
         resumeImage = newImage
         

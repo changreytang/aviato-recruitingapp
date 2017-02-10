@@ -27,27 +27,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-Ic-3iR">
                                 <rect key="frame" x="52" y="188" width="271" height="291"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOp-As-0nr">
-                                        <rect key="frame" x="0.0" y="0.0" width="271" height="291"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-MI-mOu">
-                                        <rect key="frame" x="87" y="291" width="97" height="0.0"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-MI-mOu">
+                                        <rect key="frame" x="87" y="0.0" width="97" height="261"/>
                                         <state key="normal" title="Take a Picture"/>
                                         <connections>
                                             <action selector="openCameraButton:" destination="FCF-n8-4DM" eventType="touchUpInside" id="po5-Ea-nzy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGD-Md-ks4">
-                                        <rect key="frame" x="68.5" y="291" width="134" height="0.0"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGD-Md-ks4">
+                                        <rect key="frame" x="68.5" y="261" width="134" height="30"/>
                                         <state key="normal" title="Open Photo Library"/>
                                         <connections>
                                             <action selector="openPhotoLibrary:" destination="FCF-n8-4DM" eventType="touchUpInside" id="wLr-v8-4Jk"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="EOp-As-0nr" firstAttribute="leading" secondItem="pvL-Ic-3iR" secondAttribute="leading" id="6Pe-yZ-zva"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +54,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="gTd-Ok-rc2"/>
                     <connections>
-                        <outlet property="imagePicked" destination="EOp-As-0nr" id="gDf-Hs-yvn"/>
                         <segue destination="vhV-QM-Yt8" kind="push" identifier="cropSegue" id="7Zh-Ir-Tvd"/>
                     </connections>
                 </viewController>
@@ -81,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-42-oM0">
-                                <rect key="frame" x="8" y="20" width="359" height="582"/>
+                                <rect key="frame" x="8" y="64" width="359" height="538"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-L1-g7c">
                                 <rect key="frame" x="0.0" y="615" width="70" height="32"/>
@@ -182,7 +175,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-3X-Tmo">
-                                        <rect key="frame" x="98.5" y="410" width="103" height="90"/>
+                                        <rect key="frame" x="99" y="410" width="103" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-3F-sXe">
                                                 <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
@@ -192,7 +185,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsi-KN-mra">
-                                                <rect key="frame" x="12.5" y="30" width="78" height="30"/>
+                                                <rect key="frame" x="12" y="30" width="78" height="30"/>
                                                 <state key="normal" title="Preprocess"/>
                                                 <connections>
                                                     <action selector="processImage:" destination="thD-lj-5O6" eventType="touchUpInside" id="P3t-PU-Gzq"/>
@@ -229,7 +222,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LfI-it-77f" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="968-Mq-sXA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="968-Mq-sXA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
