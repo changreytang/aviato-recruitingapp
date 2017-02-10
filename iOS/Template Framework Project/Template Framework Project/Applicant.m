@@ -67,23 +67,25 @@
 -(void)setID:(NSString *)aID{
     myID = aID;
 }
--(NSData*)toJSON{
-    NSError *error = nil;
+-(NSDictionary*)toJSON{
+   // NSError *error = nil;
 
     NSDictionary *nameInfo = @{@"firstName" : fname, @"lastName" : lname, @"suffixes" : @""};
     NSDictionary *names = @{@"name" : nameInfo};
-    //NSDictionary *website = @{@"websites" : websites};
+    NSDictionary *website = @{@"websites" : websites};
     NSDictionary *phones = @{@"phones" : phoneNum};
     NSDictionary *emails = @{@"emails" : email};
-    //NSArray *jsonArray = @[names, website, phones, emails];
-    NSArray *jsonArray = @[names, phones, emails];
+    NSArray *jsonArray = @[names, website, phones, emails];
+    //NSArray *jsonArray = @[names, phones, emails];
 
     NSString* contactKey = [NSString stringWithFormat:@"%@", myID];
-    NSDictionary *contact= @{contactKey : jsonArray};
+    NSDictionary *contactDict= @{contactKey : jsonArray};
     //Workday's format: NSDictionary *contact= @{@"contact" : jsonArray};
+    
+    
 
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:contact options:NSJSONWritingPrettyPrinted error:&error];
-    return jsonData;
+    //NSData* jsonData = [NSJSONSerialization dataWithJSONObject:contact options:NSJSONWritingPrettyPrinted error:&error];
+    return contactDict;
 }
 
 @end

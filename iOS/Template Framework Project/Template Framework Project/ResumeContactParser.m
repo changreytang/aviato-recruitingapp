@@ -3,7 +3,6 @@
 //  Template Framework Project
 //
 //  Created by Chang Rey Tang on 11/7/16.
-//  Copyright © 2016 Daniele Galiotto - www.g8production.com. All rights reserved.
 //
 
 #import "ResumeContactParser.h"

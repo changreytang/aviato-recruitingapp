@@ -26,7 +26,7 @@
 -(void)setWebsites:(NSArray*)aWebsite;
 -(void)setID:(NSString*)aID;
 
--(NSData*)toJSON;
+-(NSDictionary*)toJSON;
 
 @end
 
