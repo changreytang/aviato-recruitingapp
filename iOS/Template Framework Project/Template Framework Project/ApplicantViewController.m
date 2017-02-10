@@ -163,6 +163,38 @@ XLFormRowDescriptor *websitesRow;
     [self reloadFormRow:websitesRow];
 }
 
+- (void)sendImage {
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
+                                 usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                                     if (nil != group) {
+                                         // be sure to filter the group so you only get photos
+                                         [group setAssetsFilter:[ALAssetsFilter allPhotos]];
+                                         
+                                         if (group.numberOfAssets > 0) {
+                                             [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:group.numberOfAssets - 1]
+                                                                     options:0
+                                                                  usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                                                                      if (nil != result) {
+                                                                          ALAssetRepresentation *repr = [result defaultRepresentation];
+                                                                          // this is the most recent saved photo
+                                                                          UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage]];
+                                                                          [[[HTTPRequester alloc] init] sendHttpPostPicture:img withID:self.applicantID];
+                                                                          
+                                                                          // we only need the first (most recent) photo -- stop the enumeration
+                                                                          *stop = YES;
+                                                                      }
+                                                                  }];
+                                         }
+                                     }
+                                     
+                                     *stop = NO;
+                                 } failureBlock:^(NSError *error) {
+                                     NSLog(@"error: %@", error);
+                                 }];
+}
+
+
 -(void)doneBtnPressed:(UIBarButtonItem * )button{
     NSLog(@"%@",self.formValues);
     NSDictionary * values = self.formValues;
@@ -185,6 +217,7 @@ XLFormRowDescriptor *websitesRow;
     //HTTPRequester *requester = [[HTTPRequester alloc] init];
     NSData * jsonToSend = [newApplicant toJSON];
     [[[HTTPRequester alloc] init] sendHttpPost:jsonToSend withID:self.applicantID];
+    [self sendImage];
     //NSLog
     
     

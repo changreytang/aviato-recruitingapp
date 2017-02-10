@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "XLFormViewController.h"
 #import "Applicant.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface ApplicantViewController : XLFormViewController
 

@@ -55,8 +55,11 @@
     NSData *imageData = UIImagePNGRepresentation(imageToPost);
     NSString *imageString = [imageData base64EncodedStringWithOptions:0];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"id",nil];
-    NSArray *objects = [NSArray arrayWithObjects:currentID,nil];
+   // NSArray *keys = [NSArray arrayWithObjects:@"id",@"picture",nil];
+   // NSArray *objects = [NSArray arrayWithObjects:currentID,imageString,nil];
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"picture",nil];
+    NSArray *objects = [NSArray arrayWithObjects:imageString,nil];
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     
     NSError *error;
@@ -74,6 +77,8 @@
     if(conn) {
         NSLog(@"Connection Successful");
         NSLog(@"with ID: %@", currentID);
+        NSLog(@"%@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+
         //NSLog(@"%@",[[NSString alloc] initWithData:imageData encoding:NSUTF8StringEncoding]);
         //NSLog(@"body is %@", body);
         //NSLog(@"%@", [request http])

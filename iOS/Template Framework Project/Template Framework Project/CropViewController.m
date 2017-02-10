@@ -201,7 +201,7 @@
                                                                           ALAssetRepresentation *repr = [result defaultRepresentation];
                                                                           // this is the most recent saved photo
                                                                           UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage]];
-                                                                          [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
+                                                                         // [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
 
                                                                           [self recognizeImageWithTesseract:img];
                                                                           // we only need the first (most recent) photo -- stop the enumeration
