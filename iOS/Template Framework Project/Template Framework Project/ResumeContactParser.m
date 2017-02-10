@@ -166,6 +166,27 @@
     NSString *contact_log = @"RAW CONTACT: ";
     
     */
+    
+    if([_names count] == 0) {
+        [_names addObject:@""];
+        [_names addObject:@""];
+    }
+    else if([_names count] == 1) {
+        [_names addObject:@""];
+    }
+    
+    if([_emails count] == 0) {
+        [_emails addObject:@""];
+    }
+    
+    if([_phoneNumbers count] == 0) {
+        [_phoneNumbers addObject:@""];
+    }
+    
+    if([_websites count] == 0) {
+        [_websites addObject:@""];
+    }
+    
     [self setNames:_names];
     [self setEmails:_emails];
     [self setPhoneNumbers:_phoneNumbers];
@@ -179,8 +200,9 @@
     [candidate setFName:[array objectAtIndex:0]];
     [candidate setLName:[array objectAtIndex:1]];
     [candidate setEmail:[self.emails objectAtIndex:0]];
-    [candidate setWebsites:[self.websites objectAtIndex:1]];
+    [candidate setWebsites:self.websites];
     [candidate setPhoneNumber:[self.phoneNumbers objectAtIndex:0]];
+    [candidate setAddress:@""];
     
     return candidate;
 

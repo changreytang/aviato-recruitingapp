@@ -159,7 +159,7 @@ XLFormRowDescriptor *websitesRow;
     [self reloadFormRow:addressRow];
     phoneRow.value = [self.applicantInstance getPhoneNumber];
     [self reloadFormRow:phoneRow];
-    websitesRow.value = [self.applicantInstance getWebsites];
+    websitesRow.value = [[self.applicantInstance getWebsites] componentsJoinedByString:@" "];
     [self reloadFormRow:websitesRow];
 }
 

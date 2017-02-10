@@ -16,7 +16,7 @@
 -(NSString*)getPhoneNumber;
 -(NSString*)getAddress;
 -(NSString*)getEmail;
--(NSString*)getWebsites;
+-(NSArray*)getWebsites;
 
 -(void)setEmail:(NSString*)email;
 -(void)setPhoneNumber:(NSString*)phoneNum;
