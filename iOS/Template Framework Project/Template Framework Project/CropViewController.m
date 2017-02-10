@@ -35,7 +35,8 @@
     
     currentID = [[NSProcessInfo processInfo] globallyUniqueString];
     NSLog(@"randID is %@", currentID);
-    [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
+
+   // [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
 
 }
 
@@ -170,6 +171,43 @@
 //    [parser parseContactInfo:test];
     //[self.resumeImageView setImage:image1];
 }
+<<<<<<< HEAD
+=======
+
+- (void)croppedImageSaved {
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
+                                 usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                                     if (nil != group) {
+                                         // be sure to filter the group so you only get photos
+                                         [group setAssetsFilter:[ALAssetsFilter allPhotos]];
+                                         
+                                         if (group.numberOfAssets > 0) {
+                                             [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:group.numberOfAssets - 1]
+                                                                     options:0
+                                                                  usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                                                                      if (nil != result) {
+                                                                          ALAssetRepresentation *repr = [result defaultRepresentation];
+                                                                          // this is the most recent saved photo
+                                                                          UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage]];
+                                                                          [[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
+
+                                                                          [self recognizeImageWithTesseract:img];
+                                                                          // we only need the first (most recent) photo -- stop the enumeration
+                                                                          *stop = YES;
+                                                                      }
+                                                                  }];
+                                         }
+                                     }
+                                     
+                                     *stop = NO;
+                                 } failureBlock:^(NSError *error) {
+                                     NSLog(@"error: %@", error);
+                                 }];
+    //[self recognizeImageWithTesseract:image];
+}
+
+>>>>>>> 7de13770d9573e2f2b77aa1b98136942f639d9a0
 - (IBAction)newApplicantBtn:(id)sender {
     [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
 }

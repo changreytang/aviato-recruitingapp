@@ -33,13 +33,78 @@
     }
     
     //We want a response
-    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:returnData options:NSJSONReadingMutableLeaves error:nil];
-    NSLog(@"Reponse %@",dict);
+   // NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    //NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:returnData options:NSJSONReadingMutableLeaves error:nil];
+    //NSLog(@"Reponse %@",dict);
 
 }
 
 - (void)sendHttpPostPicture:(UIImage *)imageToPost withID:(NSString *)currentID {
+    
+    // the server url to which the image (or the media) is uploaded.
+    NSURL* requestURL = [NSURL URLWithString:@"https://1kgafeo9xg.execute-api.us-west-2.amazonaws.com/prod"];
+    
+    // create request
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    [request setHTTPShouldHandleCookies:NO];
+    [request setTimeoutInterval:1000.0];
+    [request setHTTPMethod:@"POST"];
+    //NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.mywebpage.com/upload.json"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:1000.0];
+    
+    NSData *imageData = UIImagePNGRepresentation(imageToPost);
+    NSString *imageString = [imageData base64EncodedStringWithOptions:0];
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"id",nil];
+    NSArray *objects = [NSArray arrayWithObjects:currentID,nil];
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary options:kNilOptions error:&error];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:jsonData];
+    
+    // set URL
+    [request setURL:requestURL];
+    NSURLConnection *conn = [NSURLConnection connectionWithRequest:request delegate:self];
+    if(conn) {
+        NSLog(@"Connection Successful");
+        NSLog(@"with ID: %@", currentID);
+        //NSLog(@"%@",[[NSString alloc] initWithData:imageData encoding:NSUTF8StringEncoding]);
+        //NSLog(@"body is %@", body);
+        //NSLog(@"%@", [request http])
+    } else {
+        NSLog(@"Connection could not be made");
+    }
+    
+    //Async request
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *returnData, NSError *error)
+     {
+         
+         if (error)
+         {
+             NSLog(@"Error,%@", [error localizedDescription]);
+         }
+         else
+         {
+             //NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
+             NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:returnData options:NSJSONReadingMutableLeaves error:nil];
+             NSLog(@"%@",dict);
+         }
+     }];
+
+    
+    
+    
+    
+    
+    
+    /*
     // Dictionary that holds post parameters. Set post parameters that your server accepts or programmed to accept.
     NSMutableDictionary* _params = [[NSMutableDictionary alloc] init];
     //[_params setObject:@"1.0" forKey:@"ver"];
@@ -79,6 +144,8 @@
     
     // add image data
     NSData *imageData = UIImageJPEGRepresentation(imageToPost, 1.0);
+    NSString *encodedString = [imageData base64EncodedStringWithOptions:0];
+    
     if (imageData) {
         [body appendData:[[NSString stringWithFormat:@"--%@\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
         [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", FileParamConstant, currentID] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -129,6 +196,7 @@
             NSLog(@"%@",dict);
         }
     }];
+     */
 
 }
 
