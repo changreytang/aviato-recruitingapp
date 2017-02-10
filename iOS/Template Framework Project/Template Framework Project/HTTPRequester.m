@@ -14,7 +14,7 @@
  *  Sends synchronous HTTP POST request.
  *  Gather response data inside the same method.
  */
-- (void)sendHttpPost:(NSData *)postDict withID:(NSString *)currentID {
+- (void)sendHttpPost:(NSDictionary *)postDict withID:(NSString *)currentID {
     //NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",@"_username",@"_password"];
     NSError *error = nil;
 
@@ -213,7 +213,7 @@
  *  Sends synchronous HTTP POST request.
  *  Gather response data inside the same method.
  */
-- (void)httpPostCandidate:(NSData *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
+- (void)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
     //NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",@"_username",@"_password"];
     NSError *error = nil;
     

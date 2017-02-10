@@ -72,11 +72,11 @@
 
     NSDictionary *nameInfo = @{@"firstName" : fname, @"lastName" : lname, @"suffixes" : @""};
     NSDictionary *names = @{@"name" : nameInfo};
-    NSDictionary *website = @{@"websites" : websites};
+    //NSDictionary *website = @{@"websites" : websites};
     NSDictionary *phones = @{@"phones" : phoneNum};
     NSDictionary *emails = @{@"emails" : email};
-    NSArray *jsonArray = @[names, website, phones, emails];
-    //NSArray *jsonArray = @[names, phones, emails];
+    //NSArray *jsonArray = @[names, website, phones, emails];
+    NSArray *jsonArray = @[names, phones, emails];
 
     NSString* contactKey = [NSString stringWithFormat:@"%@", myID];
     NSDictionary *contactDict= @{contactKey : jsonArray};
