@@ -211,6 +211,7 @@ XLFormRowDescriptor *websitesRow;
     [newApplicant setPhoneNumber:aPhone];
     [newApplicant setAddress:aAddr];
     [newApplicant setID:self.applicantID];
+    //[newApplicant setResume:[self.applicantInstance getResume]];
     //[newApplicant setWebsites:[aSites objectAtIndex:0]];
 
     //[newApplicant initApplicant:aName withEmail:aEmail withPhoneNum:aPhone withAddress:aAddr];
@@ -218,7 +219,10 @@ XLFormRowDescriptor *websitesRow;
     NSDictionary * jsonToSend = [newApplicant toJSON];
     //[[[HTTPRequester alloc] init] sendHttpPost:jsonToSend withID:self.applicantID];
     //[self sendImage];
-    [[[HTTPRequester alloc] init] sendHttpPostPicture:[self.applicantInstance getResume] withID:self.applicantID];
+    //[[[HTTPRequester alloc] init] sendHttpPostPicture:[self.applicantInstance getResume] withID:self.applicantID];
+    [[[HTTPRequester alloc] init] httpPostCandidate:jsonToSend withImage:[self.applicantInstance getResume] withID:self.applicantID];
+    //- (void)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
+
 
     //NSLog
     

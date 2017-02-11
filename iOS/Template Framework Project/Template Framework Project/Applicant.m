@@ -86,7 +86,8 @@
     NSArray *jsonArray = @[names, phones, emails];
 
     NSString* contactKey = [NSString stringWithFormat:@"%@", myID];
-    NSDictionary *contactDict= @{contactKey : jsonArray};
+    //NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(resume)];
+    NSDictionary *contactDict= @{contactKey : jsonArray };
     //Workday's format: NSDictionary *contact= @{@"contact" : jsonArray};
     
     
