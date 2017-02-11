@@ -17,6 +17,7 @@
 -(NSString*)getAddress;
 -(NSString*)getEmail;
 -(NSArray*)getWebsites;
+-(UIImage*)getResume;
 
 -(void)setEmail:(NSString*)email;
 -(void)setPhoneNumber:(NSString*)phoneNum;
@@ -25,6 +26,7 @@
 -(void)setLName:(NSString*)lname;
 -(void)setWebsites:(NSArray*)aWebsite;
 -(void)setID:(NSString*)aID;
+-(void)setResume:(UIImage*)aResume;
 
 -(NSDictionary*)toJSON;
 

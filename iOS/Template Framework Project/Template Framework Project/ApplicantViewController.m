@@ -215,9 +215,11 @@ XLFormRowDescriptor *websitesRow;
 
     //[newApplicant initApplicant:aName withEmail:aEmail withPhoneNum:aPhone withAddress:aAddr];
     //HTTPRequester *requester = [[HTTPRequester alloc] init];
-    NSData * jsonToSend = [newApplicant toJSON];
+    NSDictionary * jsonToSend = [newApplicant toJSON];
     //[[[HTTPRequester alloc] init] sendHttpPost:jsonToSend withID:self.applicantID];
-    [self sendImage];
+    //[self sendImage];
+    [[[HTTPRequester alloc] init] sendHttpPostPicture:[self.applicantInstance getResume] withID:self.applicantID];
+
     //NSLog
     
     

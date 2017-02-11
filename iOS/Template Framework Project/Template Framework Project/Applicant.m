@@ -17,6 +17,7 @@
     NSString* rawInfo;
     NSArray* websites;
     NSString* myID;
+    UIImage* resume;
 }
 
 -(void)initApplicant:(NSString*)aName withEmail:(NSString*)aEmail withPhoneNum:(NSString*)aPhoneNum withAddress:(NSString*)aAddress withWebsites:aWebsites {
@@ -46,6 +47,9 @@
 -(NSString*)getEmail{
     return email;
 }
+-(UIImage*)getResume{
+    return resume;
+}
 -(void)setEmail:(NSString*)aEmail{
     email = aEmail;
 }
@@ -66,6 +70,9 @@
 }
 -(void)setID:(NSString *)aID{
     myID = aID;
+}
+-(void)setResume:(UIImage *)aResume{
+    resume = aResume;
 }
 -(NSDictionary*)toJSON{
    // NSError *error = nil;

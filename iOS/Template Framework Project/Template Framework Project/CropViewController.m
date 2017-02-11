@@ -126,6 +126,7 @@
         ResumeContactParser* parser = [[ResumeContactParser alloc] init];
         parser.viewController=(CropViewController*)self.navigationController.visibleViewController;//Save view controller
         self.candidate = [parser parseContactInfo:recognizedText];
+        [self.candidate setResume:self.resumeImage];
         
         [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
         // Remove the animated progress activity indicator
