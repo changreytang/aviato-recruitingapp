@@ -14,8 +14,12 @@
  *  Sends synchronous HTTP POST request.
  *  Gather response data inside the same method.
  */
-- (void)sendHttpPost:(NSData *)postData withID:(NSString *)currentID {
+- (void)sendHttpPost:(NSDictionary *)postDict withID:(NSString *)currentID {
     //NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",@"_username",@"_password"];
+    NSError *error = nil;
+
+    NSData* postData = [NSJSONSerialization dataWithJSONObject:postDict options:NSJSONWritingPrettyPrinted error:&error];
+
     NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:@"https://1kgafeo9xg.execute-api.us-west-2.amazonaws.com/prod"]];
@@ -55,8 +59,11 @@
     NSData *imageData = UIImagePNGRepresentation(imageToPost);
     NSString *imageString = [imageData base64EncodedStringWithOptions:0];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"id",nil];
-    NSArray *objects = [NSArray arrayWithObjects:currentID,nil];
+   // NSArray *keys = [NSArray arrayWithObjects:@"id",@"picture",nil];
+   // NSArray *objects = [NSArray arrayWithObjects:currentID,imageString,nil];
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"picture",nil];
+    NSArray *objects = [NSArray arrayWithObjects:imageString,nil];
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     
     NSError *error;
@@ -74,6 +81,8 @@
     if(conn) {
         NSLog(@"Connection Successful");
         NSLog(@"with ID: %@", currentID);
+        NSLog(@"%@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+
         //NSLog(@"%@",[[NSString alloc] initWithData:imageData encoding:NSUTF8StringEncoding]);
         //NSLog(@"body is %@", body);
         //NSLog(@"%@", [request http])
@@ -199,6 +208,46 @@
      */
 
 }
+
+/**
+ *  Sends synchronous HTTP POST request.
+ *  Gather response data inside the same method.
+ */
+- (void)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
+    //NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",@"_username",@"_password"];
+    NSError *error = nil;
+    
+    NSData *imageData = UIImagePNGRepresentation(imageToPost);
+    NSString *imageString = [imageData base64EncodedStringWithOptions:0];
+    
+    NSArray *keys = [NSArray arrayWithObjects:currentID,@"picture",nil];
+    NSArray *objects = [NSArray arrayWithObjects:postDict,imageString,nil];
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    NSData* postData = [NSJSONSerialization dataWithJSONObject:jsonDictionary options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%lu",(unsigned long)[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"https://1kgafeo9xg.execute-api.us-west-2.amazonaws.com/prod"]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:postData];
+    NSURLConnection *conn = [NSURLConnection connectionWithRequest:request delegate:self];
+    if(conn) {
+        NSLog(@"Connection Successful");
+        NSLog(@"%@",[[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding]);
+    } else {
+        NSLog(@"Connection could not be made");
+    }
+    
+    //We want a response
+    // NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    //NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:returnData options:NSJSONReadingMutableLeaves error:nil];
+    //NSLog(@"Reponse %@",dict);
+    
+}
+
 
 
 @end

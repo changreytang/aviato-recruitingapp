@@ -17,6 +17,7 @@
     NSString* rawInfo;
     NSArray* websites;
     NSString* myID;
+    UIImage* resume;
 }
 
 -(void)initApplicant:(NSString*)aName withEmail:(NSString*)aEmail withPhoneNum:(NSString*)aPhoneNum withAddress:(NSString*)aAddress withWebsites:aWebsites {
@@ -46,6 +47,9 @@
 -(NSString*)getEmail{
     return email;
 }
+-(UIImage*)getResume{
+    return resume;
+}
 -(void)setEmail:(NSString*)aEmail{
     email = aEmail;
 }
@@ -67,8 +71,11 @@
 -(void)setID:(NSString *)aID{
     myID = aID;
 }
--(NSData*)toJSON{
-    NSError *error = nil;
+-(void)setResume:(UIImage *)aResume{
+    resume = aResume;
+}
+-(NSDictionary*)toJSON{
+   // NSError *error = nil;
 
     NSDictionary *nameInfo = @{@"firstName" : fname, @"lastName" : lname, @"suffixes" : @""};
     NSDictionary *names = @{@"name" : nameInfo};
@@ -79,11 +86,14 @@
     NSArray *jsonArray = @[names, phones, emails];
 
     NSString* contactKey = [NSString stringWithFormat:@"%@", myID];
-    NSDictionary *contact= @{contactKey : jsonArray};
+    //NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(resume)];
+    NSDictionary *contactDict= @{contactKey : jsonArray };
     //Workday's format: NSDictionary *contact= @{@"contact" : jsonArray};
+    
+    
 
-    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:contact options:NSJSONWritingPrettyPrinted error:&error];
-    return jsonData;
+    //NSData* jsonData = [NSJSONSerialization dataWithJSONObject:contact options:NSJSONWritingPrettyPrinted error:&error];
+    return contactDict;
 }
 
 @end
