@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Template_Framework_ProjectVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Template_Framework_ProjectVersionString[];
+FOUNDATION_EXPORT double Pods_Aviato_RecruitingVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Aviato_RecruitingVersionString[];
 

@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		150E13221E4B1230002BD1B2 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150E13211E4B1230002BD1B2 /* PictureViewController.swift */; };
+		150E13291E4B12BF002BD1B2 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; };
+		150E132A1E4B12BF002BD1B2 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; };
+		150E132B1E4B12BF002BD1B2 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13261E4B12BF002BD1B2 /* OpenCV.framework */; };
+		150E132C1E4B12BF002BD1B2 /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; };
+		150E132D1E4B12BF002BD1B2 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; };
+		158621461E5D6951008924D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158621451E5D6951008924D7 /* LaunchScreen.storyboard */; };
+		158621481E5D6A32008924D7 /* screen-iphone-portrait-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 158621471E5D6A32008924D7 /* screen-iphone-portrait-2x.png */; };
+		15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; };
+		15B40A281E4B1FB0003394D0 /* DrawAction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; };
+		15B40A2B1E4B232D003394D0 /* DynamicTesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15B40A2C1E4B232D003394D0 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13261E4B12BF002BD1B2 /* OpenCV.framework */; };
+		15B40A2D1E4B232D003394D0 /* OpenCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13261E4B12BF002BD1B2 /* OpenCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15B40A2E1E4B232D003394D0 /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; };
+		15B40A2F1E4B232D003394D0 /* WDReceiptOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; };
+		15B40A311E4B232D003394D0 /* WDUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15F362191DD3C3DD00C231A3 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
+		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
+		3188732C1DE9120600DF5CDE /* Headers in Sources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
+		3188732E1DE9125200DF5CDE /* XL in Sources */ = {isa = PBXBuildFile; fileRef = 3188732D1DE9125200DF5CDE /* XL */; };
+		318873301DE9127F00DF5CDE /* XLForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 3188732F1DE9127F00DF5CDE /* XLForm.m */; };
+		31C513E21DDE353E002AC8BF /* Applicant.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E11DDE353E002AC8BF /* Applicant.m */; };
+		31C513E51DDE6D8A002AC8BF /* ApplicantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */; };
+		31C513E81DDE6E5A002AC8BF /* ResumeContactParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */; };
+		31C514021DE4298B002AC8BF /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */; };
+		31C514031DE4298B002AC8BF /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */; };
+		31C514041DE4298B002AC8BF /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F41DE4298B002AC8BF /* TOCroppedImageAttributes.m */; };
+		31C514051DE4298B002AC8BF /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F61DE4298B002AC8BF /* TOCropScrollView.m */; };
+		31C514061DE4298B002AC8BF /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513F81DE4298B002AC8BF /* TOCropToolbar.m */; };
+		31C514071DE4298B002AC8BF /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FA1DE4298B002AC8BF /* TOCropView.m */; };
+		31C514081DE4298B002AC8BF /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FD1DE4298B002AC8BF /* TOCropViewController.m */; };
+		31C514091DE4298B002AC8BF /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */; };
+		31C5140A1DE4298B002AC8BF /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */; };
+		428615B71845F340005D5A2E /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 428615B61845F340005D5A2E /* image_sample.jpg */; };
+		6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDD8180C5DE000443362 /* Foundation.framework */; };
+		6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDA180C5DE000443362 /* CoreGraphics.framework */; };
+		6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6400DDDC180C5DE000443362 /* UIKit.framework */; };
+		6400DDE3180C5DE000443362 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6400DDE1180C5DE000443362 /* InfoPlist.strings */; };
+		6400DDE5180C5DE000443362 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6400DDE4180C5DE000443362 /* main.m */; };
+		6400DDE9180C5DE000443362 /* G8AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6400DDE8180C5DE000443362 /* G8AppDelegate.m */; };
+		6400DDEF180C5DE000443362 /* G8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6400DDEE180C5DE000443362 /* G8ViewController.m */; };
+		6400DDF1180C5DE000443362 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6400DDF0180C5DE000443362 /* Images.xcassets */; };
+		64907490198A5CD500D728CC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6490748F198A5CD500D728CC /* CoreImage.framework */; };
+		64DDA74E188FD7D10025590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6400DDEA180C5DE000443362 /* Main.storyboard */; };
+		64DDA75B188FD9140025590D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 64DDA75A188FD9140025590D /* tessdata */; };
+		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
+		73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
+		7F27EF5920729DC36CF5E0E0 /* Pods_Aviato_Recruiting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDFF4E94E69796E7FD42334 /* Pods_Aviato_Recruiting.framework */; };
+		C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */; };
+		C3696BB31E40482000DED8BB /* HTTPRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C3696BB21E40482000DED8BB /* HTTPRequester.m */; };
+		C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3EBF1A71E301B8C00F4054E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6400DDCD180C5DE000443362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6400DDD4180C5DE000443362;
+			remoteInfo = "Template Framework Project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15B40A291E4B1FB0003394D0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				15B40A2D1E4B232D003394D0 /* OpenCV.framework in Embed Frameworks */,
+				15B40A2F1E4B232D003394D0 /* WDReceiptOCR.framework in Embed Frameworks */,
+				15B40A2B1E4B232D003394D0 /* DynamicTesseractOCR.framework in Embed Frameworks */,
+				15B40A281E4B1FB0003394D0 /* DrawAction.framework in Embed Frameworks */,
+				15B40A311E4B232D003394D0 /* WDUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Framework_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		150E13201E4B122F002BD1B2 /* Template Framework Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Template Framework Project-Bridging-Header.h"; sourceTree = "<group>"; };
+		150E13211E4B1230002BD1B2 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		150E13241E4B12BF002BD1B2 /* DrawAction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DrawAction.framework; path = ExternalFramework/DrawAction.framework; sourceTree = "<group>"; };
+		150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DynamicTesseractOCR.framework; path = ExternalFramework/DynamicTesseractOCR.framework; sourceTree = "<group>"; };
+		150E13261E4B12BF002BD1B2 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCV.framework; path = ExternalFramework/OpenCV.framework; sourceTree = "<group>"; };
+		150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WDReceiptOCR.framework; path = ExternalFramework/WDReceiptOCR.framework; sourceTree = "<group>"; };
+		150E13281E4B12BF002BD1B2 /* WDUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WDUtils.framework; path = ExternalFramework/WDUtils.framework; sourceTree = "<group>"; };
+		158621451E5D6951008924D7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		158621471E5D6A32008924D7 /* screen-iphone-portrait-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen-iphone-portrait-2x.png"; sourceTree = "<group>"; };
+		15F362181DD3C3DD00C231A3 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
+		31703EA81DCADFB400CD22A4 /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
+		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
+		3188732D1DE9125200DF5CDE /* XL */ = {isa = PBXFileReference; lastKnownFileType = folder; name = XL; path = ../Pods/XLForm/XLForm/XL; sourceTree = "<group>"; };
+		3188732F1DE9127F00DF5CDE /* XLForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XLForm.m; path = ../Pods/XLForm/XLForm/XL/XLForm.m; sourceTree = "<group>"; };
+		31C513E01DDE353E002AC8BF /* Applicant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Applicant.h; sourceTree = "<group>"; };
+		31C513E11DDE353E002AC8BF /* Applicant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Applicant.m; sourceTree = "<group>"; };
+		31C513E31DDE6D8A002AC8BF /* ApplicantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicantViewController.h; sourceTree = "<group>"; };
+		31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicantViewController.m; sourceTree = "<group>"; };
+		31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeContactParser.h; sourceTree = "<group>"; };
+		31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeContactParser.m; sourceTree = "<group>"; };
+		31C513EF1DE4298B002AC8BF /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOActivityCroppedImageProvider.h; path = Headers/TOActivityCroppedImageProvider.h; sourceTree = "<group>"; };
+		31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = Headers/TOActivityCroppedImageProvider.m; sourceTree = "<group>"; };
+		31C513F11DE4298B002AC8BF /* TOCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = Headers/TOCropOverlayView.h; sourceTree = "<group>"; };
+		31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = Headers/TOCropOverlayView.m; sourceTree = "<group>"; };
+		31C513F31DE4298B002AC8BF /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCroppedImageAttributes.h; path = Headers/TOCroppedImageAttributes.h; sourceTree = "<group>"; };
+		31C513F41DE4298B002AC8BF /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCroppedImageAttributes.m; path = Headers/TOCroppedImageAttributes.m; sourceTree = "<group>"; };
+		31C513F51DE4298B002AC8BF /* TOCropScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = Headers/TOCropScrollView.h; sourceTree = "<group>"; };
+		31C513F61DE4298B002AC8BF /* TOCropScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = Headers/TOCropScrollView.m; sourceTree = "<group>"; };
+		31C513F71DE4298B002AC8BF /* TOCropToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = Headers/TOCropToolbar.h; sourceTree = "<group>"; };
+		31C513F81DE4298B002AC8BF /* TOCropToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = Headers/TOCropToolbar.m; sourceTree = "<group>"; };
+		31C513F91DE4298B002AC8BF /* TOCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = Headers/TOCropView.h; sourceTree = "<group>"; };
+		31C513FA1DE4298B002AC8BF /* TOCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropView.m; path = Headers/TOCropView.m; sourceTree = "<group>"; };
+		31C513FB1DE4298B002AC8BF /* TOCropViewController-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TOCropViewController-Bridging-Header.h"; path = "Headers/TOCropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		31C513FC1DE4298B002AC8BF /* TOCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropViewController.h; path = Headers/TOCropViewController.h; sourceTree = "<group>"; };
+		31C513FD1DE4298B002AC8BF /* TOCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropViewController.m; path = Headers/TOCropViewController.m; sourceTree = "<group>"; };
+		31C513FE1DE4298B002AC8BF /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = Headers/TOCropViewControllerTransitioning.h; sourceTree = "<group>"; };
+		31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = Headers/TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
+		31C514001DE4298B002AC8BF /* UIImage+CropRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropRotate.h"; path = "Headers/UIImage+CropRotate.h"; sourceTree = "<group>"; };
+		31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropRotate.m"; path = "Headers/UIImage+CropRotate.m"; sourceTree = "<group>"; };
+		391DBEDB21F7D2ECE09B2AAC /* Pods-Template Framework Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Framework Project.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Template Framework Project/Pods-Template Framework Project.debug.xcconfig"; sourceTree = "<group>"; };
+		428615B61845F340005D5A2E /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
+		6400DDD5180C5DE000443362 /* Aviato Recruiting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aviato Recruiting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6400DDD8180C5DE000443362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6400DDDA180C5DE000443362 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6400DDDC180C5DE000443362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6400DDE0180C5DE000443362 /* Aviato Recruiting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Aviato Recruiting-Info.plist"; sourceTree = "<group>"; };
+		6400DDE2180C5DE000443362 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6400DDE4180C5DE000443362 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6400DDE6180C5DE000443362 /* Aviato Recruiting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aviato Recruiting-Prefix.pch"; sourceTree = "<group>"; };
+		6400DDE7180C5DE000443362 /* G8AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = G8AppDelegate.h; sourceTree = "<group>"; };
+		6400DDE8180C5DE000443362 /* G8AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = G8AppDelegate.m; sourceTree = "<group>"; };
+		6400DDEB180C5DE000443362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6400DDED180C5DE000443362 /* G8ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = G8ViewController.h; sourceTree = "<group>"; };
+		6400DDEE180C5DE000443362 /* G8ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = G8ViewController.m; sourceTree = "<group>"; };
+		6400DDF0180C5DE000443362 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6490748F198A5CD500D728CC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		64DDA75A188FD9140025590D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		6CF9B2403D6C27E98536FAEE /* Pods-Template Framework Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Framework Project.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Template Framework Project/Pods-Template Framework Project.release.xcconfig"; sourceTree = "<group>"; };
+		6EDFF4E94E69796E7FD42334 /* Pods_Aviato_Recruiting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aviato_Recruiting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../build/Debug-iphoneos/TesseractOCR.framework"; sourceTree = "<group>"; };
+		73C0A7BE1A59565100D823D4 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7958283A7B1F300F02D25C8 /* Pods-Aviato Recruiting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aviato Recruiting.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Aviato Recruiting/Pods-Aviato Recruiting.release.xcconfig"; sourceTree = "<group>"; };
+		C3696BB11E40482000DED8BB /* HTTPRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequester.h; sourceTree = "<group>"; };
+		C3696BB21E40482000DED8BB /* HTTPRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequester.m; sourceTree = "<group>"; };
+		C3EBF1A21E301B8C00F4054E /* Aviato RecruitingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aviato RecruitingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Template_Framework_ProjectTests.m; sourceTree = "<group>"; };
+		C3EBF1A61E301B8C00F4054E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B04A13E896E45C1D602A36 /* Pods-Aviato Recruiting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aviato Recruiting.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Aviato Recruiting/Pods-Aviato Recruiting.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6400DDD2180C5DE000443362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */,
+				150E13291E4B12BF002BD1B2 /* DrawAction.framework in Frameworks */,
+				150E132A1E4B12BF002BD1B2 /* DynamicTesseractOCR.framework in Frameworks */,
+				150E132B1E4B12BF002BD1B2 /* OpenCV.framework in Frameworks */,
+				150E132C1E4B12BF002BD1B2 /* WDReceiptOCR.framework in Frameworks */,
+				15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */,
+				150E132D1E4B12BF002BD1B2 /* WDUtils.framework in Frameworks */,
+				73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */,
+				15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */,
+				64907490198A5CD500D728CC /* CoreImage.framework in Frameworks */,
+				64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */,
+				6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */,
+				6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */,
+				15B40A2C1E4B232D003394D0 /* OpenCV.framework in Frameworks */,
+				15B40A2E1E4B232D003394D0 /* WDReceiptOCR.framework in Frameworks */,
+				6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */,
+				C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */,
+				7F27EF5920729DC36CF5E0E0 /* Pods_Aviato_Recruiting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBF19F1E301B8C00F4054E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6400DDCC180C5DE000443362 = {
+			isa = PBXGroup;
+			children = (
+				3188732F1DE9127F00DF5CDE /* XLForm.m */,
+				3188732D1DE9125200DF5CDE /* XL */,
+				6400DDDE180C5DE000443362 /* Template Framework Project */,
+				C3EBF1A31E301B8C00F4054E /* Template Framework ProjectTests */,
+				6400DDD7180C5DE000443362 /* Frameworks */,
+				6400DDD6180C5DE000443362 /* Products */,
+				A31ED2601496880596E6541B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6400DDD6180C5DE000443362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6400DDD5180C5DE000443362 /* Aviato Recruiting.app */,
+				C3EBF1A21E301B8C00F4054E /* Aviato RecruitingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6400DDD7180C5DE000443362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				150E13241E4B12BF002BD1B2 /* DrawAction.framework */,
+				150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */,
+				150E13261E4B12BF002BD1B2 /* OpenCV.framework */,
+				150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */,
+				150E13281E4B12BF002BD1B2 /* WDUtils.framework */,
+				73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */,
+				73C0A7BE1A59565100D823D4 /* TesseractOCR.framework */,
+				6490748F198A5CD500D728CC /* CoreImage.framework */,
+				64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */,
+				6400DDD8180C5DE000443362 /* Foundation.framework */,
+				6400DDDA180C5DE000443362 /* CoreGraphics.framework */,
+				6400DDDC180C5DE000443362 /* UIKit.framework */,
+				06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */,
+				6EDFF4E94E69796E7FD42334 /* Pods_Aviato_Recruiting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6400DDDE180C5DE000443362 /* Template Framework Project */ = {
+			isa = PBXGroup;
+			children = (
+				64DDA75A188FD9140025590D /* tessdata */,
+				150E13211E4B1230002BD1B2 /* PictureViewController.swift */,
+				6400DDE7180C5DE000443362 /* G8AppDelegate.h */,
+				6400DDE8180C5DE000443362 /* G8AppDelegate.m */,
+				6400DDED180C5DE000443362 /* G8ViewController.h */,
+				6400DDEE180C5DE000443362 /* G8ViewController.m */,
+				31C513E01DDE353E002AC8BF /* Applicant.h */,
+				31C513E11DDE353E002AC8BF /* Applicant.m */,
+				31703EA81DCADFB400CD22A4 /* CropViewController.h */,
+				31703EA91DCADFB400CD22A4 /* CropViewController.m */,
+				31C513E31DDE6D8A002AC8BF /* ApplicantViewController.h */,
+				31C513E41DDE6D8A002AC8BF /* ApplicantViewController.m */,
+				31C513E61DDE6E5A002AC8BF /* ResumeContactParser.h */,
+				31C513EF1DE4298B002AC8BF /* TOActivityCroppedImageProvider.h */,
+				C3696BB11E40482000DED8BB /* HTTPRequester.h */,
+				C3696BB21E40482000DED8BB /* HTTPRequester.m */,
+				31C513F01DE4298B002AC8BF /* TOActivityCroppedImageProvider.m */,
+				31C513F11DE4298B002AC8BF /* TOCropOverlayView.h */,
+				31C513F21DE4298B002AC8BF /* TOCropOverlayView.m */,
+				31C513F31DE4298B002AC8BF /* TOCroppedImageAttributes.h */,
+				31C513F41DE4298B002AC8BF /* TOCroppedImageAttributes.m */,
+				31C513F51DE4298B002AC8BF /* TOCropScrollView.h */,
+				31C513F61DE4298B002AC8BF /* TOCropScrollView.m */,
+				31C513F71DE4298B002AC8BF /* TOCropToolbar.h */,
+				31C513F81DE4298B002AC8BF /* TOCropToolbar.m */,
+				31C513F91DE4298B002AC8BF /* TOCropView.h */,
+				31C513FA1DE4298B002AC8BF /* TOCropView.m */,
+				31C513FB1DE4298B002AC8BF /* TOCropViewController-Bridging-Header.h */,
+				31C513FC1DE4298B002AC8BF /* TOCropViewController.h */,
+				158621471E5D6A32008924D7 /* screen-iphone-portrait-2x.png */,
+				31C513FD1DE4298B002AC8BF /* TOCropViewController.m */,
+				31C513FE1DE4298B002AC8BF /* TOCropViewControllerTransitioning.h */,
+				31C513FF1DE4298B002AC8BF /* TOCropViewControllerTransitioning.m */,
+				31C514001DE4298B002AC8BF /* UIImage+CropRotate.h */,
+				31C514011DE4298B002AC8BF /* UIImage+CropRotate.m */,
+				31C513E71DDE6E5A002AC8BF /* ResumeContactParser.m */,
+				158621451E5D6951008924D7 /* LaunchScreen.storyboard */,
+				6400DDEA180C5DE000443362 /* Main.storyboard */,
+				6400DDF0180C5DE000443362 /* Images.xcassets */,
+				15F362181DD3C3DD00C231A3 /* Headers */,
+				6400DDDF180C5DE000443362 /* Supporting Files */,
+				150E13201E4B122F002BD1B2 /* Template Framework Project-Bridging-Header.h */,
+			);
+			path = "Template Framework Project";
+			sourceTree = "<group>";
+		};
+		6400DDDF180C5DE000443362 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				428615B61845F340005D5A2E /* image_sample.jpg */,
+				6400DDE0180C5DE000443362 /* Aviato Recruiting-Info.plist */,
+				6400DDE1180C5DE000443362 /* InfoPlist.strings */,
+				6400DDE4180C5DE000443362 /* main.m */,
+				6400DDE6180C5DE000443362 /* Aviato Recruiting-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A31ED2601496880596E6541B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				391DBEDB21F7D2ECE09B2AAC /* Pods-Template Framework Project.debug.xcconfig */,
+				6CF9B2403D6C27E98536FAEE /* Pods-Template Framework Project.release.xcconfig */,
+				E7B04A13E896E45C1D602A36 /* Pods-Aviato Recruiting.debug.xcconfig */,
+				A7958283A7B1F300F02D25C8 /* Pods-Aviato Recruiting.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3EBF1A31E301B8C00F4054E /* Template Framework ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */,
+				C3EBF1A61E301B8C00F4054E /* Info.plist */,
+			);
+			path = "Template Framework ProjectTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6400DDD4180C5DE000443362 /* Aviato Recruiting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6400DE07180C5DE100443362 /* Build configuration list for PBXNativeTarget "Aviato Recruiting" */;
+			buildPhases = (
+				3B2BD38BB58B8CBB36C19D70 /* [CP] Check Pods Manifest.lock */,
+				6400DDD1180C5DE000443362 /* Sources */,
+				6400DDD2180C5DE000443362 /* Frameworks */,
+				6400DDD3180C5DE000443362 /* Resources */,
+				41040937EDF8B1C4E172C24B /* [CP] Embed Pods Frameworks */,
+				126FD3AD7C827CEDEFEC00D3 /* [CP] Copy Pods Resources */,
+				15B40A291E4B1FB0003394D0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aviato Recruiting";
+			productName = "Template Framework Project";
+			productReference = 6400DDD5180C5DE000443362 /* Aviato Recruiting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3EBF1A11E301B8C00F4054E /* Aviato RecruitingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3EBF1AB1E301B8C00F4054E /* Build configuration list for PBXNativeTarget "Aviato RecruitingTests" */;
+			buildPhases = (
+				C3EBF19E1E301B8C00F4054E /* Sources */,
+				C3EBF19F1E301B8C00F4054E /* Frameworks */,
+				C3EBF1A01E301B8C00F4054E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3EBF1A81E301B8C00F4054E /* PBXTargetDependency */,
+			);
+			name = "Aviato RecruitingTests";
+			productName = "Template Framework ProjectTests";
+			productReference = C3EBF1A21E301B8C00F4054E /* Aviato RecruitingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6400DDCD180C5DE000443362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Aviato;
+				TargetAttributes = {
+					6400DDD4180C5DE000443362 = {
+						DevelopmentTeam = SZVLL8KQSW;
+						LastSwiftMigration = 0820;
+					};
+					C3EBF1A11E301B8C00F4054E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6400DDD4180C5DE000443362;
+					};
+				};
+			};
+			buildConfigurationList = 6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Aviato Recruiting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6400DDCC180C5DE000443362;
+			productRefGroup = 6400DDD6180C5DE000443362 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6400DDD4180C5DE000443362 /* Aviato Recruiting */,
+				C3EBF1A11E301B8C00F4054E /* Aviato RecruitingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6400DDD3180C5DE000443362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6400DDF1180C5DE000443362 /* Images.xcassets in Resources */,
+				158621481E5D6A32008924D7 /* screen-iphone-portrait-2x.png in Resources */,
+				428615B71845F340005D5A2E /* image_sample.jpg in Resources */,
+				64DDA75B188FD9140025590D /* tessdata in Resources */,
+				15F362191DD3C3DD00C231A3 /* Headers in Resources */,
+				158621461E5D6951008924D7 /* LaunchScreen.storyboard in Resources */,
+				6400DDE3180C5DE000443362 /* InfoPlist.strings in Resources */,
+				64DDA74E188FD7D10025590D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBF1A01E301B8C00F4054E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		126FD3AD7C827CEDEFEC00D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Aviato Recruiting/Pods-Aviato Recruiting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B2BD38BB58B8CBB36C19D70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		41040937EDF8B1C4E172C24B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Aviato Recruiting/Pods-Aviato Recruiting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6400DDD1180C5DE000443362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				318873301DE9127F00DF5CDE /* XLForm.m in Sources */,
+				3188732E1DE9125200DF5CDE /* XL in Sources */,
+				3188732C1DE9120600DF5CDE /* Headers in Sources */,
+				6400DDE5180C5DE000443362 /* main.m in Sources */,
+				150E13221E4B1230002BD1B2 /* PictureViewController.swift in Sources */,
+				31C514081DE4298B002AC8BF /* TOCropViewController.m in Sources */,
+				6400DDE9180C5DE000443362 /* G8AppDelegate.m in Sources */,
+				C3696BB31E40482000DED8BB /* HTTPRequester.m in Sources */,
+				31C514091DE4298B002AC8BF /* TOCropViewControllerTransitioning.m in Sources */,
+				31C514031DE4298B002AC8BF /* TOCropOverlayView.m in Sources */,
+				31C513E21DDE353E002AC8BF /* Applicant.m in Sources */,
+				31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */,
+				31C514041DE4298B002AC8BF /* TOCroppedImageAttributes.m in Sources */,
+				31C514021DE4298B002AC8BF /* TOActivityCroppedImageProvider.m in Sources */,
+				31C514051DE4298B002AC8BF /* TOCropScrollView.m in Sources */,
+				31C514071DE4298B002AC8BF /* TOCropView.m in Sources */,
+				31C514061DE4298B002AC8BF /* TOCropToolbar.m in Sources */,
+				6400DDEF180C5DE000443362 /* G8ViewController.m in Sources */,
+				31C513E51DDE6D8A002AC8BF /* ApplicantViewController.m in Sources */,
+				31C5140A1DE4298B002AC8BF /* UIImage+CropRotate.m in Sources */,
+				31C513E81DDE6E5A002AC8BF /* ResumeContactParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EBF19E1E301B8C00F4054E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3EBF1A81E301B8C00F4054E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6400DDD4180C5DE000443362 /* Aviato Recruiting */;
+			targetProxy = C3EBF1A71E301B8C00F4054E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6400DDE1180C5DE000443362 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6400DDE2180C5DE000443362 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6400DDEA180C5DE000443362 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6400DDEB180C5DE000443362 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6400DE05180C5DE100443362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-lstdc++";
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		6400DE06180C5DE100443362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-lstdc++";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		6400DE08180C5DE100443362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B04A13E896E45C1D602A36 /* Pods-Aviato Recruiting.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/ExternalFramework",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Template Framework Project/Aviato Recruiting-Prefix.pch";
+				INFOPLIST_FILE = "Template Framework Project/Aviato Recruiting-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/ExternalFramework";
+				MACH_O_TYPE = mh_execute;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+					"-lz",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = matthewcheung.Tesseract;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template Framework Project/Template Framework Project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6400DE09180C5DE100443362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7958283A7B1F300F02D25C8 /* Pods-Aviato Recruiting.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SZVLL8KQSW;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/ExternalFramework",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Template Framework Project/Aviato Recruiting-Prefix.pch";
+				INFOPLIST_FILE = "Template Framework Project/Aviato Recruiting-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/ExternalFramework";
+				MACH_O_TYPE = mh_execute;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+					"-lz",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = matthewcheung.Tesseract;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Template Framework Project/Template Framework Project-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C3EBF1A91E301B8C00F4054E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Template Framework ProjectTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.changreytang.test.Template-Framework-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviato Recruiting.app/Aviato Recruiting";
+			};
+			name = Debug;
+		};
+		C3EBF1AA1E301B8C00F4054E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Template Framework ProjectTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.changreytang.test.Template-Framework-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviato Recruiting.app/Aviato Recruiting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6400DDD0180C5DE000443362 /* Build configuration list for PBXProject "Aviato Recruiting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6400DE05180C5DE100443362 /* Debug */,
+				6400DE06180C5DE100443362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6400DE07180C5DE100443362 /* Build configuration list for PBXNativeTarget "Aviato Recruiting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6400DE08180C5DE100443362 /* Debug */,
+				6400DE09180C5DE100443362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3EBF1AB1E301B8C00F4054E /* Build configuration list for PBXNativeTarget "Aviato RecruitingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3EBF1A91E301B8C00F4054E /* Debug */,
+				C3EBF1AA1E301B8C00F4054E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6400DDCD180C5DE000443362 /* Project object */;
+}

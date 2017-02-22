@@ -13,10 +13,10 @@ target 'TestsProject' do
 
 end
 
-xcodeproj 'Template Framework Project/Template Framework Project.xcodeproj/'
+xcodeproj 'Template Framework Project/Aviato Recruiting.xcodeproj/'
 workspace 'Tesseract-OCR-iOS'
 
-target 'Template Framework Project' do
+target 'Aviato Recruiting' do
        use_frameworks!
         pod 'XLForm' , '~> 3.0'
 	#pod 'Alamofire' , '~> 4.0'

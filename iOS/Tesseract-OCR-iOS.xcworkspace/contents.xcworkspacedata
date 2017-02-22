@@ -13,4 +13,7 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Template Framework Project/Aviato Recruiting.xcodeproj">
+   </FileRef>
 </Workspace>

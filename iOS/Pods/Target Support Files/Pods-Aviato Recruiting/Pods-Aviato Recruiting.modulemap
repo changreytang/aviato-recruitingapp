@@ -1,0 +1,6 @@
+framework module Pods_Aviato_Recruiting {
+  umbrella header "Pods-Aviato Recruiting-umbrella.h"
+
+  export *
+  module * { export * }
+}
