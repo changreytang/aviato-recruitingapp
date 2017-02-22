@@ -19,17 +19,13 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var corners : Corners!
     var resumeImage: UIImage?
-    
-//    @IBOutlet weak var imagePicked: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func openCameraButton(_ sender: Any) {
@@ -53,32 +49,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image: UIImage? = info[UIImagePickerControllerOriginalImage] as! UIImage?
-        
         let cornersResult = ImagePreprocessor.detectCornersInImage(image!)
         corners = cornersResult.corners
-//        print("Cofidence: \(cornersResult.isConfident)")
-//        print("TL: \(corners.topLeft)")
-//        print("TR: \(corners.topRight)")
-//        print("BL: \(corners.bottomLeft)")
-//        print("BR: \(corners.bottomRight)")
-//        
-//        corners = Corners(topLeft: CGPoint(x: 0, y: 0),
-//                topRight: CGPoint(x: 1, y: 0),
-//                bottomLeft: CGPoint(x: 0, y: 1),
-//                bottomRight: CGPoint(x: 1, y: 1))
-//        let points = [corners.topLeft, corners.topRight,
-//                      corners.bottomLeft, corners.bottomRight]
-//        let size  = CGSize(width: 10, height: 10)
-//        for point in points {
-//            let convertedPoint = CGPoint(x: ((point.x/(image?.size.width)!)*imagePicked.bounds.size.width)-5,
-//                                         y: ((point.y/(image?.size.height)!)*imagePicked.bounds.size.height)-5)
-//            let view = UIView(frame: CGRect(origin: convertedPoint, size: size))
-//            view.backgroundColor = UIColor.red
-//            imagePicked.addSubview(view)
-//        }
         let newImage = ImagePreprocessor.preprocessImage(image!, corners: corners)
         resumeImage = newImage
-        
         picker.dismiss(animated: true, completion: { _ in })
         self.performSegue(withIdentifier: "cropSegue", sender: self)
     }

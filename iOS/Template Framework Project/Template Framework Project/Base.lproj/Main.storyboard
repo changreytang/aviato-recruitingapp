@@ -175,7 +175,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-3X-Tmo">
-                                        <rect key="frame" x="99" y="410" width="103" height="90"/>
+                                        <rect key="frame" x="98.5" y="410" width="103" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-3F-sXe">
                                                 <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
@@ -185,7 +185,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsi-KN-mra">
-                                                <rect key="frame" x="12" y="30" width="78" height="30"/>
+                                                <rect key="frame" x="12.5" y="30" width="78" height="30"/>
                                                 <state key="normal" title="Preprocess"/>
                                                 <connections>
                                                     <action selector="processImage:" destination="thD-lj-5O6" eventType="touchUpInside" id="P3t-PU-Gzq"/>
@@ -222,7 +222,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LfI-it-77f" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="968-Mq-sXA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="968-Mq-sXA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
