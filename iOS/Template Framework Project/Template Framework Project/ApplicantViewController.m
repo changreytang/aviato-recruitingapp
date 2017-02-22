@@ -16,7 +16,14 @@ static NSString *const kPhone = @"phone";
 static NSString *const kAddress = @"address";
 static NSString *const kWebsite = @"websites";
 static NSString *const kNotes = @"notes";
-static NSString *const kSelectorAlertView = @"selectorAlertView";
+//static NSString *const kSelectorAlertView = @"selectorAlertView";
+static NSString *const kFullTime = @"Full Time";
+static NSString *const kPartTime = @"Part Time";
+static NSString *const kInternship = @"Internship";
+static NSString *const kYes = @"Yes";
+static NSString *const kMaybe = @"Maybe";
+static NSString *const kNo = @"No";
+
 
 XLFormRowDescriptor *fnameRow;
 XLFormRowDescriptor *lnameRow;
@@ -116,12 +123,31 @@ XLFormRowDescriptor *websitesRow;
 //    section = [XLFormSectionDescriptor formSection];
 //    [form addFormSection:section];
     
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kSelectorAlertView rowType:XLFormRowDescriptorTypeSelectorAlertView title:@"Position Type"];
-    row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"Full Time"],
-                            [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"Part Time"],
-                            [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Internship"],
-                            ];
-    row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
+//    row = [XLFormRowDescriptor formRowDescriptorWithTag:kSelectorAlertView rowType:XLFormRowDescriptorTypeSelectorAlertView title:@"Position Type"];
+//    row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"Full Time"],
+//                            [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"Part Time"],
+//                            [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Internship"],
+//                            ];
+//    row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
+//    [section addFormRow:row];
+    
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"Position Type"];
+    [form addFormSection:section];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kFullTime rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Full Time"];
+    [section addFormRow:row];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kPartTime rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Part Time"];
+    [section addFormRow:row];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kInternship rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Internship"];
+    [section addFormRow:row];
+
+    // Yes No Maybe
+    section = [XLFormSectionDescriptor formSectionWithTitle:@""];
+    [form addFormSection:section];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kYes rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Yes"];
+    [section addFormRow:row];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kMaybe rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Maybe"];
+    [section addFormRow:row];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kNo rowType:XLFormRowDescriptorTypeBooleanCheck title:@"No"];
     [section addFormRow:row];
     
     // For Recruiter - Section
