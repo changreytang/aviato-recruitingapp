@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JFMinimalNotifications.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kiwi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-TestsProject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06DDC1646E8989F09180D6DBBF7876A6</key>
+		<key>113CE7DFDC338C93C5CFA88B2DE57168</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E07F8433FF98F7D39FAF9AE26ACD031</key>
+		<key>33DD33E221266813A0EF58C39F17EF95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,22 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>668B7383987774FEC4AA9770FFD6D96A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7AD9E924DE4FE5588595F37549F430C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CB14EF9E5CCF45A88C4874FAF3568FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>99CB6621E6FECB33C0DAEBE3B571E703</key>
+		<key>7FC58315F36E8D74469DE4DF566D19F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9C069659D0364DCF95715D12054D6BAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAEA46899C68DFC50E2FB9BD3D6D7B23</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,7 @@
 
 #import "ApplicantViewController.h"
 #import "XLForm.h"
+#import "JFMinimalNotification.h"
 #import "HTTPRequester.h"
 
 static NSString *const kFName = @"fname";
@@ -34,7 +35,7 @@ XLFormRowDescriptor *websitesRow;
 
 
 @interface ApplicantViewController ()
-
+@property (nonatomic, strong) JFMinimalNotification* minimalNotification;
 @end
 
 
@@ -42,7 +43,6 @@ XLFormRowDescriptor *websitesRow;
 
 //- (void)viewDidLoad {
 //    [super viewDidLoad];
-//    // Do any additional setup after loading the view.
 //}
 //
 //- (void)didReceiveMemoryWarning {
@@ -140,6 +140,13 @@ XLFormRowDescriptor *websitesRow;
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kInternship rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Internship"];
     [section addFormRow:row];
 
+    // For Recruiter - Section
+    section = [XLFormSectionDescriptor formSectionWithTitle:@"For Recruiter"];
+    
+    //Notes for recruiter
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
+    [section addFormRow:row];
+    
     // Yes No Maybe
     section = [XLFormSectionDescriptor formSectionWithTitle:@""];
     [form addFormSection:section];
@@ -149,15 +156,9 @@ XLFormRowDescriptor *websitesRow;
     [section addFormRow:row];
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNo rowType:XLFormRowDescriptorTypeBooleanCheck title:@"No"];
     [section addFormRow:row];
-    
-    // For Recruiter - Section
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"For Recruiter"];
     section.footerTitle = @"Aviato";
     [form addFormSection:section];
-    
-    //Notes for recruiter
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
-    [section addFormRow:row];
+
     
     self.form = form;
 
@@ -246,9 +247,69 @@ XLFormRowDescriptor *websitesRow;
     //[[[HTTPRequester alloc] init] sendHttpPost:jsonToSend withID:self.applicantID];
     //[self sendImage];
     //[[[HTTPRequester alloc] init] sendHttpPostPicture:[self.applicantInstance getResume] withID:self.applicantID];
-    [[[HTTPRequester alloc] init] httpPostCandidate:jsonToSend withImage:[self.applicantInstance getResume] withID:self.applicantID];
+    int success = [[[HTTPRequester alloc] init] httpPostCandidate:jsonToSend withImage:[self.applicantInstance getResume] withID:self.applicantID];
     //- (void)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
+    if(success == 0){
+        /**
+         * Create the notification
+         */
 
+        self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:@"Success" subTitle:@"Application Sent" dismissalDelay:2.0 touchHandler:^{
+            [self.minimalNotification dismiss];
+        }];
+        
+        /**
+         * Set the desired font for the title and sub-title labels
+         * Default is System Normal
+         */
+        UIFont* titleFont = [UIFont fontWithName:@"STHeitiK-Light" size:22];
+        [self.minimalNotification setTitleFont:titleFont];
+        UIFont* subTitleFont = [UIFont fontWithName:@"STHeitiK-Light" size:16];
+        [self.minimalNotification setSubTitleFont:subTitleFont];
+        
+        /**
+         * Set any necessary edge padding as needed
+         */
+        self.minimalNotification.edgePadding = UIEdgeInsetsMake(0, 0, 10, 0);
+        
+        /**
+         * Add the notification to a view
+         */
+        [self.navigationController.view addSubview:self.minimalNotification];
+        self.minimalNotification.presentFromTop = YES;
+        [self.minimalNotification show];
+
+    }
+    else{
+        /**
+         * Create the notification
+         */
+        
+        self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError title:@"Error" subTitle:@"Application not sent" dismissalDelay:2.0 touchHandler:^{
+            [self.minimalNotification dismiss];
+        }];
+        
+        /**
+         * Set the desired font for the title and sub-title labels
+         * Default is System Normal
+         */
+        UIFont* titleFont = [UIFont fontWithName:@"STHeitiK-Light" size:22];
+        [self.minimalNotification setTitleFont:titleFont];
+        UIFont* subTitleFont = [UIFont fontWithName:@"STHeitiK-Light" size:16];
+        [self.minimalNotification setSubTitleFont:subTitleFont];
+        
+        /**
+         * Set any necessary edge padding as needed
+         */
+        self.minimalNotification.edgePadding = UIEdgeInsetsMake(0, 0, 10, 0);
+        
+        /**
+         * Add the notification to a view
+         */
+        [self.navigationController.view addSubview:self.minimalNotification];
+        self.minimalNotification.presentFromTop = YES;
+        [self.minimalNotification show];
+    }
 
     //NSLog
     

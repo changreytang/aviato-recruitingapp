@@ -1,18 +1,38 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - JFMinimalNotifications (0.0.9)
   - Kiwi (2.3.1)
+  - SwiftyButton (0.6.0)
   - TesseractOCRiOS (4.0.0)
   - XLForm (3.3.0)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - JFMinimalNotifications (~> 0.0.8)
   - Kiwi (~> 2.3.1)
+  - SwiftyButton
   - TesseractOCRiOS (= 4.0.0)
   - XLForm (~> 3.0)
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  JFMinimalNotifications: b0c64f1237d8571f8e091b51530ffb9d8d7dcb76
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
+  SwiftyButton: 4c9b61c499f172971a1b8c2eebbbdc20a26d8a08
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
   XLForm: d5c391dfc62865927b5bcab0a5a0dbfb3e02b0ec
 
-PODFILE CHECKSUM: 9645c1869f61301a33a73998181667f9768d4a7a
+PODFILE CHECKSUM: 4a8d3a4fef59a3a3b53d7fee114cdb584a3921b0
 
 COCOAPODS: 1.2.0

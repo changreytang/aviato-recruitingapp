@@ -6,9 +6,7 @@ target 'TestsProject' do
         workspace 'Tesseract-OCR-iOS'
 	xcodeproj 'TestsProject/TestsProject.xcodeproj/', 'Coverage' => :debug
 	pod 'Kiwi', '~> 2.3.1'
-
 	pod 'TesseractOCRiOS', '4.0.0'
-
 	pod 'XLForm' , '~> 3.0'
 
 end
@@ -19,6 +17,8 @@ workspace 'Tesseract-OCR-iOS'
 target 'Template Framework Project' do
        use_frameworks!
         pod 'XLForm' , '~> 3.0'
-	#pod 'Alamofire' , '~> 4.0'
+        pod 'SwiftyButton'
+        pod 'JFMinimalNotifications', '~> 0.0.8'
+	pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 end

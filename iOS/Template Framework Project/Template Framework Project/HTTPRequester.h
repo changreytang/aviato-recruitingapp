@@ -12,6 +12,6 @@
 
 - (void)sendHttpPost:(NSDictionary *)postDict withID:(NSString *)currentID;
 - (void)sendHttpPostPicture:(UIImage *)imageToPost withID:(NSString *)currentID;
-- (void)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID;
+- (int)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID;
 
 @end

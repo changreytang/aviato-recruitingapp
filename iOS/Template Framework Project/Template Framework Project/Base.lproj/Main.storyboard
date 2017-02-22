@@ -21,47 +21,63 @@
                         <viewControllerLayoutGuide type="bottom" id="uJT-pw-Ptg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z3E-Fj-NhG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-Ic-3iR">
-                                <rect key="frame" x="52" y="188" width="271" height="291"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-MI-mOu">
-                                        <rect key="frame" x="87" y="0.0" width="97" height="261"/>
-                                        <state key="normal" title="Take a Picture"/>
-                                        <connections>
-                                            <action selector="openCameraButton:" destination="FCF-n8-4DM" eventType="touchUpInside" id="po5-Ea-nzy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGD-Md-ks4">
-                                        <rect key="frame" x="68.5" y="261" width="134" height="30"/>
-                                        <state key="normal" title="Open Photo Library"/>
-                                        <connections>
-                                            <action selector="openPhotoLibrary:" destination="FCF-n8-4DM" eventType="touchUpInside" id="wLr-v8-4Jk"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aviatobanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="qWJ-zO-bA5">
+                                <rect key="frame" x="23" y="43" width="329" height="56"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-MI-mOu" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="87" y="191" width="200" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="LYl-MW-UNd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Open Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openCameraButton:" destination="FCF-n8-4DM" eventType="touchUpInside" id="po5-Ea-nzy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGD-Md-ks4" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="87" y="270" width="200" height="55"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Open Photo Library">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openPhotoLibrary:" destination="FCF-n8-4DM" eventType="touchUpInside" id="wLr-v8-4Jk"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pvL-Ic-3iR" firstAttribute="centerY" secondItem="z3E-Fj-NhG" secondAttribute="centerY" id="Lsb-1x-oKc"/>
-                            <constraint firstItem="pvL-Ic-3iR" firstAttribute="centerX" secondItem="z3E-Fj-NhG" secondAttribute="centerX" id="Smi-hx-x4B"/>
-                            <constraint firstItem="pvL-Ic-3iR" firstAttribute="leading" secondItem="z3E-Fj-NhG" secondAttribute="leadingMargin" constant="36" id="aun-LB-Vi0"/>
-                            <constraint firstItem="pvL-Ic-3iR" firstAttribute="top" secondItem="UrF-J8-Ewd" secondAttribute="bottom" constant="124" id="lS4-NT-j7Y"/>
+                            <constraint firstItem="Cyv-MI-mOu" firstAttribute="leading" secondItem="z3E-Fj-NhG" secondAttribute="leadingMargin" constant="71" id="7TY-Tq-Zyg"/>
+                            <constraint firstItem="YGD-Md-ks4" firstAttribute="height" secondItem="Cyv-MI-mOu" secondAttribute="height" constant="2" id="9ab-Sd-4U9"/>
+                            <constraint firstItem="Cyv-MI-mOu" firstAttribute="centerX" secondItem="z3E-Fj-NhG" secondAttribute="centerX" id="ROx-ml-UEF"/>
+                            <constraint firstItem="qWJ-zO-bA5" firstAttribute="top" secondItem="UrF-J8-Ewd" secondAttribute="bottom" constant="43" id="bkt-8j-uPf"/>
+                            <constraint firstItem="Cyv-MI-mOu" firstAttribute="leading" secondItem="YGD-Md-ks4" secondAttribute="leading" id="dCL-9Z-jiz"/>
+                            <constraint firstItem="Cyv-MI-mOu" firstAttribute="top" secondItem="qWJ-zO-bA5" secondAttribute="bottom" constant="92" id="ncr-0S-WeX"/>
+                            <constraint firstItem="YGD-Md-ks4" firstAttribute="width" secondItem="Cyv-MI-mOu" secondAttribute="width" id="reb-Nn-fc9"/>
+                            <constraint firstItem="qWJ-zO-bA5" firstAttribute="leading" secondItem="z3E-Fj-NhG" secondAttribute="leadingMargin" constant="7" id="vZU-w4-hHY"/>
+                            <constraint firstItem="qWJ-zO-bA5" firstAttribute="centerX" secondItem="Cyv-MI-mOu" secondAttribute="centerX" id="xmz-Kv-bAl"/>
+                            <constraint firstItem="uJT-pw-Ptg" firstAttribute="top" secondItem="YGD-Md-ks4" secondAttribute="bottom" constant="278" id="xx1-Yr-q9v"/>
+                            <constraint firstItem="YGD-Md-ks4" firstAttribute="top" secondItem="Cyv-MI-mOu" secondAttribute="bottom" constant="26" id="zlV-bF-yjQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gTd-Ok-rc2"/>
                     <connections>
+                        <outlet property="cameraButton" destination="Cyv-MI-mOu" id="6RY-ka-svd"/>
+                        <outlet property="photoButton" destination="YGD-Md-ks4" id="IWx-06-SJa"/>
                         <segue destination="vhV-QM-Yt8" kind="push" identifier="cropSegue" id="7Zh-Ir-Tvd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qva-mi-esU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="42"/>
+            <point key="canvasLocation" x="557.5" y="41.5"/>
         </scene>
-        <!--Crop View Controller-->
+        <!--Check Picture-->
         <scene sceneID="PNt-iB-Uol">
             <objects>
                 <viewController id="vhV-QM-Yt8" customClass="CropViewController" sceneMemberID="viewController">
@@ -70,14 +86,14 @@
                         <viewControllerLayoutGuide type="bottom" id="jWN-xD-Vmq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lt2-uj-5So">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-42-oM0">
-                                <rect key="frame" x="8" y="64" width="359" height="538"/>
+                                <rect key="frame" x="8" y="0.0" width="359" height="538"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-L1-g7c">
-                                <rect key="frame" x="0.0" y="615" width="70" height="32"/>
+                                <rect key="frame" x="0.0" y="551" width="70" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="TGc-nb-a0f"/>
                                 </constraints>
@@ -88,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLN-kt-hZG">
-                                <rect key="frame" x="305" y="615" width="70" height="32"/>
+                                <rect key="frame" x="305" y="551" width="70" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="VDO-H5-F1D"/>
                                 </constraints>
@@ -98,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmJ-pr-ZAW">
-                                <rect key="frame" x="117" y="617" width="140" height="30"/>
+                                <rect key="frame" x="117" y="553" width="140" height="30"/>
                                 <state key="normal" title="Applicant"/>
                                 <connections>
                                     <action selector="newApplicantBtn:" destination="vhV-QM-Yt8" eventType="touchUpInside" id="Tda-Lr-9wj"/>
@@ -123,7 +139,7 @@
                             <constraint firstAttribute="bottom" secondItem="OLN-kt-hZG" secondAttribute="bottom" constant="20" symbolic="YES" id="y46-Ni-uVo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vFE-73-IOh"/>
+                    <navigationItem key="navigationItem" title="Check Picture" id="vFE-73-IOh"/>
                     <connections>
                         <outlet property="resumeImageView" destination="2Ao-42-oM0" id="p5o-Ne-P8j"/>
                         <segue destination="ppB-kn-Pee" kind="push" identifier="applicantVCSegue" id="iQ3-hJ-VgL"/>
@@ -142,7 +158,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VFm-c4-hkG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YPa-WP-MoA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -152,79 +168,16 @@
             </objects>
             <point key="canvasLocation" x="1595.5" y="41.5"/>
         </scene>
-        <!--Preprocess View Controller-->
-        <scene sceneID="O6S-Hi-cyL">
-            <objects>
-                <viewController id="thD-lj-5O6" customClass="PreprocessViewController" customModule="Template_Framework_Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HLE-Ed-RMd"/>
-                        <viewControllerLayoutGuide type="bottom" id="0Vr-Ia-du3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2hX-P3-nb9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0oh-cI-eAK">
-                                <rect key="frame" x="38" y="84" width="300" height="500"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDf-Mk-0zj">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="Vnc-0x-WDu"/>
-                                            <constraint firstAttribute="width" constant="300" id="XtZ-mb-gbI"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VDT-3X-Tmo">
-                                        <rect key="frame" x="98.5" y="410" width="103" height="90"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-3F-sXe">
-                                                <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
-                                                <state key="normal" title="Detect corners"/>
-                                                <connections>
-                                                    <action selector="detectCorners:" destination="thD-lj-5O6" eventType="touchUpInside" id="BHa-BH-k7T"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsi-KN-mra">
-                                                <rect key="frame" x="12.5" y="30" width="78" height="30"/>
-                                                <state key="normal" title="Preprocess"/>
-                                                <connections>
-                                                    <action selector="processImage:" destination="thD-lj-5O6" eventType="touchUpInside" id="P3t-PU-Gzq"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsA-sF-nCJ">
-                                                <rect key="frame" x="32" y="60" width="39" height="30"/>
-                                                <state key="normal" title="parse"/>
-                                                <connections>
-                                                    <action selector="parseText:" destination="thD-lj-5O6" eventType="touchUpInside" id="cdD-Tq-fx5"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0oh-cI-eAK" firstAttribute="centerY" secondItem="2hX-P3-nb9" secondAttribute="centerY" id="8PF-OR-IdC"/>
-                            <constraint firstItem="0oh-cI-eAK" firstAttribute="centerX" secondItem="2hX-P3-nb9" secondAttribute="centerX" id="BbG-ac-0Kj"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="jDf-Mk-0zj" id="u3d-9z-9qv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DhX-eY-OtO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2051" y="36"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tRf-1k-zLT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LfI-it-77f" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="968-Mq-sXA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="968-Mq-sXA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -236,6 +189,9 @@
             <point key="canvasLocation" x="40" y="42"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aviatobanner.png" width="3000" height="681"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

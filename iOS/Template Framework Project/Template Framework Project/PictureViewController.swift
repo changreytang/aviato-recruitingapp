@@ -8,6 +8,8 @@
 
 import UIKit
 import WDReceiptOCR
+import SwiftyButton
+import ChameleonFramework
 
 public extension OCR {
     public func doSomething() {
@@ -17,11 +19,39 @@ public extension OCR {
 
 class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var cameraButton: PressableButton!
+    @IBOutlet weak var photoButton: PressableButton!
+    
     var corners : Corners!
     var resumeImage: UIImage?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setStatusBarStyle(UIStatusBarStyleContrast)
+        self.navigationController?.navigationBar.backgroundColor = FlatBlueDark()
+        self.navigationController?.hidesNavigationBarHairline = true
+
+
+
+        self.cameraButton.colors = .init(
+            button: UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1),
+            shadow: UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1))
+        
+        self.cameraButton.shadowHeight = 5
+        self.cameraButton.cornerRadius = 5
+        self.cameraButton.setTitle("Open Camera", for: .normal)
+        
+        self.photoButton.colors = .init(
+            button: UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1),
+            shadow: UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1))
+        
+        self.photoButton.shadowHeight = 5
+        self.photoButton.cornerRadius = 5
+        self.photoButton.setTitle("Open Photo Library", for: .normal)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -213,7 +213,7 @@
  *  Sends synchronous HTTP POST request.
  *  Gather response data inside the same method.
  */
-- (void)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
+- (int)httpPostCandidate:(NSDictionary *)postDict withImage:(UIImage *)imageToPost withID:(NSString *)currentID {
     //NSString *post = [NSString stringWithFormat:@"Username=%@&Password=%@",@"_username",@"_password"];
     NSError *error = nil;
     
@@ -237,8 +237,10 @@
     if(conn) {
         NSLog(@"Connection Successful");
         NSLog(@"%@",[[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding]);
+        return 0;
     } else {
         NSLog(@"Connection could not be made");
+        return -1;
     }
     
     //We want a response
