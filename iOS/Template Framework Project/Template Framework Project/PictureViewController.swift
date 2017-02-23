@@ -79,10 +79,11 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image: UIImage? = info[UIImagePickerControllerOriginalImage] as! UIImage?
-        let cornersResult = ImagePreprocessor.detectCornersInImage(image!)
-        corners = cornersResult.corners
-        let newImage = ImagePreprocessor.preprocessImage(image!, corners: corners)
-        resumeImage = newImage
+//        let cornersResult = ImagePreprocessor.detectCornersInImage(image!)
+//        corners = cornersResult.corners
+//        let newImage = ImagePreprocessor.preprocessImage(image!, corners: corners)
+//        resumeImage = newImage
+        resumeImage = image
         picker.dismiss(animated: true, completion: { _ in })
         self.performSegue(withIdentifier: "cropSegue", sender: self)
     }
