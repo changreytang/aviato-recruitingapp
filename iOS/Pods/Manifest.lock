@@ -2,6 +2,9 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - HTPressableButton (1.3.3):
+    - HTPressableButton/All (= 1.3.3)
+  - HTPressableButton/All (1.3.3)
   - JFMinimalNotifications (0.0.9)
   - Kiwi (2.3.1)
   - SwiftyButton (0.6.0)
@@ -10,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - HTPressableButton
   - JFMinimalNotifications (~> 0.0.8)
   - Kiwi (~> 2.3.1)
   - SwiftyButton
@@ -27,12 +31,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  HTPressableButton: 3109ba7972247ddbd387c8a22b0341b02369b31e
   JFMinimalNotifications: b0c64f1237d8571f8e091b51530ffb9d8d7dcb76
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
   SwiftyButton: 4c9b61c499f172971a1b8c2eebbbdc20a26d8a08
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
   XLForm: d5c391dfc62865927b5bcab0a5a0dbfb3e02b0ec
 
-PODFILE CHECKSUM: 4a8d3a4fef59a3a3b53d7fee114cdb584a3921b0
+PODFILE CHECKSUM: f92a77b252f17592c856c9f6c02052f838afe799
 
 COCOAPODS: 1.2.0

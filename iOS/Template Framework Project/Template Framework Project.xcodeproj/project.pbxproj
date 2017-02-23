@@ -17,6 +17,7 @@
 		154FDE761E5D71FD00E88E19 /* launchscreenphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE751E5D71FD00E88E19 /* launchscreenphoto.png */; };
 		154FDE781E5D80F500E88E19 /* SwiftyButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154FDE771E5D80F500E88E19 /* SwiftyButton.framework */; };
 		154FDE7C1E5D842900E88E19 /* aviatobanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE7B1E5D842900E88E19 /* aviatobanner.png */; };
+		15982D3E1E5E66F7009A95CC /* HTPressableButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15982D3D1E5E66F7009A95CC /* HTPressableButton.framework */; };
 		15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; };
 		15B40A281E4B1FB0003394D0 /* DrawAction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; };
@@ -104,6 +105,7 @@
 		154FDE751E5D71FD00E88E19 /* launchscreenphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchscreenphoto.png; sourceTree = "<group>"; };
 		154FDE771E5D80F500E88E19 /* SwiftyButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyButton.framework; path = "/Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Pods/../build/Debug-iphoneos/SwiftyButton/SwiftyButton.framework"; sourceTree = "<absolute>"; };
 		154FDE7B1E5D842900E88E19 /* aviatobanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aviatobanner.png; sourceTree = "<group>"; };
+		15982D3D1E5E66F7009A95CC /* HTPressableButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTPressableButton.framework; path = "/Users/matthewcheung/Documents/workspace/aviato-recruitingapp/iOS/Pods/../build/Debug-iphoneos/HTPressableButton/HTPressableButton.framework"; sourceTree = "<absolute>"; };
 		15F362181DD3C3DD00C231A3 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
 		31703EA81DCADFB400CD22A4 /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
 		31703EA91DCADFB400CD22A4 /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15982D3E1E5E66F7009A95CC /* HTPressableButton.framework in Frameworks */,
 				154FDE781E5D80F500E88E19 /* SwiftyButton.framework in Frameworks */,
 				15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */,
 				150E13291E4B12BF002BD1B2 /* DrawAction.framework in Frameworks */,
@@ -224,6 +227,7 @@
 		6400DDD7180C5DE000443362 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15982D3D1E5E66F7009A95CC /* HTPressableButton.framework */,
 				154FDE771E5D80F500E88E19 /* SwiftyButton.framework */,
 				150E13241E4B12BF002BD1B2 /* DrawAction.framework */,
 				150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */,

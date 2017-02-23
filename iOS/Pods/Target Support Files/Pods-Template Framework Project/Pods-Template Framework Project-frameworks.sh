@@ -91,18 +91,21 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/XLForm-framework/XLForm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ChameleonFramework/ChameleonFramework.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HTPressableButton/HTPressableButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JFMinimalNotifications/JFMinimalNotifications.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/XLForm-framework/XLForm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ChameleonFramework/ChameleonFramework.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HTPressableButton/HTPressableButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JFMinimalNotifications/JFMinimalNotifications.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Coverage" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/XLForm-framework/XLForm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ChameleonFramework/ChameleonFramework.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HTPressableButton/HTPressableButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JFMinimalNotifications/JFMinimalNotifications.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyButton/SwiftyButton.framework"
 fi

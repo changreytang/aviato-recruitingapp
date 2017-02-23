@@ -11,9 +11,16 @@
 #import "Headers/TOCropViewController.h"
 #import "ApplicantViewController.h"
 #import "HTTPRequester.h"
+#import "HTPressableButton.h"
+#import "UIColor+HTColor.h"
+
 
 @interface CropViewController () <TOCropViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *resumeImageView;
+
+@property (strong, nonatomic) IBOutlet HTPressableButton *cropButton;
+@property (weak, nonatomic) IBOutlet HTPressableButton *applicantButton;
+
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 @end
@@ -35,6 +42,20 @@
     currentID = [[NSProcessInfo processInfo] globallyUniqueString];
     NSLog(@"randID is %@", currentID);
     //[[[HTTPRequester alloc] init] sendHttpPostPicture:self.resumeImage withID: currentID];
+
+    _cropButton.style = HTPressableButtonStyleRounded;
+    _cropButton.frame = CGRectMake(80.0, 80.0, 160.0, 40.0);
+    _cropButton.buttonColor = [UIColor ht_peterRiverColor];
+    _cropButton.shadowColor = [UIColor ht_belizeHoleColor];
+    [_cropButton setTitle:@"Crop Contact" forState:UIControlStateNormal];
+    [self.view addSubview:_cropButton];
+    
+    _applicantButton.style = HTPressableButtonStyleRounded;
+    _applicantButton.frame = CGRectMake(80.0, 80.0, 160.0, 40.0);
+    _applicantButton.buttonColor = [UIColor ht_peterRiverColor];
+    _applicantButton.shadowColor = [UIColor ht_belizeHoleColor];
+    [_applicantButton setTitle:@"Applicant" forState:UIControlStateNormal];
+    [self.view addSubview:_applicantButton];
     
 }
 
@@ -49,11 +70,6 @@
     cropViewController.delegate = self;
     [self presentViewController:cropViewController animated:YES completion:nil];
 }
-
-- (IBAction)backButton:(id)sender {
-    [G8Tesseract clearCache];
-}
-
 
 
 -(NSString*)recognizeImageWithTesseract:(UIImage *)image

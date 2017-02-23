@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HTPressableButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JFMinimalNotifications.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>113CE7DFDC338C93C5CFA88B2DE57168</key>
+		<key>33DD33E221266813A0EF58C39F17EF95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33DD33E221266813A0EF58C39F17EF95</key>
+		<key>5F21ABBD4D06B43A1E038B2D7036CA68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FC58315F36E8D74469DE4DF566D19F3</key>
+		<key>86E28CD06BB8D7ACD678C5F42F5EDDC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AAEA46899C68DFC50E2FB9BD3D6D7B23</key>
+		<key>B044041109E10E4317E38C91325539D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0E6A087DC733B05C0813ADAD022BD91</key>
 		<dict>
 			<key>primary</key>
 			<true/>

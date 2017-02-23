@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,55 +90,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-42-oM0">
                                 <rect key="frame" x="8" y="0.0" width="359" height="538"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-L1-g7c">
-                                <rect key="frame" x="0.0" y="551" width="70" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmJ-pr-ZAW" customClass="HTPressableButton">
+                                <rect key="frame" x="219" y="549" width="140" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="TGc-nb-a0f"/>
+                                    <constraint firstAttribute="width" constant="140" id="1EY-IL-yQ0"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="vhV-QM-Yt8" eventType="touchUpInside" id="CX8-I3-TfX"/>
-                                    <segue destination="LfI-it-77f" kind="modal" id="M2P-r6-mbs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLN-kt-hZG">
-                                <rect key="frame" x="305" y="551" width="70" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="VDO-H5-F1D"/>
-                                </constraints>
-                                <state key="normal" title="Parse"/>
-                                <connections>
-                                    <action selector="captureCropBox:" destination="vhV-QM-Yt8" eventType="touchUpInside" id="bSN-bf-xra"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmJ-pr-ZAW">
-                                <rect key="frame" x="117" y="553" width="140" height="30"/>
                                 <state key="normal" title="Applicant"/>
                                 <connections>
                                     <action selector="newApplicantBtn:" destination="vhV-QM-Yt8" eventType="touchUpInside" id="Tda-Lr-9wj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLN-kt-hZG" customClass="HTPressableButton">
+                                <rect key="frame" x="16" y="549" width="140" height="34"/>
+                                <state key="normal" title="Crop Contact"/>
+                                <connections>
+                                    <action selector="captureCropBox:" destination="vhV-QM-Yt8" eventType="touchUpInside" id="bSN-bf-xra"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="O4V-L1-g7c" firstAttribute="firstBaseline" secondItem="OLN-kt-hZG" secondAttribute="baseline" id="0Pd-rl-ZvW"/>
+                            <constraint firstItem="CmJ-pr-ZAW" firstAttribute="leading" secondItem="OLN-kt-hZG" secondAttribute="trailing" constant="63" id="6IX-tk-v9M"/>
+                            <constraint firstItem="CmJ-pr-ZAW" firstAttribute="baseline" secondItem="OLN-kt-hZG" secondAttribute="baseline" id="6OY-nF-NEQ"/>
                             <constraint firstItem="jWN-xD-Vmq" firstAttribute="top" secondItem="2Ao-42-oM0" secondAttribute="bottom" constant="65" id="9uI-GA-XM9"/>
-                            <constraint firstItem="O4V-L1-g7c" firstAttribute="top" secondItem="OLN-kt-hZG" secondAttribute="top" id="BDQ-iE-8iI"/>
-                            <constraint firstItem="O4V-L1-g7c" firstAttribute="leading" secondItem="lt2-uj-5So" secondAttribute="leading" id="CBK-v5-LSY"/>
                             <constraint firstItem="2Ao-42-oM0" firstAttribute="leading" secondItem="lt2-uj-5So" secondAttribute="leadingMargin" constant="-8" id="CWZ-mI-DGL"/>
-                            <constraint firstAttribute="trailing" secondItem="OLN-kt-hZG" secondAttribute="trailing" id="Etf-Xj-hza"/>
-                            <constraint firstItem="O4V-L1-g7c" firstAttribute="baseline" secondItem="OLN-kt-hZG" secondAttribute="firstBaseline" id="GD4-al-Zyw"/>
-                            <constraint firstItem="CmJ-pr-ZAW" firstAttribute="leading" secondItem="O4V-L1-g7c" secondAttribute="trailing" constant="47" id="LXE-bf-Mp8"/>
-                            <constraint firstItem="CmJ-pr-ZAW" firstAttribute="bottom" secondItem="O4V-L1-g7c" secondAttribute="bottom" id="Lum-Uo-Eiv"/>
+                            <constraint firstAttribute="bottom" secondItem="CmJ-pr-ZAW" secondAttribute="bottom" constant="20" symbolic="YES" id="JFj-7i-tYY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OLN-kt-hZG" secondAttribute="leading" id="QfX-o4-Led"/>
+                            <constraint firstItem="CmJ-pr-ZAW" firstAttribute="width" secondItem="OLN-kt-hZG" secondAttribute="width" id="RPG-n9-w0o"/>
                             <constraint firstItem="2Ao-42-oM0" firstAttribute="top" secondItem="N3z-aw-eWk" secondAttribute="bottom" id="UFk-Oi-0yX"/>
-                            <constraint firstItem="O4V-L1-g7c" firstAttribute="top" secondItem="2Ao-42-oM0" secondAttribute="bottom" constant="13" id="boI-3c-x9p"/>
-                            <constraint firstItem="CmJ-pr-ZAW" firstAttribute="centerX" secondItem="2Ao-42-oM0" secondAttribute="centerX" id="c82-St-2ZS"/>
                             <constraint firstItem="2Ao-42-oM0" firstAttribute="centerX" secondItem="lt2-uj-5So" secondAttribute="centerX" id="kQt-u0-qie"/>
-                            <constraint firstAttribute="bottom" secondItem="OLN-kt-hZG" secondAttribute="bottom" constant="20" symbolic="YES" id="y46-Ni-uVo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CmJ-pr-ZAW" secondAttribute="trailing" id="uXc-wU-tiO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Check Picture" id="vFE-73-IOh"/>
                     <connections>
+                        <outlet property="applicantButton" destination="CmJ-pr-ZAW" id="ySj-DG-CaI"/>
+                        <outlet property="cropButton" destination="OLN-kt-hZG" id="7HT-mR-fwR"/>
                         <outlet property="resumeImageView" destination="2Ao-42-oM0" id="p5o-Ne-P8j"/>
                         <segue destination="ppB-kn-Pee" kind="push" identifier="applicantVCSegue" id="iQ3-hJ-VgL"/>
                     </connections>
@@ -176,8 +161,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="968-Mq-sXA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20224562287330627" green="0.5951007604598999" blue="0.85695862770080566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
