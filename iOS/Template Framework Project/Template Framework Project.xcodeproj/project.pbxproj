@@ -15,9 +15,7 @@
 		150E132D1E4B12BF002BD1B2 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; };
 		154FDE741E5D71C200E88E19 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE731E5D71C200E88E19 /* Launch Screen.storyboard */; };
 		154FDE761E5D71FD00E88E19 /* launchscreenphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE751E5D71FD00E88E19 /* launchscreenphoto.png */; };
-		154FDE781E5D80F500E88E19 /* SwiftyButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154FDE771E5D80F500E88E19 /* SwiftyButton.framework */; };
 		154FDE7C1E5D842900E88E19 /* aviatobanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE7B1E5D842900E88E19 /* aviatobanner.png */; };
-		15982D3E1E5E66F7009A95CC /* HTPressableButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15982D3D1E5E66F7009A95CC /* HTPressableButton.framework */; };
 		15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; };
 		15B40A281E4B1FB0003394D0 /* DrawAction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; };
@@ -28,6 +26,9 @@
 		15B40A2F1E4B232D003394D0 /* WDReceiptOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; };
 		15B40A311E4B232D003394D0 /* WDUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15E827A11E5EAA17008E3B8A /* HTPressableButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15982D3D1E5E66F7009A95CC /* HTPressableButton.framework */; };
+		15E827A31E5EAA17008E3B8A /* SwiftyButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154FDE771E5D80F500E88E19 /* SwiftyButton.framework */; };
+		15E827A51E5EAA17008E3B8A /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
 		15F362191DD3C3DD00C231A3 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
 		31703EAC1DCADFB400CD22A4 /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31703EA91DCADFB400CD22A4 /* CropViewController.m */; };
 		3188732C1DE9120600DF5CDE /* Headers in Sources */ = {isa = PBXBuildFile; fileRef = 15F362181DD3C3DD00C231A3 /* Headers */; };
@@ -58,7 +59,6 @@
 		64DDA74E188FD7D10025590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6400DDEA180C5DE000443362 /* Main.storyboard */; };
 		64DDA75B188FD9140025590D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 64DDA75A188FD9140025590D /* tessdata */; };
 		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
-		73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
 		C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */; };
 		C3696BB31E40482000DED8BB /* HTTPRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C3696BB21E40482000DED8BB /* HTTPRequester.m */; };
 		C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */; };
@@ -170,8 +170,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15982D3E1E5E66F7009A95CC /* HTPressableButton.framework in Frameworks */,
-				154FDE781E5D80F500E88E19 /* SwiftyButton.framework in Frameworks */,
+				15E827A31E5EAA17008E3B8A /* SwiftyButton.framework in Frameworks */,
+				15E827A11E5EAA17008E3B8A /* HTPressableButton.framework in Frameworks */,
+				15E827A51E5EAA17008E3B8A /* TesseractOCR.framework in Frameworks */,
 				15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */,
 				150E13291E4B12BF002BD1B2 /* DrawAction.framework in Frameworks */,
 				150E132A1E4B12BF002BD1B2 /* DynamicTesseractOCR.framework in Frameworks */,
@@ -179,7 +180,6 @@
 				150E132C1E4B12BF002BD1B2 /* WDReceiptOCR.framework in Frameworks */,
 				15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */,
 				150E132D1E4B12BF002BD1B2 /* WDUtils.framework in Frameworks */,
-				73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */,
 				15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */,
 				64907490198A5CD500D728CC /* CoreImage.framework in Frameworks */,
 				64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */,
@@ -640,7 +640,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 391DBEDB21F7D2ECE09B2AAC /* Pods-Template Framework Project.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -678,7 +677,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CF9B2403D6C27E98536FAEE /* Pods-Template Framework Project.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;

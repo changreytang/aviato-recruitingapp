@@ -7,22 +7,22 @@
 //
 
 import UIKit
-import WDReceiptOCR
+//import WDReceiptOCR
 import SwiftyButton
 import ChameleonFramework
 
-public extension OCR {
-    public func doSomething() {
-        //nothing
-    }
-}
+//public extension OCR {
+//    public func doSomething() {
+//        //nothing
+//    }
+//}
 
 class PictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var cameraButton: PressableButton!
     @IBOutlet weak var photoButton: PressableButton!
     
-    var corners : Corners!
+//    var corners : Corners!
     var resumeImage: UIImage?
     
 
