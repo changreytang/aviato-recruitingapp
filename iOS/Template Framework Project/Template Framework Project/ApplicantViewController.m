@@ -142,7 +142,7 @@ XLFormRowDescriptor *websitesRow;
 
     // For Recruiter - Section
     section = [XLFormSectionDescriptor formSectionWithTitle:@"For Recruiter"];
-    
+    [form addFormSection:section];
     //Notes for recruiter
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kNotes rowType:XLFormRowDescriptorTypeTextView title:@"Notes"];
     [section addFormRow:row];
