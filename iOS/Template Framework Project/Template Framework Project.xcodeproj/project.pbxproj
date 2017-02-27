@@ -40,6 +40,11 @@
 		73BE4C421A5D83AB002C15F1 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
 		C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */; };
 		C3696BB31E40482000DED8BB /* HTTPRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = C3696BB21E40482000DED8BB /* HTTPRequester.m */; };
+		C370EB5F1E5D8F5400F7A3F3 /* resume1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C370EB5E1E5D8F5400F7A3F3 /* resume1.jpg */; };
+		C370EB651E5DA1D000F7A3F3 /* resume3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C370EB611E5DA1D000F7A3F3 /* resume3.jpg */; };
+		C370EB671E5DA1D000F7A3F3 /* resume5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C370EB631E5DA1D000F7A3F3 /* resume5.jpg */; };
+		C370EB691E5DA3C500F7A3F3 /* resume2.png in Resources */ = {isa = PBXBuildFile; fileRef = C370EB681E5DA3C500F7A3F3 /* resume2.png */; };
+		C370EB6B1E5DA46A00F7A3F3 /* resume4.png in Resources */ = {isa = PBXBuildFile; fileRef = C370EB6A1E5DA46A00F7A3F3 /* resume4.png */; };
 		C3EBF1A51E301B8C00F4054E /* Template_Framework_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +114,11 @@
 		73C0A7BE1A59565100D823D4 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3696BB11E40482000DED8BB /* HTTPRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequester.h; sourceTree = "<group>"; };
 		C3696BB21E40482000DED8BB /* HTTPRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequester.m; sourceTree = "<group>"; };
+		C370EB5E1E5D8F5400F7A3F3 /* resume1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = resume1.jpg; sourceTree = "<group>"; };
+		C370EB611E5DA1D000F7A3F3 /* resume3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = resume3.jpg; sourceTree = "<group>"; };
+		C370EB631E5DA1D000F7A3F3 /* resume5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = resume5.jpg; sourceTree = "<group>"; };
+		C370EB681E5DA3C500F7A3F3 /* resume2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resume2.png; sourceTree = "<group>"; };
+		C370EB6A1E5DA46A00F7A3F3 /* resume4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resume4.png; sourceTree = "<group>"; };
 		C3EBF1A21E301B8C00F4054E /* Template Framework ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Template Framework ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBF1A41E301B8C00F4054E /* Template_Framework_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Template_Framework_ProjectTests.m; sourceTree = "<group>"; };
 		C3EBF1A61E301B8C00F4054E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,6 +234,11 @@
 		6400DDDF180C5DE000443362 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C370EB611E5DA1D000F7A3F3 /* resume3.jpg */,
+				C370EB681E5DA3C500F7A3F3 /* resume2.png */,
+				C370EB6A1E5DA46A00F7A3F3 /* resume4.png */,
+				C370EB631E5DA1D000F7A3F3 /* resume5.jpg */,
+				C370EB5E1E5D8F5400F7A3F3 /* resume1.jpg */,
 				428615B61845F340005D5A2E /* image_sample.jpg */,
 				6400DDE0180C5DE000443362 /* Template Framework Project-Info.plist */,
 				6400DDE1180C5DE000443362 /* InfoPlist.strings */,
@@ -304,6 +319,7 @@
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
 						DevelopmentTeam = 45U965DEU6;
+						ProvisioningStyle = Automatic;
 					};
 					C3EBF1A11E301B8C00F4054E = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -336,9 +352,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C370EB5F1E5D8F5400F7A3F3 /* resume1.jpg in Resources */,
+				C370EB691E5DA3C500F7A3F3 /* resume2.png in Resources */,
 				6400DDF1180C5DE000443362 /* Images.xcassets in Resources */,
 				428615B71845F340005D5A2E /* image_sample.jpg in Resources */,
 				64DDA75B188FD9140025590D /* tessdata in Resources */,
+				C370EB651E5DA1D000F7A3F3 /* resume3.jpg in Resources */,
+				C370EB6B1E5DA46A00F7A3F3 /* resume4.png in Resources */,
+				C370EB671E5DA1D000F7A3F3 /* resume5.jpg in Resources */,
 				15F362191DD3C3DD00C231A3 /* Headers in Resources */,
 				6400DDE3180C5DE000443362 /* InfoPlist.strings in Resources */,
 				64DDA74E188FD7D10025590D /* Main.storyboard in Resources */,
@@ -561,6 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 45U965DEU6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,6 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 45U965DEU6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

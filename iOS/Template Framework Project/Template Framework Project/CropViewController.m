@@ -130,7 +130,7 @@
         
         [self performSegueWithIdentifier:@"applicantVCSegue" sender:self];
         // Remove the animated progress activity indicator
-        //[self.activityIndicator stopAnimating];
+        // [self.activityIndicator stopAnimating];
         
         // Spawn an alert with the recognized text
     };
@@ -142,7 +142,7 @@
     [self.operationQueue addOperation:operation];
     
     //SEND contactInfo TO PARSER THEN TO FORM
-    return @"";//recognizedText;
+    return @"";
 }
 
 
