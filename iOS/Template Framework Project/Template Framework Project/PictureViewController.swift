@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import WDReceiptOCR
 import SwiftyButton
 import ChameleonFramework
 

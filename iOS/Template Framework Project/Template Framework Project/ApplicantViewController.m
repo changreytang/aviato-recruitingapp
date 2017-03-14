@@ -1,10 +1,3 @@
-//
-//  ApplicantViewController.m
-//  Template Framework Project
-//
-//  Created by Tim Liew on 11/17/16.
-//
-
 #import "ApplicantViewController.h"
 #import "XLForm.h"
 #import "JFMinimalNotification.h"
@@ -87,7 +80,7 @@ XLFormRowDescriptor *websitesRow;
     row.value = [self.applicantInstance getFName];
     fnameRow = row;
     [section addFormRow:row];
-
+    
     // Last Name
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kLName rowType:XLFormRowDescriptorTypeText title:@"Last Name"];
     row.required = YES;
@@ -119,17 +112,17 @@ XLFormRowDescriptor *websitesRow;
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kWebsite rowType:XLFormRowDescriptorTypeURL title:@"Websites"];
     websitesRow = row;
     [section addFormRow:row];
-
-//    section = [XLFormSectionDescriptor formSection];
-//    [form addFormSection:section];
     
-//    row = [XLFormRowDescriptor formRowDescriptorWithTag:kSelectorAlertView rowType:XLFormRowDescriptorTypeSelectorAlertView title:@"Position Type"];
-//    row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"Full Time"],
-//                            [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"Part Time"],
-//                            [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Internship"],
-//                            ];
-//    row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
-//    [section addFormRow:row];
+    //    section = [XLFormSectionDescriptor formSection];
+    //    [form addFormSection:section];
+    
+    //    row = [XLFormRowDescriptor formRowDescriptorWithTag:kSelectorAlertView rowType:XLFormRowDescriptorTypeSelectorAlertView title:@"Position Type"];
+    //    row.selectorOptions = @[[XLFormOptionsObject formOptionsObjectWithValue:@(0) displayText:@"Full Time"],
+    //                            [XLFormOptionsObject formOptionsObjectWithValue:@(1) displayText:@"Part Time"],
+    //                            [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Internship"],
+    //                            ];
+    //    row.value = [XLFormOptionsObject formOptionsObjectWithValue:@(2) displayText:@"Choose One"];
+    //    [section addFormRow:row];
     
     section = [XLFormSectionDescriptor formSectionWithTitle:@"Position Type"];
     [form addFormSection:section];
@@ -139,7 +132,7 @@ XLFormRowDescriptor *websitesRow;
     [section addFormRow:row];
     row = [XLFormRowDescriptor formRowDescriptorWithTag:kInternship rowType:XLFormRowDescriptorTypeBooleanCheck title:@"Internship"];
     [section addFormRow:row];
-
+    
     // For Recruiter - Section
     section = [XLFormSectionDescriptor formSectionWithTitle:@"For Recruiter"];
     [form addFormSection:section];
@@ -158,10 +151,10 @@ XLFormRowDescriptor *websitesRow;
     [section addFormRow:row];
     section.footerTitle = @"Aviato";
     [form addFormSection:section];
-
+    
     
     self.form = form;
-
+    
 }
 
 -(void)viewDidLoad{
@@ -240,7 +233,7 @@ XLFormRowDescriptor *websitesRow;
     [newApplicant setID:self.applicantID];
     //[newApplicant setResume:[self.applicantInstance getResume]];
     //[newApplicant setWebsites:[aSites objectAtIndex:0]];
-
+    
     //[newApplicant initApplicant:aName withEmail:aEmail withPhoneNum:aPhone withAddress:aAddr];
     //HTTPRequester *requester = [[HTTPRequester alloc] init];
     NSDictionary * jsonToSend = [newApplicant toJSON];
@@ -253,7 +246,7 @@ XLFormRowDescriptor *websitesRow;
         /**
          * Create the notification
          */
-
+        
         self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:@"Success" subTitle:@"Application Sent" dismissalDelay:2.0 touchHandler:^{
             [self.minimalNotification dismiss];
         }];
@@ -278,7 +271,7 @@ XLFormRowDescriptor *websitesRow;
         [self.navigationController.view addSubview:self.minimalNotification];
         self.minimalNotification.presentFromTop = YES;
         [self.minimalNotification show];
-
+        
     }
     else{
         /**
@@ -310,7 +303,7 @@ XLFormRowDescriptor *websitesRow;
         self.minimalNotification.presentFromTop = YES;
         [self.minimalNotification show];
     }
-
+    
     //NSLog
     
     
