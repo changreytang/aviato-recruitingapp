@@ -330,9 +330,9 @@
 		6400DDCD180C5DE000443362 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = G8;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Daniele Galiotto - www.g8production.com";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
 						DevelopmentTeam = SZVLL8KQSW;

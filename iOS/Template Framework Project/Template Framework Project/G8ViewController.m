@@ -2,10 +2,6 @@
 //  G8ViewController.m
 //  Template Framework Project
 //
-//  Created by Daniele on 14/10/13.
-//  Copyright (c) 2013 Daniele Galiotto - www.g8production.com.
-//  All rights reserved.
-//
 
 #import "G8ViewController.h"
 #import "CropViewController.h"
