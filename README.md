@@ -1,2 +1,2 @@
 # Career Fair Recruiting Application
-CS189a Capstone Project
+CS189a Capstone Project    
