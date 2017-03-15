@@ -21,13 +21,10 @@ Java client file for making SOAP requests to Workday application - create user a
 ### putApplicant.wsdl
 Wsdl file to generate class files for Workday API - use these class files to create a client to connect to Workday 
 
-
-
-
-
 Work To Be Done:
 1) Integrate into main workflow
 2) Run tessseract on individual image in order to generate text data
+3) Automate text data input into API call to create applicant
 
 ### AWSLib
 Playground to test Back End workflow
