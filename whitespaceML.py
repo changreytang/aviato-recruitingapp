@@ -93,6 +93,8 @@ fourthMargin = 4*margin
 #print(thirdMargin)
 #print(fourthMargin)
 
+# basic iteration of finding whitespace
+# change to back and forth iteration. Faster computation
 while(isBlack(firstMargin)):
     firstMargin = firstMargin + 1
 while(isBlack(secondMargin)):
