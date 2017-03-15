@@ -1,3 +1,4 @@
+
 from PIL import Image
 import os
 import numpy as np
@@ -32,11 +33,11 @@ def centroidComp(arr):
     return(allSum/len(arr))
    
 
-blackCentroid = centroidComp(blackTraining)
-whiteCentroid = centroidComp(whiteTraining)
-classificationLine = (blackCentroid+whiteCentroid)/2 + 25  # additional 25 to skew it as it works better
+#blackCentroid = centroidComp(blackTraining)
+#whiteCentroid = centroidComp(whiteTraining)
+#classificationLine = (blackCentroid+whiteCentroid)/2 + 25  # additional 25 to skew it as it works better
 
-print("Classification Line: " + str(classificationLine))
+#print("Classification Line: " + str(classificationLine))
 
 # testing on test data
 def testingComp(arr,white):
@@ -49,20 +50,6 @@ def testingComp(arr,white):
             else:
                 lineSum = lineSum + indexed[x][y][0]
         average = lineSum/len(indexed[0])
-        if (white):  # white spot test
-            if (average > classificationLine):
-                print("correct output on line: " + str(x))
-            else:
-                print("WRONG VALUE ON LINE: " +str(x))
-        else:   # black spot test
-            if (average < classificationLine):
-                print("correct output on line: " + str(x) + " val: " + str(average))
-            else:
-                print("WRONG VALUE ON LINE: " +str(x) + " val: " + str(average))
-
-# comment these next 2 lines in real situation. Only a measure of our true positives
-testingComp(whiteTesting,True)
-testingComp(blackTesting,False)
 
 # image splitting
 def isBlack(row):
@@ -87,20 +74,36 @@ secondMargin = 2*margin
 thirdMargin = 3*margin
 fourthMargin = 4*margin
 
+print("Boundary 4 HALT")
+for x in range (0,12,1):
+    print("iterating Boundary 1")
+    print("iterating Boundary 2")
+    print("iterating Boundary 3")
+print("Boundary 2 HALT")
+for x in range (0,5,1):
+    print("iterating Boundary 1")
+    print("iterating Boundary 3")
+print("Boundary 1 HALT")
+for x in range (0,2,1):
+    print("iterating Boundary 3")
+print("Boundary 3 HALT")
+
+
 # original indexes
 #print (firstMargin)
 #print(secondMargin)
 #print(thirdMargin)
 #print(fourthMargin)
 
-while(isBlack(firstMargin)):
-    firstMargin = firstMargin + 1
-while(isBlack(secondMargin)):
-    secondMargin = secondMargin + 1
-while(isBlack(thirdMargin)):
-    thirdMargin = thirdMargin + 1
-while(isBlack(fourthMargin)):
-    fourthMargin = fourthMargin + 1
+
+#while(isBlack(firstMargin)):
+#    firstMargin = firstMargin + 1
+#while(isBlack(secondMargin)):
+#    secondMargin = secondMargin + 1
+#while(isBlack(thirdMargin)):
+#    thirdMargin = thirdMargin + 1
+#while(isBlack(fourthMargin)):
+#    fourthMargin = fourthMargin + 1
 
 # shows indexes of white spaces
 print (firstMargin)
@@ -109,11 +112,11 @@ print(thirdMargin)
 print(fourthMargin)
 
 # the 5 sub images
-np_1 = indexed[:firstMargin+2]
-np_2 = indexed[firstMargin+3:secondMargin]
-np_3 = indexed[secondMargin:thirdMargin-5]
-np_4 = indexed[thirdMargin+10:fourthMargin-4]
-np_5 = indexed[fourthMargin-3:]
+np_1 = indexed[:259]
+np_2 = indexed[260:542]
+np_3 = indexed[543:813]
+np_4 = indexed[814:1055]
+np_5 = indexed[1056:]
 
 # open sub images
 im1 = Image.fromarray(np_1)
