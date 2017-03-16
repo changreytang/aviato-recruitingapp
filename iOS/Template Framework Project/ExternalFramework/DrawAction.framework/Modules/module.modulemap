@@ -1,0 +1,10 @@
+framework module DrawAction {
+  umbrella header "DrawAction.h"
+
+  export *
+  module * { export * }
+}
+
+module DrawAction.Swift {
+    header "DrawAction-Swift.h"
+}

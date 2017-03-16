@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+workspace 'Tesseract-OCR-iOS'
+xcodeproj 'TestsProject/TestsProject.xcodeproj/', 'Coverage' => :debug
+
+target 'TestsProject' do
+        workspace 'Tesseract-OCR-iOS'
+	xcodeproj 'TestsProject/TestsProject.xcodeproj/', 'Coverage' => :debug
+	pod 'Kiwi', '~> 2.3.1'
+	pod 'TesseractOCRiOS', '4.0.0'
+	pod 'XLForm' , '~> 3.0'
+
+end
+
+xcodeproj 'Template Framework Project/Template Framework Project.xcodeproj/'
+workspace 'Tesseract-OCR-iOS'
+
+target 'Template Framework Project' do
+       use_frameworks!
+        pod 'XLForm' , '~> 3.0'
+        pod 'SwiftyButton'
+        pod 'HTPressableButton'
+        pod 'JFMinimalNotifications', '~> 0.0.8'
+	pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+
+end
