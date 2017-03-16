@@ -14,7 +14,8 @@ Mobile application created with a combination of Objective-C and Swift. Develope
 
 Work To Be Done:
 1) Integrate a list view of applications created for recruiters to easily access/edit current applications
-2) Change from using Tesseract to Workday's Text Parser
+2) Change from using Tesseract to Workday's Text Parser on Front End
+3) Create Android version of mobile application
 
 ## Back End
 ### lambdafunc.js
