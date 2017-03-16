@@ -19,6 +19,10 @@ import org.apache.axis.message.SOAPHeaderElement;
 
 import java.io.*;
 
+#USERNAME 
+#PASSWORD 
+
+
 public class Client {
 	
 	public static void main(String args[]) {
@@ -28,8 +32,6 @@ public class Client {
 		
 		//Put in header request info: Username and password
 		//wss security token
-		//username: superuser@super
-		//password:  8v18t0
 		
 		SOAPHeaderElement wsseSecurity = new SOAPHeaderElement(new PrefixedQName("http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd","Security", "wsse"));
         wsseSecurity.setMustUnderstand(true);
@@ -44,7 +46,7 @@ public class Client {
         sub.setAttribute("xmlns:wsu", "http://schemas.xmlsoap.org/ws/2002/07/utility");
         SOAPElement userElement = null;
 		try {
-			userElement = sub.addChildElement("Username");
+			userElement = sub.addChildElement(#USERNAME);
 		} catch (SOAPException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -64,7 +66,7 @@ public class Client {
 		}
         pwdElement.setAttribute("Type", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText");
         try {
-			pwdElement.addTextNode("8v18t0");
+			pwdElement.addTextNode(#PASSWORD);
 		} catch (SOAPException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -157,7 +159,6 @@ public class Client {
         contactData.setEmail_Address_Data(emailData);
         
         //body of SOAP message is now sent, now send over to endpoint along with the secure header
-        //endpoint: https://i-0f26c73d9ac10f5e2.workdaysuv.com/ccx/service/super/Recruiting/v27.1
         
         //contactData is of type Contact_Information_DataType
         //add to personal data, then applicant object
@@ -166,8 +167,6 @@ public class Client {
         applicant_data.setPersonal_Data(personalData);
         
         //add applicant to request (applicant is of type Applicant_Data_WWSType)
-       
-        //test endpoint: "https://i-0f26c73d9ac10f5e2.workdaysuv.com/ccx/at-test-ghe-webhook"
         
         RecruitingPortProxy port = new RecruitingPortProxy();
         
