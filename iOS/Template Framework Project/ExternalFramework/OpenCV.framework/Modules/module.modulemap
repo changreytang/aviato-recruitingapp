@@ -1,6 +1,0 @@
-framework module OpenCV {
-  umbrella header "OpenCV.h"
-
-  export *
-  module * { export * }
-}

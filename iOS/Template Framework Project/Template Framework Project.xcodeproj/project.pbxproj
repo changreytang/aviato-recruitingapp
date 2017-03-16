@@ -8,24 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		150E13221E4B1230002BD1B2 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150E13211E4B1230002BD1B2 /* PictureViewController.swift */; };
-		150E13291E4B12BF002BD1B2 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; };
-		150E132A1E4B12BF002BD1B2 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; };
-		150E132B1E4B12BF002BD1B2 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13261E4B12BF002BD1B2 /* OpenCV.framework */; };
-		150E132C1E4B12BF002BD1B2 /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; };
-		150E132D1E4B12BF002BD1B2 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; };
 		154FDE741E5D71C200E88E19 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE731E5D71C200E88E19 /* Launch Screen.storyboard */; };
 		154FDE761E5D71FD00E88E19 /* launchscreenphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE751E5D71FD00E88E19 /* launchscreenphoto.png */; };
 		154FDE7C1E5D842900E88E19 /* aviatobanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 154FDE7B1E5D842900E88E19 /* aviatobanner.png */; };
-		15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; };
-		15B40A281E4B1FB0003394D0 /* DrawAction.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13241E4B12BF002BD1B2 /* DrawAction.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; };
-		15B40A2B1E4B232D003394D0 /* DynamicTesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13251E4B12BF002BD1B2 /* DynamicTesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15B40A2C1E4B232D003394D0 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13261E4B12BF002BD1B2 /* OpenCV.framework */; };
-		15B40A2D1E4B232D003394D0 /* OpenCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13261E4B12BF002BD1B2 /* OpenCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15B40A2E1E4B232D003394D0 /* WDReceiptOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; };
-		15B40A2F1E4B232D003394D0 /* WDReceiptOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13271E4B12BF002BD1B2 /* WDReceiptOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; };
-		15B40A311E4B232D003394D0 /* WDUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 150E13281E4B12BF002BD1B2 /* WDUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15E827A11E5EAA17008E3B8A /* HTPressableButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15982D3D1E5E66F7009A95CC /* HTPressableButton.framework */; };
 		15E827A31E5EAA17008E3B8A /* SwiftyButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154FDE771E5D80F500E88E19 /* SwiftyButton.framework */; };
 		15E827A51E5EAA17008E3B8A /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BE4C411A5D83AB002C15F1 /* TesseractOCR.framework */; };
@@ -73,24 +58,6 @@
 			remoteInfo = "Template Framework Project";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		15B40A291E4B1FB0003394D0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				15B40A2D1E4B232D003394D0 /* OpenCV.framework in Embed Frameworks */,
-				15B40A2F1E4B232D003394D0 /* WDReceiptOCR.framework in Embed Frameworks */,
-				15B40A2B1E4B232D003394D0 /* DynamicTesseractOCR.framework in Embed Frameworks */,
-				15B40A281E4B1FB0003394D0 /* DrawAction.framework in Embed Frameworks */,
-				15B40A311E4B232D003394D0 /* WDUtils.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06684DD13D0329B3C10C3142 /* Pods_Template_Framework_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Framework_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,20 +140,10 @@
 				15E827A31E5EAA17008E3B8A /* SwiftyButton.framework in Frameworks */,
 				15E827A11E5EAA17008E3B8A /* HTPressableButton.framework in Frameworks */,
 				15E827A51E5EAA17008E3B8A /* TesseractOCR.framework in Frameworks */,
-				15B40A301E4B232D003394D0 /* WDUtils.framework in Frameworks */,
-				150E13291E4B12BF002BD1B2 /* DrawAction.framework in Frameworks */,
-				150E132A1E4B12BF002BD1B2 /* DynamicTesseractOCR.framework in Frameworks */,
-				150E132B1E4B12BF002BD1B2 /* OpenCV.framework in Frameworks */,
-				150E132C1E4B12BF002BD1B2 /* WDReceiptOCR.framework in Frameworks */,
-				15B40A2A1E4B232D003394D0 /* DynamicTesseractOCR.framework in Frameworks */,
-				150E132D1E4B12BF002BD1B2 /* WDUtils.framework in Frameworks */,
-				15B40A271E4B1FB0003394D0 /* DrawAction.framework in Frameworks */,
 				64907490198A5CD500D728CC /* CoreImage.framework in Frameworks */,
 				64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */,
 				6400DDDB180C5DE000443362 /* CoreGraphics.framework in Frameworks */,
 				6400DDDD180C5DE000443362 /* UIKit.framework in Frameworks */,
-				15B40A2C1E4B232D003394D0 /* OpenCV.framework in Frameworks */,
-				15B40A2E1E4B232D003394D0 /* WDReceiptOCR.framework in Frameworks */,
 				6400DDD9180C5DE000443362 /* Foundation.framework in Frameworks */,
 				C32A98F0DF6C721CB5D5D5BB /* Pods_Template_Framework_Project.framework in Frameworks */,
 			);
@@ -339,7 +296,6 @@
 				6400DDD3180C5DE000443362 /* Resources */,
 				41040937EDF8B1C4E172C24B /* [CP] Embed Pods Frameworks */,
 				126FD3AD7C827CEDEFEC00D3 /* [CP] Copy Pods Resources */,
-				15B40A291E4B1FB0003394D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,9 +330,9 @@
 		6400DDCD180C5DE000443362 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = G8;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Daniele Galiotto - www.g8production.com";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					6400DDD4180C5DE000443362 = {
 						DevelopmentTeam = SZVLL8KQSW;
